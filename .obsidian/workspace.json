@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "C_C++/C/C语言.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "C_C++/C/C语言.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "C_C++/C/C语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git的基本使用.md"
+                "file": "C_C++/C/C语言.md"
               }
             }
           },
@@ -171,8 +171,8 @@
   },
   "active": "e7dd5a9dabbf3733",
   "lastOpenFiles": [
-    "C_C++/C/C语言.md",
     "Git/Git的基本使用.md",
+    "C_C++/C/C语言.md",
     "Git",
     "数据库",
     "数据结构",
