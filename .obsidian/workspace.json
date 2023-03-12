@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4fb12240590ed9b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C_C++/C/C语言.md"
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md"
               }
             }
           },
@@ -156,10 +169,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e7dd5a9dabbf3733",
+  "active": "4fb12240590ed9b8",
   "lastOpenFiles": [
-    "Git/Git的基本使用.md",
     "C_C++/C/C语言.md",
+    "操作系统/进制转换_原码_反码_补码_位运算.md",
+    "Git/Git的基本使用.md",
     "Git",
     "数据库",
     "数据结构",
