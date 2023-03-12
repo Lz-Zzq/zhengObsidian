@@ -12,18 +12,18 @@
 
 4.初始化本地仓库,将所有文件添加/提交到本地仓库
 
--- git init
+```git
+```-- git init
 
 -- git add .
 
 -- git commit -m "提交注释"
-
-  
+```
 
 5.关联远程仓库
 
--- git remote add origin git@xxxxxxx
+``-- git remote add origin git@xxxxxxx
 
 6.上传文件
 
--- git push -u origin master
+``-- git push -u origin master
