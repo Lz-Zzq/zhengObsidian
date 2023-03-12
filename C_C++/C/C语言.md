@@ -41,60 +41,48 @@
 
 
 ##### 2.2 转换
-| 符号      | 意义                                                          |
-| --------- | ------------------------------------------------------------- |
-| %d        | 打印数字                                                      |
-| %u        | 无符号int                                                     |
-| %ld %lu   | long int unsigned long 以此类推                               |
-| %lx       | 十六进制打印long                                              |
-| %lo       | 八进制打印long                                                |
-| %hd       | 十进制 short                                                  |
-| %lld llu  | 十进制long long unsigned long                                 |
-| %.1f      | 浮点数保留一位小数                                            |
-| %e a      | 指数计数法 十六进制格式浮点数                                 |
-| %lf le la | long double 指数计数 十六进制格式浮点数                       |
-| %c        | 字符                                                          |
-| %g        | 根据值不同,自动选择%f %e 格式用于指数小于-4或者大于等于精度时 |
-| %i        | %d                                                            |
-| %p        | 指针                                                          |
-| %s        | 字符串                                                        |
-| %#x       | 十六进制带前缀                                                |
-| h         | %hu %hx %6.4hd 表示short int unsigned short int 类型的值      |
-| j         | intmax_t unitmax_t类型的值 %jd %8jx                           |
-| l         | long int unsigned long int %ld %8lu                           |
-| ll        | long long int unsigned long long int %lld %8lu                |
-| L         | long double %lf %10.4Le                                       |
-| t         | ptrdiff_t %td %12ti ptrdiff_t表示的时两个指针的差             |
-| z         | size_t类型的值 size_t时sizeof返回类型 %zd %12zd               |
-| \-        | 左对齐 %-20s 左对齐20空格(包含)                               |
-|           |                                                               |
+| 符号      | 意义                                                                                            |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| %d        | 打印数字                                                                                        |
+| %u        | 无符号int                                                                                       |
+| %ld %lu   | long int unsigned long 以此类推                                                                 |
+| %lx       | 十六进制打印long                                                                                |
+| %lo       | 八进制打印long                                                                                  |
+| %hd       | 十进制 short                                                                                    |
+| %lld llu  | 十进制long long unsigned long                                                                   |
+| %.1f      | 浮点数保留一位小数                                                                              |
+| %e a      | 指数计数法 十六进制格式浮点数                                                                   |
+| %lf le la | long double 指数计数 十六进制格式浮点数                                                         |
+| %c        | 字符                                                                                            |
+| %g        | 根据值不同,自动选择%f %e 格式用于指数小于-4或者大于等于精度时                                   |
+| %i        | %d                                                                                              |
+| %p        | 指针                                                                                            |
+| %s        | 字符串                                                                                          |
+| %#x       | 十六进制带前缀                                                                                  |
+| h         | %hu %hx %6.4hd 表示short int unsigned short int 类型的值                                        |
+| j         | intmax_t unitmax_t类型的值 %jd %8jx                                                             |
+| l         | long int unsigned long int %ld %8lu                                                             |
+| ll        | long long int unsigned long long int %lld %8lu                                                  |
+| L         | long double %lf %10.4Le                                                                         |
+| t         | ptrdiff_t %td %12ti ptrdiff_t表示的时两个指针的差                                               |
+| z         | size_t类型的值 size_t时sizeof返回类型 %zd %12zd                                                 |
+| \-        | 左对齐 %-20s 左对齐20空格(包含)                                                                 |
+| \+        | 有符号,正数+ 负数-                                                                              |
+| \#        | 前缀                                                                                            |
+| 0         | 前导0代替空格 %010d 10空格 %0.84f %010.5f 表示(前导0 10空格 显示5个(使用浮点显示不写前导也行) ) |
+| 0         | 当使用 %010.5f 与 %10.5性质一样 占位10 显示5 多余使用前导0代替 浮点显示自动添加前导0            |
+| \a        | 警报                                                                                            |
+| \b        | 退格                                                                                            |
+| \f        | 换页                                                                                            |
+| \n        | 换行                                                                                            |
+| \r        | 回车                                                                                            |
+| \t        | 水平制表符                                                                                      |
+| \v        | 垂直制表符                                                                                      |
+| \0oo      | 八进制                                                                                          |
+| \xhh      | 十六进制                                                                                        |
+|           |                                                                                                 |
 
-
-  
-
-   
-
-  有符号,正数+ 负数-
-
-% 6.2f
-
-\#  前缀
-
-0 前导0代替空格 %010d 10空格 %0.84f %010.5f 表示(前导0 10空格 显示5个(使用浮点显示不写前导也行) )
-
-0  当使用 %010.5f 与 %10.5性质一样 占位10 显示5 多余使用前导0代替 浮点显示自动添加前导0
-
-\a  警报
-
-\b  退格
-
-\f  换页
-
-\n  换行
-
-\r  回车
-
-\t  水平制表符
+\t  
 
 \v  垂直制表符
 
