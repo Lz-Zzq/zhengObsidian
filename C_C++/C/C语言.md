@@ -55,59 +55,26 @@
 | %lf le la | long double 指数计数 十六进制格式浮点数                       |
 | %c        | 字符                                                          |
 | %g        | 根据值不同,自动选择%f %e 格式用于指数小于-4或者大于等于精度时 |
+| %i        | %d                                                            |
+| %p        | 指针                                                          |
+| %s        | 字符串                                                        |
+| %#x       | 十六进制带前缀                                                |
+| h         | %hu %hx %6.4hd 表示short int unsigned short int 类型的值      |
+| j         | intmax_t unitmax_t类型的值 %jd %8jx                           |
+| l         | long int unsigned long int %ld %8lu                           |
+| ll        | long long int unsigned long long int %lld %8lu                |
+| L         | long double %lf %10.4Le                                       |
+| t         | ptrdiff_t %td %12ti ptrdiff_t表示的时两个指针的差             |
+| z         | size_t类型的值 size_t时sizeof返回类型 %zd %12zd               |
+| \-        | 左对齐 %-20s 左对齐20空格(包含)                               |
 |           |                                                               |
 
-|           |                                                               |
 
+  
 
+   
 
-%i
-
-%d
-
-%p
-
-指针
-
-%s
-
-字符串
-
-%#x
-
-十六进制带前缀
-
-h
-
-%hu %hx %6.4hd 表示short int unsigned short int 类型的值
-
-hh
-
-%hhu %hhx %6.4hhd singed char unsigned char类型的值
-
-j
-
-intmax_t unitmax_t类型的值 %jd %8jx
-
-l
-
-long int unsigned long int %ld %8lu
-
-ll
-
-long long int unsigned long long int %lld %8lu
-
-L
-
-long double %lf %10.4Le
-
-t    ptrdiff_t %td %12ti ptrdiff_t表示的时两个指针的差
-
-z    size_t类型的值 size_t时sizeof返回类型 %zd %12zd
-
-\-   左对齐 %-20s 左对齐20空格(包含)
-
-\+  有符号,正数+ 负数-
+  有符号,正数+ 负数-
 
 % 6.2f
 
