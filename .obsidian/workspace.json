@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +109,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "中间件_框架/Nginx.md",
-                "collapseAll": false,
+                "file": "C_C++/C/C语言.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "中间件_框架/Nginx.md",
+                "file": "C_C++/C/C语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "中间件_框架/Nginx.md"
+                "file": "C_C++/C/C语言.md"
               }
             }
           },
@@ -162,12 +161,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 206.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,15 +176,17 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "36c684fb50da8408",
+  "active": "e7dd5a9dabbf3733",
   "lastOpenFiles": [
+    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "C_C++/C/C语言.md",
+    "中间件_框架/未命名.md",
     "中间件_框架/Nginx.md",
     "中间件_框架",
-    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "Git/Git的基本使用.md",
     "Git",
     "数据库",
