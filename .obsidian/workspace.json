@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "17787d5ad188cf13",
+    "type": "split",
+    "children": [
+      {
+        "id": "915dd5daec00f805",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7962f5cb96d427a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C_C++/C/C语言.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5b28476aff8bb508",
+    "type": "split",
+    "children": [
+      {
+        "id": "87e171e1743bb0b4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80bc0c3ada0e0c7a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0d6e828b01107a1a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "268cd703d5767c2f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 218.50365829467773
+  },
+  "right": {
+    "id": "630a796890b83c7c",
+    "type": "split",
+    "children": [
+      {
+        "id": "709be5b64c19babe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d26223bb29b36c49",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "C_C++/C/C语言.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b2911abfbf41a33",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "C_C++/C/C语言.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7c912feafc2dcd87",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c9a639e9b89a101d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "C_C++/C/C语言.md"
+              }
+            }
+          },
+          {
+            "id": "8c31321c2480dfae",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 320.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "7962f5cb96d427a9",
+  "lastOpenFiles": [
+    "数据库",
+    "数据结构",
+    "netty",
+    "网络",
+    "操作系统",
+    "C_C++/C++",
+    "C_C++/C",
+    "C_C++/C/C语言.md",
+    "C_C++",
+    "未命名.canvas",
+    "2023-03-12.md",
+    "未命名.md",
+    "Excalidraw/Drawing 2023-03-12 10.32.17.excalidraw.md",
+    "Excalidraw"
+  ]
+}
