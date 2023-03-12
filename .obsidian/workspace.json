@@ -15,7 +15,7 @@
               "state": {
                 "file": "C_C++/C/C语言.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -158,6 +158,7 @@
   },
   "active": "7962f5cb96d427a9",
   "lastOpenFiles": [
+    "C_C++/C/C语言.md",
     "数据库",
     "数据结构",
     "netty",
@@ -165,7 +166,6 @@
     "操作系统",
     "C_C++/C++",
     "C_C++/C",
-    "C_C++/C/C语言.md",
     "C_C++",
     "未命名.canvas",
     "2023-03-12.md",
