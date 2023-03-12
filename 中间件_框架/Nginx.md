@@ -2,7 +2,7 @@ worker_processes  2;     ---全局块 和Nginx运行相关的全局配置
 
 events {                 ---events块 网络连接相关配置
     worker_connections  1024;
-}
+} ^cf356b
 
 http {                   ---http块 代理,缓存,日志记录 虚拟主机地址
     include       mime.types;
