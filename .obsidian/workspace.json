@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7962f5cb96d427a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C_C++/C/C语言.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e7dd5a9dabbf3733",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
