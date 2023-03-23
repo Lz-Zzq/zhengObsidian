@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "b948dcd981da48f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "中间件_框架/docker.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "36c684fb50da8408",
             "type": "leaf",
             "state": {
@@ -46,7 +59,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -112,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "中间件_框架/docker.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "中间件_框架/docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C_C++/C/C语言.md"
+                "file": "中间件_框架/docker.md"
               }
             }
           },
@@ -183,12 +197,12 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "e7dd5a9dabbf3733",
+  "active": "b948dcd981da48f9",
   "lastOpenFiles": [
-    "中间件_框架/Nginx.md",
     "C_C++/C/C语言.md",
+    "中间件_框架/docker.md",
+    "中间件_框架/Nginx.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "中间件_框架/未命名.md",
     "中间件_框架",
     "Git/Git的基本使用.md",
     "Git",
