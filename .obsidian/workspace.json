@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "C_C++/C/C语言.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.50365829467773,
-    "collapsed": true
+    "width": 218.50365829467773
   },
   "right": {
     "id": "630a796890b83c7c",
@@ -87,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "C_C++/C/C语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "C_C++/C/C语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/计算机网络.md"
+                "file": "C_C++/C/C语言.md"
               }
             }
           },
@@ -161,12 +160,12 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "网络/计算机网络.md",
     "Pasted image 20230330211247.png",
     "Pasted image 20230330210156.png",
     "Pasted image 20230330210027.png",
     "Pasted image 20230330203212.png",
     "操作系统/数字逻辑电路.md",
-    "网络/计算机网络.md",
     "中间件_框架/docker.md",
     "C_C++/C/C语言.md",
     "中间件_框架/Nginx.md",
