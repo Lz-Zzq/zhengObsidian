@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "网络/计算机网络.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "网络/计算机网络.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C_C++/C/C语言.md",
+                "file": "网络/计算机网络.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C_C++/C/C语言.md"
+                "file": "网络/计算机网络.md"
               }
             }
           },
@@ -160,6 +160,7 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "C_C++/C/C语言.md",
     "网络/计算机网络.md",
     "Pasted image 20230330211247.png",
     "Pasted image 20230330210156.png",
@@ -167,7 +168,6 @@
     "Pasted image 20230330203212.png",
     "操作系统/数字逻辑电路.md",
     "中间件_框架/docker.md",
-    "C_C++/C/C语言.md",
     "中间件_框架/Nginx.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "中间件_框架",
