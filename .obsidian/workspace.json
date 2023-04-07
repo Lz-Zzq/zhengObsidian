@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#比特流直接到达终点",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -159,8 +159,9 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "0d6e828b01107a1a",
+  "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "Pasted image 20230407164656.png",
     "操作系统/数字逻辑电路.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "编程语言/C语言.md",
