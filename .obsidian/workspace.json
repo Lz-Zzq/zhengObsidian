@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "编程语言/C语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -66,13 +66,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 218.50365829467773,
-    "collapsed": true
+    "width": 218.50365829467773
   },
   "right": {
     "id": "630a796890b83c7c",
@@ -88,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "编程语言/C语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "编程语言/C语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/计算机网络.md"
+                "file": "编程语言/C语言.md"
               }
             }
           },
@@ -162,24 +160,23 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
-    "Pasted image 20230407191128.png",
-    "Pasted image 20230407191105.png",
-    "Pasted image 20230407190514.png",
-    "Pasted image 20230407185636.png",
-    "Pasted image 20230407185105.png",
-    "Pasted image 20230407173246.png",
-    "Pasted image 20230407171157.png",
-    "Pasted image 20230407171139.png",
-    "Pasted image 20230407164656.png",
+    "PNG图片资源/Pasted image 20230407164656.png",
+    "网络/计算机网络.md",
+    "PNG图片资源/Pasted image 20230407191128.png",
+    "PNG图片资源/Pasted image 20230407191105.png",
+    "PNG图片资源/Pasted image 20230407190514.png",
+    "PNG图片资源/Pasted image 20230407185636.png",
+    "PNG图片资源/Pasted image 20230407185105.png",
+    "PNG图片资源/Pasted image 20230407173246.png",
+    "PNG图片资源/Pasted image 20230407171157.png",
+    "PNG图片资源/Pasted image 20230407171139.png",
     "操作系统/数字逻辑电路.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "编程语言/C语言.md",
-    "网络/计算机网络.md",
     "编程语言",
     "PNG图片资源/Pasted image 20230330211247.png",
     "PNG图片资源",
     "网络安全",
-    "PNG图片资源/Pasted image 20230330203212.png",
     "中间件_框架/docker.md",
     "中间件_框架/Nginx.md",
     "中间件_框架",
