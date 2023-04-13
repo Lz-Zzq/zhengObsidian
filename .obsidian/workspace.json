@@ -32,9 +32,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5667edfa28e9a4a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数据结构与算法/数据结构算法.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "数据结构与算法/数据结构算法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "数据结构与算法/数据结构算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/Linux.md"
+                "file": "数据结构与算法/数据结构算法.md"
               }
             }
           },
@@ -172,11 +185,12 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "9177addf77c8beb2",
+  "active": "5667edfa28e9a4a5",
   "lastOpenFiles": [
+    "操作系统/Linux.md",
+    "数据结构与算法/数据结构算法.md",
     "编程语言/C语言.md",
     "PNG图片资源/Pasted image 20230413073453.png",
-    "操作系统/Linux.md",
     "PNG图片资源/Pasted image 20230407164656.png",
     "网络/计算机网络.md",
     "PNG图片资源/Pasted image 20230407191128.png",
