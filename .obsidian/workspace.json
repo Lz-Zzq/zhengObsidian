@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据结构与算法/数据结构算法.md",
+                "file": "编程语言/C语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构与算法/数据结构算法.md",
+                "file": "编程语言/C语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据结构与算法/数据结构算法.md",
+                "file": "编程语言/C语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据结构与算法/数据结构算法.md"
+                "file": "编程语言/C语言.md"
               }
             }
           },
@@ -187,8 +187,8 @@
   },
   "active": "5667edfa28e9a4a5",
   "lastOpenFiles": [
-    "操作系统/Linux.md",
     "数据结构与算法/数据结构算法.md",
+    "操作系统/Linux.md",
     "编程语言/C语言.md",
     "PNG图片资源/Pasted image 20230413073453.png",
     "PNG图片资源/Pasted image 20230407164656.png",
