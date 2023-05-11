@@ -118,7 +118,6 @@ SPRING = 0, SUMMER = 3, AUTUMN = 6, WINTER = 9
 int main(){
 	enum SEASON season;  //定义枚举  可以转换int类型
 	day = 5; 枚举类型可以直接转换为int类型
-
 }
 
 ```
