@@ -109,6 +109,18 @@ C语言内存布局图
 enum SEASON {  
 SPRING = 0, SUMMER = 3, AUTUMN = 6, WINTER = 9  
 } day; //day默认第一个值的元素 整数可以转换为枚举类型
+
+//enum SEASON {  
+// 默认值0 默认值1 值6 默认值7  
+// SPRING, SUMMER, AUTUMN = 6, WINTER  
+//} day;
+
+int main(){
+	enum SEASON season;  //定义枚举  可以转换int类型
+	day = 5; 枚举类型可以直接转换为int类型
+
+}
+
 ```
 
 ### 字符串指针与字符数组
