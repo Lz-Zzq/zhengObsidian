@@ -45,9 +45,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "dc36c0202ad3d13f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.8"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -90,6 +100,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bc3c57defbd3c12e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -185,7 +203,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "5667edfa28e9a4a5",
+  "active": "dc36c0202ad3d13f",
   "lastOpenFiles": [
     "操作系统/Linux.md",
     "编程语言/C语言.md",
