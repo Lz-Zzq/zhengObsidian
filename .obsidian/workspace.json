@@ -39,25 +39,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C语言.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
-          },
-          {
-            "id": "dc36c0202ad3d13f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.2.8"
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -131,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C语言.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C语言.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C语言.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -203,10 +193,10 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "dc36c0202ad3d13f",
+  "active": "5667edfa28e9a4a5",
   "lastOpenFiles": [
-    "操作系统/Linux.md",
     "编程语言/C语言.md",
+    "操作系统/Linux.md",
     "数据结构与算法/数据结构算法.md",
     "PNG图片资源/Pasted image 20230413073453.png",
     "PNG图片资源/Pasted image 20230407164656.png",
