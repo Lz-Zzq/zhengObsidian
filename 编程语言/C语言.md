@@ -140,3 +140,14 @@ int main(){
 ![[Pasted image 20230525173312.png|500]]
 
 ### 指针的指针
+```
+int var = 3000, *ptr ,**pptr; 
+
+ptr = &var; //ptr指向var地址  
+pptr = &ptr; //pptr指向ptr地址 pptr -> ptr -> varprintf("var的地址 = %p var = %d \n",&var,var);  
+printf("ptr的本身的地址 = %p ptr存放的地址 = %p *ptr=%d \n",&ptr,ptr,*ptr);  
+printf("pptr本身的地址 = %p pptr存放的地址 = %p **pptr = %d\n",&pptr,pptr,**pptr);
+
+ptr存放的是var的地址    pptr存放的是ptr的地址  *pptr存放的是
+
+```
