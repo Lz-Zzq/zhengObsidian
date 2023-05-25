@@ -148,6 +148,6 @@ pptr = &ptr; //pptr指向ptr地址 pptr -> ptr -> varprintf("var的地址 = %p v
 printf("ptr的本身的地址 = %p ptr存放的地址 = %p *ptr=%d \n",&ptr,ptr,*ptr);  
 printf("pptr本身的地址 = %p pptr存放的地址 = %p **pptr = %d\n",&pptr,pptr,**pptr);
 
-ptr存放的是var的地址    pptr存放的是ptr的地址  *pptr存放的是
+ptr存放的是var的地址    pptr存放的是ptr的地址  *pptr存放的是ptr指向的地址var的地址 **pptr 指向的是ptr指向的var的值
 
 ```
