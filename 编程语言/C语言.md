@@ -180,4 +180,11 @@ main(){
 - 用calloc函数可以为一维数组开辟动态存储空间,n为数组元素个数,每个元素长度为size.
 - 函数返回指向所分配域的起始位置的指针;分配不成功,返回NULL.
 - p = calloc(50,4); //开辟50\*4个字节临时空间,把起始地址分配给指针变量p
-3.
+4. 函数原型 void free (void \*p)
+- 作用--释放变量p所指向的动态空间,是这部分空间能重新被其他变量使用.
+- p是最近一次调用calloc或malloc函数时的函数返回值
+- free函数无返回值
+- free(p); //释放p所指向的已分配的动态空间
+-  函数原型 void \*realloc (void \*p,unsigned int size);
+5. 函数原型 void \*realloc (void \*p , unsigned int size)
+- 作用--重新分配malloc或calloc函数获得的动态空间大小,将p指向
