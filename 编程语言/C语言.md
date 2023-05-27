@@ -196,4 +196,4 @@ main(){
 - realloc(p,50); //将p所指向的已分配的动态空间 改为50字节
 ```
 ### 空指针
-- NULL指针是定义在标准库<stdio.h>中的值为零的cha
+- NULL指针是定义在标准库<stdio.h>中的值为零的常量 \#define NULL 0 案例
