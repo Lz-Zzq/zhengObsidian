@@ -159,3 +159,12 @@ ptr存放的是var的地址    pptr存放的是ptr的地址  *pptr存放的是pt
 - int (\*pMax)(int,int) = max;   //max是一个函数 此处是一个指针指向了函数地址
 - (pMax)(x,y) 获得函数地址,向函数中存放两个值 (\*pMax)(x,y)也可以
 ### 回调函数
+```
+int (*f)(void); //定义一个函数指针  返回int类型 接收void类型
+void fun1( int(*f)(void) ) //接收一个函数   函数指针指向传递过来的函数地址
+void 
+main(){
+   fun1();
+   return 0;
+}
+```
