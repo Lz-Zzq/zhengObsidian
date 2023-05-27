@@ -172,19 +172,29 @@ main(){
 ### 动态内存
 1. 头文件 \#include <stdlib.h>声明了四个关于内存动态分配的函数
 2. 函数原型 void * malloc (usigned int size) //memory allocation
+3. ```
+```
 - 作用 00 在内存的**动态存储区(堆)**中分配一个长度为size的连续空间.
 - 形参size的类型为无符号整形,函数返回值是所分配区域的第一个字节的地址,即此函数是一个指针类型函数,返回的指针指向该分配域的开头位置
 - malloc(100); 开辟100字节的临时空间,返回值为其第一个字节的地址
-3. 函数原型 void * calloc(unsigned n, unsigned size)
-- 作用--在内存的动态存储区中分配n个长度为size的连续空间,这个空间一般比较大,足以保存一个数组
+```
+```
+4. 函数原型 void * calloc(unsigned n, unsigned size)
+```
+```- 作用--在内存的动态存储区中分配n个长度为size的连续空间,这个空间一般比较大,足以保存一个数组
 - 用calloc函数可以为一维数组开辟动态存储空间,n为数组元素个数,每个元素长度为size.
 - 函数返回指向所分配域的起始位置的指针;分配不成功,返回NULL.
 - p = calloc(50,4); //开辟50\*4个字节临时空间,把起始地址分配给指针变量p
-4. 函数原型 void free (void \*p)
-- 作用--释放变量p所指向的动态空间,是这部分空间能重新被其他变量使用.
+`````
+1. 函数原型 void free (void \*p)
+``` 作用--释放变量p所指向的动态空间,是这部分空间能重新被其他变量使用.
 - p是最近一次调用calloc或malloc函数时的函数返回值
 - free函数无返回值
 - free(p); //释放p所指向的已分配的动态空间
 -  函数原型 void \*realloc (void \*p,unsigned int size);
-5. 函数原型 void \*realloc (void \*p , unsigned int size)
-- 作用--重新分配malloc或calloc函数获得的动态空间大小,将p指向
+```
+1. 函数原型 void \*realloc (void \*p , unsigned int size)
+```
+- 作用--重新分配malloc或calloc函数获得的动态空间大小,将p指向的动态空间大小改变为size,p的值不变,分配失败返回NULL
+- realloc(p,50); //将p所指向的已分配的动态空间 改为50字节
+```
