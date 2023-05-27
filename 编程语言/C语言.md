@@ -172,7 +172,7 @@ main(){
 ### 动态内存
 1. 头文件 \#include <stdlib.h>声明了四个关于内存动态分配的函数
 2. 函数原型 void * malloc (usigned int size) //memory allocation
-- 作用 00 在内存的动态存储区(堆)中分配一个长度为size的连续空间.
+- 作用 00 在内存的**动态存储区(堆)**中分配一个长度为size的连续空间.
 - 形参size的类型为无符号整形,函数返回值是所分配区域的第一个字节的地址,即此函数是一个指针类型函数,返回的指针指向该分配域的开头位置
 - malloc(100); 开辟100字节的临时空间,返回值为其第一个字节的地址
 3. 函数原型 void * calloc(unsigned n, unsigned size)
