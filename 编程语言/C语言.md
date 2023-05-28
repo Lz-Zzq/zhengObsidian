@@ -208,5 +208,5 @@ main(){
 union data { int n;  char ch;  short m;  };
 
 a.n = 0x40;  //16 进制   此时内存  00000000 00000000 00000000 01000000
-printf("%d, %c, %d\n", a.n, a.ch, a.m);  //输出
+printf("%d, %c, %d\n", a.n, a.ch, a.m);  //输出 转换为10进制 64   转换为符号@   转换为十进制64 (shor两个字节 看前两位)
 ```
