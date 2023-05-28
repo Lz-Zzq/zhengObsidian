@@ -202,3 +202,5 @@ main(){
 ### 结构体 strucat 
 - 类似Class
 - 结构体使用.  结构指针使用->
+### 共用体 union
+- union
