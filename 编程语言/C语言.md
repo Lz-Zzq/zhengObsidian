@@ -231,6 +231,12 @@ int printf(const char *format, ...) 函数把输出写入到标准输出流 stdo
 FILE *fp = NULL;  
 fp = fopen("F:\\CLC\\src\\chapter02\\abcd.txt", "a+");  
 //将内容写入到文件中  
+int fputc( int c, FILE *fp );
+说明：函数 fputc() 把参数 c 的字符值写入到 fp 所指向的输出流中。如果写入成功，它会返回写入的字符，
+如果发生错误，则会返回 EOF。您可以使用下面的函数来把一个以 null 结尾的字符串写入到流中：
+int fputs( const char *s, FILE *fp );
+说明：函数 fputs() 把字符串 s 写入到 fp 所指向的输出流中。如果写入成功，它会返回一个非负值，如果发生
+错误，则会返回 EOF。您也可以使用 int fprintf(FILE *fp,const char *format, ...) 函数来写把一个字符串写入到文件中
 fprintf(fp, "你好,北京");  
 // 字符串  
 fputs("你好,上海", fp);  
@@ -249,14 +255,16 @@ fscanf(fp, "%s", buff);
 printf("%s\n", buff);  
   
 // 读取整个文件  函数 fgets() 从 fp 所指向的输入流中读取 n - 1 个字符。它会把读取的字符串复制到缓冲区 buf，并在
-最后追加一个 null 字符来终止字符串。
+最后追加一个 null 字符来终止字符串。如果读取到 '\n' 或文件的末尾 EOF 因为只会返回字符 包括换行符
+也可以使用 int fscanf(FILE *fp, const char *format, ...) 函数来从文件中读取字符串，但是在遇到第一个空格字符
+时，它会停止读取
 while (fgets(buff, 1024, fp) != NULL) {  
 printf("%s", buff);  
 }  
 printf("\n");  
   
 //读取整个文件  
-int ch; //需要使用int类型,因为如果使用char类型可能会存在=EOF情况导致提前结束  
+int ch; //：fgetc() 函数从 fp 所指向的输入文件中读取一个字符。返回值是读取的字符，如果发生错误则返回 EOF。
 while ((ch = fgetc(fp)) != EOF) {  
 printf("%c", ch);  
 }  
