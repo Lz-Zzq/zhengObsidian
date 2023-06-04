@@ -225,3 +225,42 @@ int printf(const char *format, ...) 函数把输出写入到标准输出流 stdo
 
 ### 打开文件
 ![[Pasted image 20230604174947.png|500]]
+```
+//-----写入文件  
+//创建文件指针  
+FILE *fp = NULL;  
+fp = fopen("F:\\CLC\\src\\chapter02\\abcd.txt", "a+");  
+//将内容写入到文件中  
+fprintf(fp, "你好,北京");  
+// 字符串  
+fputs("你好,上海", fp);  
+fputc('A', fp);  
+// 关闭文件  
+fclose(fp);  
+  
+// -----读取文件  
+// 定义一个缓冲区  
+char buff[1024];  
+  
+//打开文件  
+fp = fopen("F:\\CLC\\src\\chapter02\\abcd.txt", "r+");  
+//读取 从fp所指向的文件读取一行到buff  
+fscanf(fp, "%s", buff);  
+printf("%s\n", buff);  
+  
+// 读取整个文件  函数 fgets() 从 fp 所指向的输入流中读取 n - 1 个字符。它会把读取的字符串复制到缓冲区 buf，并在
+最后追加一个 null 字符来终止字符串。
+while (fgets(buff, 1024, fp) != NULL) {  
+printf("%s", buff);  
+}  
+printf("\n");  
+  
+//读取整个文件  
+int ch; //需要使用int类型,因为如果使用char类型可能会存在=EOF情况导致提前结束  
+while ((ch = fgetc(fp)) != EOF) {  
+printf("%c", ch);  
+}  
+  
+fclose(fp);  
+return 0;
+```
