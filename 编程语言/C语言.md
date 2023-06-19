@@ -273,4 +273,4 @@ fclose(fp);
 return 0;
 ```
 ### 字符串 
-sizeof 运算符 返回占用空间的字节数  与strlen()返回的实际类型通常是unsigned /long  c99/11 为此类型返回
+sizeof 运算符 返回占用空间的字节数  (早期)与strlen()返回的实际类型通常是unsigned /long  c99/11 为此类型返回
