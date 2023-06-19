@@ -272,3 +272,5 @@ printf("%c", ch);
 fclose(fp);  
 return 0;
 ```
+### 字符串 
+sizeof 运算符
