@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C plus plus.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C plus plus.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C plus plus.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C plus plus.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -169,8 +169,8 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
-    "编程语言/C语言.md",
     "编程语言/C plus plus.md",
+    "编程语言/C语言.md",
     "数据结构与算法/算法.md",
     "数据结构与算法/数据结构.md",
     "操作系统/Linux.md",
