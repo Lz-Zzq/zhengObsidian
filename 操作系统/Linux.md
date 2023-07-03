@@ -38,16 +38,16 @@
 4.2
 具体的目录结构(不用背,知道即可)
 1) /bin [常用]
-(/usr/bin 、 /usr/local/bin)
-是 Binary 的缩写, 这个目录存放着最经常使用的命令
-2)
-/sbin
-(/usr/sbin 、 /usr/local/sbin)
-s 就是 Super User 的意思，这里存放的是系统管理员使用的系统管理程序。
+	(/usr/bin 、 /usr/local/bin)
+	是 Binary 的缩写, 这个目录存放着最经常使用的命令
+2) /sbin
+	(/usr/sbin 、 /usr/local/sbin)
+	s 就是 Super User 的意思，这里存放的是系统管理员使用的系统管理程序。
 3)
-/home [常用]
-存放普通用户的主目录
+	/home [常用]
+	存放普通用户的主目录
 ```
+![[Pasted image 20230703220424.png|500]]
 ### linux用户管理
 ```
 基本语法
