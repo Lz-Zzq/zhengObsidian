@@ -88,16 +88,20 @@ systemctl restart network
 ```
 ### linux运行级别
 ```
-0 关机
-1 单用户[找回丢失的密码]
-2 多用户状态没有网络服务
-3 多用户状态有网络服务
-4 系统未使用保留给用户
-5 图形界面
-6 系统重启
-init 切换不同的运行级别
-
-
-systemctl get-default 当前级别  
-
+级别
+	0 关机
+	1 单用户[找回丢失的密码]
+	2 多用户状态没有网络服务
+	3 多用户状态有网络服务
+	4 系统未使用保留给用户
+	5 图形界面
+	6 系统重启
+指令
+	init [0-6] 切换不同的运行级别
+CentOS7以前是存放在/etc/inittab文件中
+	multi-user.target: analogous to runlevel 3  [multi-user多用户]  
+	graphical.target: analogous to runlevel 5 
+设置/查看级别
+	systemctl get-default 当前级别  
+	systemctl set-default TARGET.target
 ```
