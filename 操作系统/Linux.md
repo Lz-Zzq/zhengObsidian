@@ -50,8 +50,13 @@
 ![[Pasted image 20230703220424.png|500]]
 ### linux用户管理
 ```
-基本语法
+设置用户名
 useradd  [name]
 默认地址  /home/name  指定目录 useradd -d address name
+设置密码
 passwd [name]
+查看当前用户
+whoami / who am i
+
+
 ```
