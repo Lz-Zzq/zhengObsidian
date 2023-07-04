@@ -40,7 +40,7 @@ DNS1="8.8.8.8"
 
 systemctl restart network
 ```
-### linux目录结构
+### 目录结构
 ```
 1)  linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的
 目录。
@@ -60,7 +60,7 @@ systemctl restart network
 	存放普通用户的主目录
 ```
 ![[Pasted image 20230703220424.png|500]]
-### linux用户管理
+### 用户管理
 ```
 设置用户名
 	useradd  [name]
@@ -86,7 +86,7 @@ systemctl restart network
 	组(group)的配置文件,记录Linux 包含的组的信息
 	每行含义: 组名:口令:组标识号:组内用户列表
 ```
-### linux运行级别
+### 运行级别
 ```
 级别
 	0 关机
@@ -105,3 +105,4 @@ CentOS7以前是存放在/etc/inittab文件中
 	systemctl get-default 当前级别  
 	systemctl set-default TARGET.target   [multi-user] and [graphical] ...
 ```
+### 找回密码
