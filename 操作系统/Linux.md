@@ -129,6 +129,8 @@ help
 ```
 	pwd    绝对路径    
 	mkdir -p[多级目录] 创建目录
-	rmdir 
+	rmdir [] 要删除的空目录
+	touch 创建文件
+	cp [] source  拷贝
 ```
 #### 4.5时间日期
