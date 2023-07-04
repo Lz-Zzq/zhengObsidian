@@ -103,5 +103,5 @@ CentOS7以前是存放在/etc/inittab文件中
 	graphical.target: analogous to runlevel 5 
 设置/查看级别
 	systemctl get-default 当前级别  
-	systemctl set-default TARGET.target
+	systemctl set-default TARGET.target   [multi-user] and [graphical] ...
 ```
