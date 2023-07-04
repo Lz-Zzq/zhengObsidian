@@ -131,6 +131,8 @@ help
 	mkdir [ -p 多级目录] 创建目录
 	rmdir  要删除的空目录
 	touch 创建文件
-	cp [ -r 整个文件夹] source dest  拷贝   
+	cp [ -r 整个文件夹] source dest  拷贝  \cp 强制覆盖
+	rm [-r递归删除文件夹  -f强制删除不提示]  要删除的文件或者目录
+	
 ```
 #### 4.5时间日期
