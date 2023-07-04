@@ -86,7 +86,8 @@ systemctl restart network
 	组(group)的配置文件,记录Linux 包含的组的信息
 	每行含义: 组名:口令:组标识号:组内用户列表
 ```
-### 运行级别
+### 实用指令
+#### 运行级别
 ```
 级别
 	0 关机
@@ -105,7 +106,7 @@ CentOS7以前是存放在/etc/inittab文件中
 	systemctl get-default 当前级别  
 	systemctl set-default TARGET.target   [multi-user] and [graphical] ...
 ```
-### 找回密码
+#### 找回密码
 ```
 重启 进入选择系统界面输入E
 光标下移 找到linux_16这一行的最后  输入 init=/bin/sh   
@@ -117,12 +118,11 @@ CentOS7以前是存放在/etc/inittab文件中
 输入 touch / .autorelabel
 输入 exec /sbin/init
 ```
-### 帮助指令
+#### 帮助指令
 ```
 man 获得帮助信息
 	man [命令或者配置文件]   man ls
 help
 	help 命令
-
-
 ```
+#### 
