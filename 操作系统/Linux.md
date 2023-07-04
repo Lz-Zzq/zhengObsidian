@@ -57,6 +57,8 @@ useradd  [name]
 passwd [name]
 查看当前用户
 whoami / who am i
-
+用户组   类似角色,系统可以对有共性用户进行统一管理
+新增组
+groupdel [n]
 
 ```
