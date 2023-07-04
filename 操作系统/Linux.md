@@ -1,4 +1,4 @@
-### 网络的三种模式
+### 1. 网络的三种模式
 - 1  桥接网络模式
 	桥接网络是指本地物理网卡和虚拟网卡通过VMnet0虚拟交换机进行桥接，物理网卡和虚拟网卡在拓扑图上处于同等地位(虚拟网卡既不是Adepter VMnet1也不是Adepter VMnet8)。
 	这里的VMnet0相当于一个交换机，最终通过这个虚拟交换机使其两端在一个网段中。
@@ -40,7 +40,7 @@ DNS1="8.8.8.8"
 
 systemctl restart network
 ```
-### 目录结构
+### 2. 目录结构
 ```
 1)  linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的
 目录。
@@ -60,7 +60,7 @@ systemctl restart network
 	存放普通用户的主目录
 ```
 ![[Pasted image 20230703220424.png|500]]
-### 用户管理
+### 3. 用户管理
 ```
 设置用户名
 	useradd  [name]
@@ -86,8 +86,8 @@ systemctl restart network
 	组(group)的配置文件,记录Linux 包含的组的信息
 	每行含义: 组名:口令:组标识号:组内用户列表
 ```
-### 实用指令
-#### 运行级别
+### 4. 实用指令
+#### 4.1 运行级别
 ```
 级别
 	0 关机
@@ -106,7 +106,7 @@ CentOS7以前是存放在/etc/inittab文件中
 	systemctl get-default 当前级别  
 	systemctl set-default TARGET.target   [multi-user] and [graphical] ...
 ```
-#### 找回密码
+#### 4.2 找回密码
 ```
 重启 进入选择系统界面输入E
 光标下移 找到linux_16这一行的最后  输入 init=/bin/sh   
@@ -118,11 +118,12 @@ CentOS7以前是存放在/etc/inittab文件中
 输入 touch / .autorelabel
 输入 exec /sbin/init
 ```
-#### 帮助指令
+#### 4.3 帮助指令
 ```
 man 获得帮助信息
 	man [命令或者配置文件]   man ls
 help
 	help 命令
 ```
-#### 
+#### 4.4 文件目录
+#### 4.5时间日期
