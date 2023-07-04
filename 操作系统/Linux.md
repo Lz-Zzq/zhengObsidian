@@ -95,4 +95,5 @@ systemctl restart network
 4 系统未使用保留给用户
 5 图形界面
 6 系统重启
+init 切换不同的运行级别
 ```
