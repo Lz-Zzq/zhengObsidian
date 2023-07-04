@@ -108,5 +108,11 @@ CentOS7以前是存放在/etc/inittab文件中
 ### 找回密码
 ```
 重启 进入选择系统界面输入E
-光标下移 找到linux_16这一行的最后  输入 init=/bin/sh
+光标下移 找到linux_16这一行的最后  输入 init=/bin/sh   
+随后Ctrl+x进入单用户模式
+输入: mount -o remount,rw /
+输入: passwd
+12345
+12345
+输入 touch / .autorelabel
 ```
