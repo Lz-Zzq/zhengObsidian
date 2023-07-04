@@ -74,5 +74,7 @@ systemctl restart network
 	groupdel [name]
 	useradd -g [用户组][name]  添加用户直接添加到组中
 删除组
+	groupdel [name]
+
 
 ```
