@@ -120,7 +120,9 @@ CentOS7以前是存放在/etc/inittab文件中
 ### 帮助指令
 ```
 man 获得帮助信息
-:: man [命令或者配置文件]   man ls
+	man [命令或者配置文件]   man ls
+help
+	help 命令
 
 
 ```
