@@ -106,3 +106,7 @@ CentOS7以前是存放在/etc/inittab文件中
 	systemctl set-default TARGET.target   [multi-user] and [graphical] ...
 ```
 ### 找回密码
+```
+重启 进入选择系统界面输入E
+光标下移 找到linux_16这一行的最后  输入 init=/bin/sh
+```
