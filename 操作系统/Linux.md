@@ -96,4 +96,8 @@ systemctl restart network
 5 图形界面
 6 系统重启
 init 切换不同的运行级别
+
+
+systemctl get-default 当前级别  
+
 ```
