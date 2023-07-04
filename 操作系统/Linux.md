@@ -27,7 +27,19 @@
 	Host-Only的宗旨就是建立一个与外界隔绝的内部网络，来提高内网的安全性。这个功能或许对普通用户来说没有多大意义，但大型服务商会常常利用这个功能。如果你想为VMnet1网段提供路由功能，那就需要使用RRAS，而不能使用XP或2000的ICS，因为ICS会把内网的IP地址改为 192.168.0.1，但虚拟机是不会给VMnet1虚拟网卡分配这个地址的，那么主机和虚拟机之间就不能通信了。
 	在Host-only模式下，相当于虚拟机通过双绞线和宿主计算机直连，而宿主计算机不提供任何路由服务。因此在Host-only模式下，虚拟机可以和宿主计算机互相访问，但是虚拟机无法访问外部网络。
 	当我们要组成一个与物理网络相隔离的虚拟网络时，无疑非常适合使用Host-only模式。
+```
+设置网络  vim /etc/sysconfig/network-scripts/ifcfg-ens33  
+TYPE="Ethernet"
+BOOTPROTO="static"
+DEVICE="ens33"
+ONBOOT="yes"
+IPADDR="192.168.xxx.xxx"
+NETMASK="255.255.255.0"
+GATEWAY="192.168.0.1"
+DNS1="8.8.8.8"
 
+systemctl restart network
+```
 ### linux目录结构
 ```
 1)  linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的
@@ -59,6 +71,7 @@ passwd [name]
 whoami / who am i
 用户组   类似角色,系统可以对有共性用户进行统一管理
 新增组
-groupdel [n]
+groupdel [name]
+useradd -g [用户组][name]  添加用户直接添加到组中
 
 ```
