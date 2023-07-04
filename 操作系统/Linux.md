@@ -115,4 +115,6 @@ CentOS7以前是存放在/etc/inittab文件中
 12345
 12345
 输入 touch / .autorelabel
+输入 exec /sbin/init
+
 ```
