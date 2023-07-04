@@ -63,15 +63,16 @@ systemctl restart network
 ### linux用户管理
 ```
 设置用户名
-useradd  [name]
+	useradd  [name]
 默认地址  /home/name  指定目录 useradd -d address name
 设置密码
-passwd [name]
+	passwd [name]
 查看当前用户
-whoami / who am i
+	whoami / who am i
 用户组   类似角色,系统可以对有共性用户进行统一管理
 新增组
-groupdel [name]
-useradd -g [用户组][name]  添加用户直接添加到组中
+	groupdel [name]
+	useradd -g [用户组][name]  添加用户直接添加到组中
+删除组
 
 ```
