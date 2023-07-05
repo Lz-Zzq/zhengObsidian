@@ -153,6 +153,9 @@ help
 	**history [10]  查看历史命令
 	**date 时间日期
 		date  显示当前时间
-		
+		date +%Y 年份
+		date +%m 月份
+		date +%d 天
+		date "+%Y-%m-%d %H:%M:%S"  年月日时分秒
 ```
 #### 4.5时间日期
