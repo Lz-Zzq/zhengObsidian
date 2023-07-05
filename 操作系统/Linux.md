@@ -139,6 +139,7 @@ help
 		空白键 代表翻页   enter翻页一行  q离开more名且不显示 ctrl F 向下滚动一屏 ctrl B 返回上一屏  = 输出当前行号  :f输出文件名和当前行的行号
 	less 用来分屏查看文件内容 对于more有更高的效率 一次不是加载所有内容
 		pagedown下一页   pageup上一页   /字串 搜索 n下查找N上查找  ?字串  n上查找 N下查找  q exit
+	echo 指令  输入nei'r
 	
 ```
 #### 4.5时间日期
