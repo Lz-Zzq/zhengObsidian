@@ -8,7 +8,10 @@
 ** :: 域运算符    
 	使用::域运算符可以指定局部变量还是全局变量
 ** wchar_t 宽字符类型 具体占用几个字节要看系统实现
-** 
+** 强制转换
+	C语言风格             cout << " avg = " << (double) total / num << endl;
+	C++函数风格        cout << " avg = " << double (total) / num << endl;
+	C++强转运算符     cout << " avg = " << static_cast<double>(total) / num << endl;
 
 ```
 ### 位运算
