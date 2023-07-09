@@ -39,4 +39,6 @@
 	cin 配合 >> 重载输入操作符 输入一个单词  跳过第一个空白符 读取到下一个空白符  剩下的字符会保存到"输入队列"
 	getline(cin,string)  string引入    读取一行
 	get  n=cin.get(); 捕获的字符返回   或者cin.get(n) 直接传递到n
+** 读写文件
+	ifstream  IO库中提供了专门用于文件输入的ifstream类与文件输出ofstream
 ```
