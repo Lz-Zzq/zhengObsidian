@@ -41,4 +41,6 @@
 	get  n=cin.get(); 捕获的字符返回   或者cin.get(n) 直接传递到n
 ** 读写文件
 	ifstream <fstream>  IO库中提供了专门用于文件输入的ifstream类与文件输出ofstream  
+	ifstream input("input.txt");  //读取  ofstream output("output.txt");//写入
+	input >> word  单词读取  output << word  单词写入   getline(input,line)
 ```
