@@ -161,6 +161,7 @@ help
 	**find 指令
 		find [-name 按照名称 user用户名 size文件大小 搜索范围] find指令将从指定目录向下递归遍历各个子目录,将满足条件的文件在终端显示
 	**locate
-		locate 搜索文件  可以快速定位文件路径
+		locate 搜索文件  可以快速定位文件路径  使用之前需要执行updatedb指令
+	**which 
 ```
 #### 4.5时间日期
