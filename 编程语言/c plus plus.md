@@ -35,7 +35,8 @@
 **string
 	字符串数据类型string,能够表示长度可变的字符序列
 	使用+号可以拼接字符串,这是算书院算符+的运算符重载 但是不可以两个字面值常量相加,因为字面值常量是char数组
-** cin getline
-	cin 配合 >> 重载输入操作符 输入一个单词  跳过第一个\0 读取到下一个\0
-	getline()  string引入    读取一行
+** cin getline get
+	cin 配合 >> 重载输入操作符 输入一个单词  跳过第一个空白符 读取到下一个空白符  剩下的字符会保存到"输入队列"
+	getline(cin,string)  string引入    读取一行
+	get  n=cin.get(); 捕获的字符返回   或者cin.get(n) 直接传递到n
 ```
