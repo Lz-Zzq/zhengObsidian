@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "数据结构与算法/算法.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -74,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "数据结构与算法/算法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "数据结构与算法/算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/Linux.md"
+                "file": "数据结构与算法/算法.md"
               }
             }
           },
@@ -168,15 +167,15 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "0d6e828b01107a1a",
+  "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "数据结构与算法/数据结构.md",
+    "操作系统/Linux.md",
     "编程语言/C plus plus.md",
     "编程语言/C语言.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "操作系统/Linux.md",
     "PNG图片资源/Pasted image 20230703220424.png",
     "数据结构与算法/算法.md",
-    "数据结构与算法/数据结构.md",
     "数据结构与算法/数据结构算法.md",
     "操作系统/数字逻辑电路.md",
     "PNG图片资源/Pasted image 20230604174947.png",
