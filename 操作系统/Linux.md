@@ -171,5 +171,8 @@ help
 		gunzip file.gz 解压缩文件
 	**zip/unzip 压缩/解压
 		zip [-r 递归压缩 ] file.zip 
-		unzip [-d 指定压缩后存放的目录] 
+		unzip [-d 指定压缩后存放的目录]
+	**tar指令 打包指令,最后打包后的文件是.tar.gz文件
+		tar [-c 产生.tar打包文件 -v显示详细信息 -f指定ya'suo'w] xxx.tar.gz 打包的内容  
+	 
 ```
