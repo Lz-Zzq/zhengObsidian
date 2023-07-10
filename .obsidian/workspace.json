@@ -74,7 +74,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -167,7 +168,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "ca4ce07fa812851a",
+  "active": "0d6e828b01107a1a",
   "lastOpenFiles": [
     "编程语言/C plus plus.md",
     "编程语言/C语言.md",
