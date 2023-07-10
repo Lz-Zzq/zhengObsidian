@@ -170,5 +170,6 @@ help
 		gzip file  压缩为.gz文件
 		gunzip file.gz 解压缩文件
 	**zip/unzip 压缩/解压
-		zip [-r 递归压缩 ] file.zip  
+		zip [-r 递归压缩 ] file.zip 
+		unzip [-d 指定压缩后存放的目录] 
 ```
