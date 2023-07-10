@@ -166,5 +166,7 @@ help
 		可以查看指令存在的目录
 	**grep指令 管道符号 |
 		grep [选项 -n显示行号  -i忽略大小写] 查找内容 源文件      grep过滤查找 管道符| 表示将一个命令处理结果交给后面指令处理
-	    
+	**gzip/gunzip 压缩/解压
+		gzip file  压缩为.gz文件
+		gunzip file.gz 解压缩文件 
 ```
