@@ -70,10 +70,14 @@ cout << "arrp在内存中的长度为: " << sizeof(arrp) << endl;
 //本质是一个指针
 cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
 cout << *arrp[0] << endl;
+
 //arr本质上是一个int *类型的数组  但是arrp2 是 int* 5指向数组类型的对象
 //这里arr 代表的是第一个元素的地址  &arr代表数组的地址  虽然地址一样,但是含义不一样
 arrp2 = &arr;
-cout << *arrp2 << endl;
-
+//存储的是整个数组 也就是数组第一个值的地址
+cout << *arrp2 << endl; 
+cout << arr << " + " << &arr << endl;
+//加上括号 否则会直接两次解析成值而非地址则不能向后位移4位
+cout << *(*arrp2 + 1) << endl;
 
 ```
