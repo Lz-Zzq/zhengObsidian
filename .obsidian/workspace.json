@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/CPP.md",
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/CPP.md",
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/CPP.md",
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/CPP.md"
+                "file": "操作系统/进制转换_原码_反码_补码_位运算.md"
               }
             }
           },
@@ -169,8 +169,8 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
-    "Pasted image 20230720163805.png",
     "编程语言/CPP.md",
+    "Pasted image 20230720163805.png",
     "Pasted image 20230720163435.png",
     "Pasted image 20230720163216.png",
     "数据结构与算法/算法.md",
