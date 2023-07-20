@@ -44,3 +44,7 @@
 	ifstream input("input.txt");  //读取  ofstream output("output.txt");//写入
 	示例:  input >> word  单词读取  output << word  单词写入   getline(input,line)    output << line;   
 ```
+### 结构体
+```
+
+```
