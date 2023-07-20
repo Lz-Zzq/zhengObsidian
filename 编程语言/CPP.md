@@ -60,4 +60,19 @@
 函数指针 指向函数的指针
 //指向常量的指针常量
 const int* const ccp = &i2;
+
+//指针与数组
+int arr[] = { 1,2,3,4,5 };
+//指针数组和数组指针
+int* arrp[5] = {&i,&b,&a,arr}; //指针数组  
+int(* arrp2)[5]; //指向数组的指针 
+cout << "arrp在内存中的长度为: " << sizeof(arrp) << endl;
+//本质是一个指针
+cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
+cout << *arrp[0] << endl;
+//arr本质上是一个int *类型的数组  但是arrp2 是 int* 5指向数组类型的对象
+arrp2 = &arr;
+cout << *arrp2 << endl;
+
+
 ```
