@@ -44,10 +44,6 @@
 	ifstream input("input.txt");  //读取  ofstream output("output.txt");//写入
 	示例:  input >> word  单词读取  output << word  单词写入   getline(input,line)    output << line;   
 ```
-### 结构体
-```
-
-```
 ### 指针
 - 计算机内存分布是高位存储数据,低位补零
 ![[Pasted image 20230720163216.png|500]]
@@ -79,5 +75,9 @@ cout << *arrp2 << endl; 
 cout << arr << " + " << &arr << endl;
 //加上括号 否则会直接两次解析成值而非地址则不能向后位移4位
 cout << *(*arrp2 + 1) << endl;
+
+```
+### 引用
+```
 
 ```
