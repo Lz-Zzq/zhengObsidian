@@ -94,4 +94,11 @@ ref = b; // ref没有绑定b，而是把b的值赋给了ref绑定的a
 //常量引用可以字面初始化,与变量几乎相同,但是不能修改值
 const int& a = 10;
 
+ptr是一个指针 ptrf是一个指针引用
+int*& ptrf = ptr;
+不允许使用一个指向引用的指针 int&* xxx;
+应该这样  此时 ptr就是指向了i
+int &ref = i;
+int * ptr = &ref;
+
 ```
