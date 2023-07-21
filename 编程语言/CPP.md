@@ -79,5 +79,14 @@ cout << *(*arrp2 + 1) << endl;
 ```
 ### 引用
 ```
-
+	引用本身就是一个别名 
+int a = 10;
+int& ref = a; // ref是a的引用
+//int& ref2; // 错误，引用必须初始化
+cout << "ref = " << ref << endl; // ref等于a的值
+cout << "a的地址为：" << &a << endl;
+cout << "ref 的地址为：" << &ref << endl; // ref 和 a 的地址完全一样
+ref = 20; // 更改ref相当于更改a
+int b = 26;
+ref = b; // ref没有绑定b，而是把b的值赋给了ref绑定的a
 ```
