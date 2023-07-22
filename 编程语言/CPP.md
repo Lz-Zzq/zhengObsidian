@@ -79,7 +79,7 @@ cout << *(*arrp2 + 1) << endl;
 ```
 ### 引用
 ```
-	引用本身就是一个别名 
+	引用本质就是一个别名 
 int a = 10;
 int& ref = a; // ref是a的引用
 //int& ref2; // 错误，引用必须初始化
@@ -93,10 +93,10 @@ ref = b; // ref没有绑定b，而是把b的值赋给了ref绑定的a
 	常量引用
 //常量引用可以字面初始化,与变量几乎相同,但是不能修改值
 const int& a = 10;
-
+	指针与引用
 ptr是一个指针 ptrf是一个指针引用
 int*& ptrf = ptr;
-不允许使用一个指向引用的指针 int&* xxx;
+不允许使用一个指向引用的指针 int&* ptr;
 应该这样  此时 ptr就是指向了i
 int &ref = i;
 int * ptr = &ref;
