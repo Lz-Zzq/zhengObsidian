@@ -100,6 +100,7 @@ int*& ptrf = ptr;
 应该这样  此时 ptr就是指向了i
 int &ref = i;
 int * ptr = &ref;
+	引用在作为函数参数时,
 
 ```
 ### 函数
