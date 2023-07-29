@@ -62,7 +62,7 @@ int arr[] = { 1,2,3,4,5 };
 //指针数组和数组指针
 int* arrp[5] = {&i,&b,&a,arr}; //指针数组  
 数组指针,指向了数组的地址 int(*ap)[5] = &arr;
-
+数组指针 int* array = new int[x + 1];
 cout << "arrp在内存中的长度为: " << sizeof(arrp) << endl;
 //本质是一个指针
 cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
