@@ -113,10 +113,11 @@ int * ptr = &ref;
 2. 返回数组指针的定义: int ( * fun(int x) )[5]  
 3. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
 4. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
-7.返回类型是 数组指针 
+7. 返回类型是 数组指针 
 	auto fun3(int x) -> int(*)[5] {}
 	int(*fun(int x))[5] {}
 	arrayT* fun(int x) {}   //typedef int arrayT[5];
-
+8. 数组指针,指向了数组的地址 int(*ap)[5] = &arr;
+9. 
 
 ```
