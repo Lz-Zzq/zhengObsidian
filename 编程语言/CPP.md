@@ -111,4 +111,5 @@ int * ptr = &ref;
 3. 当一个函数被调用时候,调用的地方会创建一个临时变量拷贝返回值,但是如果在返回值类型后添加&,则返回引用  (sting &)
 4. 返回数组指针的定义: int ( * fun(int x) )[5]  
 5. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
+6. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
 ```
