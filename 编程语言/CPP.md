@@ -82,7 +82,7 @@ cout << *(*arrp2 + 1) << endl;
 	引用本质就是一个别名 
 int a = 10;
 int& ref = a; // ref是a的引用
-//int& ref2; // 错误，引用必须初始化
+int& ref2; // 错误，引用必须初始化
 cout << "ref = " << ref << endl; // ref等于a的值
 cout << "a的地址为：" << &a << endl;
 cout << "ref 的地址为：" << &ref << endl; // ref 和 a 的地址完全一样
@@ -91,7 +91,7 @@ int b = 26;
 ref = b; // ref没有绑定b，而是把b的值赋给了ref绑定的a
 相当于修改了a的值 但是没有修改地址
 	常量引用
-//常量引用可以字面初始化,与变量几乎相同,但是不能修改值
+常量引用可以字面初始化,与变量几乎相同,但是不能修改值
 const int& a = 10;
 	指针与引用
 ptr是一个指针 ptrf是一个指针引用
@@ -107,14 +107,16 @@ int * ptr = &ref;
 ### 函数
 ```
 1. 函数的返回值不能是数组和函数
-2. 引用数组作为函数参数:  int(&arr)[6]  注: 范围for循环无法循环不知道指定长度的数组
-3. 当一个函数被调用时候,调用的地方会创建一个临时变量拷贝返回值,但是如果在返回值类型后添加&,则返回引用  (sting &)
-4. 返回数组指针的定义: int ( * fun(int x) )[5]  
-5. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
-6. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
-7.返回类型是 数组指针
+2. 引用数组作为函数参数: 
+	int(&arr)[6]  注: 范围for循环无法循环不知道指定长度的数组
+1. 当一个函数被调用时候,调用的地方会创建一个临时变量拷贝返回值,但是如果在返回值类型后添加&,则返回引用  (sting &)
+2. 返回数组指针的定义: int ( * fun(int x) )[5]  
+3. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
+4. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
+7.返回类型是 数组指针 
 	auto fun3(int x) -> int(*)[5] {}
 	int(*fun(int x))[5] {}
-	arrayT* fun(int x) {}
-	
+	arrayT* fun(int x) {}   //typedef int arrayT[5];
+
+
 ```
