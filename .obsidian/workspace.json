@@ -11,14 +11,12 @@
             "id": "ca4ce07fa812851a",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "未命名 1.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "操作系统/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -96,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名 1.canvas",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名 1.canvas",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名 1.canvas"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -171,14 +169,14 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "编程语言/CPP.md",
+    "编程语言/C.md",
+    "未命名 1.canvas",
     "未命名.canvas",
     "操作系统/Linux.md",
-    "编程语言/CPP.md",
     "未命名 2.canvas",
-    "未命名 1.canvas",
     "Git/Git的基本使用.md",
     "数据结构与算法/算法数据结构.md",
-    "编程语言/C.md",
     "数据结构与算法/数据结构.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "PNG图片资源/Pasted image 20230720163805.png",
