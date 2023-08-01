@@ -220,7 +220,7 @@ help
 	chown newowner 文件/目录 改变所有者
 	chown newowner:newgroup 文件/目录 改变所有者和所在组
 	-R 如果是目录 则使其下所有子文件或目录递归生效
-**修改文件所在组
+**  修改文件所在组
 	chgrp newgroup 文件/目录 [改变所在组]
 
 ```

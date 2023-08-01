@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -74,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git/Git的基本使用.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git的基本使用.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -170,9 +169,13 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
-    "操作系统/Linux.md",
-    "数据结构与算法/算法数据结构.md",
     "编程语言/CPP.md",
+    "操作系统/Linux.md",
+    "未命名 2.canvas",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "Git/Git的基本使用.md",
+    "数据结构与算法/算法数据结构.md",
     "编程语言/C.md",
     "数据结构与算法/数据结构.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
@@ -195,14 +198,12 @@
     "中间件_框架/docker.md",
     "中间件_框架/Nginx.md",
     "中间件_框架",
-    "Git/Git的基本使用.md",
     "Git",
     "数据库",
     "数据结构与算法",
     "netty",
     "网络",
     "操作系统",
-    "未命名.canvas",
     "2023-03-12.md",
     "未命名.md",
     "Excalidraw/Drawing 2023-03-12 10.32.17.excalidraw.md"
