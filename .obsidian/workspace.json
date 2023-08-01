@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "Git/Git的基本使用.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -74,7 +74,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "Git/Git的基本使用.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "Git/Git的基本使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/Linux.md"
+                "file": "Git/Git的基本使用.md"
               }
             }
           },
@@ -169,8 +170,8 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
-    "数据结构与算法/算法数据结构.md",
     "操作系统/Linux.md",
+    "数据结构与算法/算法数据结构.md",
     "编程语言/CPP.md",
     "编程语言/C.md",
     "数据结构与算法/数据结构.md",

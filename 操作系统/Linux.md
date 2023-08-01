@@ -201,6 +201,7 @@ help
 	3.第4-6位确定所属组(**同用户组的**)拥有该文件的权限 --Group
 		r  可读
 		w 可写
+		x 可执行
 	4.第7-9位确定其他用户拥有该文件的权限 --Ohter
 		同上
 	5.后面的数字1 
@@ -215,4 +216,11 @@ help
 	chmod u=rwx,g=rx,o=x 文件/目录名
 	chmod o+w 文件/目录名
 	chmod a-x 文件
+** 修改文件所有者
+	chown newowner 文件/目录 改变所有者
+	chown newowner:newgroup 文件/目录 改变所有者和所在组
+	-R 如果是目录 则使其下所有子文件或目录递归生效
+**修改文件所在组
+	chgrp newgroup 文件/目录 [改变所在组]
+
 ```
