@@ -125,4 +125,6 @@ int * ptr = &ref;
 ```
 inline 内联函数
 	提高函数调用效率 编译器不做常规调用,直接在调用点进行内联展开
+默认参数
+	string stuInfo(string name = "未指定", int age = 18, double score = 60)  定义的实参后面必须也得定义
 ```
