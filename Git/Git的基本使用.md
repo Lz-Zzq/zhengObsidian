@@ -30,3 +30,8 @@
 ```
 -- git push -u origin master
 ```
+
+7.远程推送
+```
+git push origin(远程名称) main(分支名称) 
+```
