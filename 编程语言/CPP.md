@@ -56,8 +56,8 @@
 指向常量的指针 const int *p; 指向一个常量
 指针函数 返回指针的函数  return p; 返回指针
 函数指针 指向函数的指针 p = method(); 函数的指针
-//指向常量的指针常量
-const int* const ccp = &i2;
+//指向常量的指针常量   可以指向变量与常量
+const int* const ccp = &i2;  
 
 //指针与数组
 int arr[] = { 1,2,3,4,5 };
