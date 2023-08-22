@@ -59,6 +59,14 @@
 //指向常量的指针常量   可以指向变量与常量
 const int* const ccp = &i2;  常量 常量指针
 
+
+//引用常量  引用本身是常量类型 指向变量 不能指向常量
+	int& const f = b;
+//常量引用  引用指向常量类型的数据
+ //const int& f1 = b;
+ const int& f1 = c;
+ const int& const fff 与 const int & f 等价 
+
 //指针与数组
 int arr[] = { 1,2,3,4,5 };
 //指针数组和数组指针
