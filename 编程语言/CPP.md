@@ -50,42 +50,43 @@
 - 64位系统每一个指针保存的64位的 分配8字节
 ![[Pasted image 20230720163435.png | 300]]
 ```
-//指针常量 
+**指针常量 
 指针也可以分为常量类型变量类型,指针常量就是 这个指针是常量类型 int* const p; 指向的地址无法改变
-//常量指针
+**常量指针
 指向常量的指针 const int *p; 指向一个常量
-指针函数 返回指针的函数  return p; 返回指针
-函数指针 指向函数的指针 p = method(); 函数的指针
+**指针函数 返回指针的函数  return p; 返回指针
+**函数指针 指向函数的指针 p = method(); 函数的指针
+
 //指向常量的指针常量   可以指向变量与常量
-const int* const ccp = &i2;  常量 常量指针
+	const int* const ccp = &i2;  常量 常量指针
 
 
-//引用常量  引用本身是常量类型 指向变量 不能指向常量
+**引用常量  引用本身是常量类型 指向变量 不能指向常量
 	int& const f = b;
-//常量引用  引用指向常量类型的数据
- //const int& f1 = b;
- const int& f1 = c;
- const int& const fff 与 const int & f 等价 
+**常量引用  引用指向常量类型的数据
+	 //const int& f1 = b;
+	 const int& f1 = c;
+	 const int& const fff 与 const int & f 等价 
 
-//指针与数组
-int arr[] = { 1,2,3,4,5 };
-//指针数组和数组指针
-int* arrp[5] = {&i,&b,&a,arr}; //指针数组  
-数组指针,指向了数组的地址 int(*ap)[5] = &arr;
-数组指针 int* array = new int[x + 1];  指向了数组第一个元素的指针
-cout << "arrp在内存中的长度为: " << sizeof(arrp) << endl;
-//本质是一个指针
-cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
-cout << *arrp[0] << endl;
+**指针与数组
+	int arr[] = { 1,2,3,4,5 };
+**指针数组和数组指针
+	int* arrp[5] = {&i,&b,&a,arr}; //指针数组  
+**数组指针,指向了数组的地址 int(*ap)[5] = &arr;
+**数组指针 int* array = new int[x + 1];  指向了数组第一个元素的指针
+	cout << "arrp在内存中的长度为: " << sizeof(arrp) << endl;
+	//本质是一个指针
+	cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
+	cout << *arrp[0] << endl;
 
 //arr本质上是一个int *类型的数组  但是arrp2 是 int* 5指向数组类型的对象
 //这里arr 代表的是第一个元素的地址  &arr代表数组的地址  虽然地址一样,但是含义不一样
-arrp2 = &arr;
+	arrp2 = &arr;
 //存储的是整个数组 解析数组地址后得到数组元素第一个的地址
-cout << *arrp2 << endl; 
-cout << arr << " + " << &arr << endl;
+	cout << *arrp2 << endl; 
+	cout << arr << " + " << &arr << endl;
 //加上括号 否则会直接两次解析成值而非地址则不能向后位移4位
-cout << *(*arrp2 + 1) << endl;
+	cout << *(*arrp2 + 1) << endl;
 
 ```
 ### 引用
@@ -138,9 +139,10 @@ inline 内联函数
 默认参数
 	string stuInfo(string name = "未指定", int age = 18, double score = 60)  定义的实参后面必须也得定义
 ```
-### 参数匹配
+#### 参数匹配
 ```
-候选函数: 函数调用第一步就是确定候选函数u
+候选函数: 函数调用第一步就是确定候选函数
 可行函数:  函数调用时,优先调用匹配度最高的重载函数, 函数参数个数,是否需要类型转换等
-二义性调用:
+多参数: 逐渐比较每个参数
+二义性调用: 检查函数,优先级相同,无法调用
 ```
