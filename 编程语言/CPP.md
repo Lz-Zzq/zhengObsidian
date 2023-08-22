@@ -81,7 +81,7 @@
 	cout << "arrp2在内存中的长度为: " << sizeof(arrp2) << endl;
 	cout << *arrp[0] << endl;
 	
-	arr本质上是一个int *类型的数组  //但是arrp2 是 int* 5指向数组类型的对象
+	arr本质上是一个int *类型的数组  //但是ap 是 int* 5指向数组类型的对象
 	这里arr 代表的是第一个元素的地址  &arr代表数组的地址  虽然地址一样,但是含义不一样
 	arrp2 = &arr;   存储的是整个数组 解析数组地址(*arrp2)后得到数组元素第一个的地址
 	cout << *arrp2 << endl; 
