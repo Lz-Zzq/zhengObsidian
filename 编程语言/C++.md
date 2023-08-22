@@ -57,8 +57,9 @@
 **指针函数 
 	返回指针的函数  return p; 返回指针
 **函数指针
-	string (* fp) (string,int,double) 一个函数指针
-
+	string method
+	string (* fp) (string,int,double) = nullptr;  //一个函数指针
+	fp = &method();
 //指向常量的指针常量   可以指向变量与常量
 	const int* const ccp = &i2;  常量 常量指针
 
