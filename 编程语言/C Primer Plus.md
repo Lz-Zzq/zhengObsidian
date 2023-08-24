@@ -152,4 +152,6 @@ typedef
 	;空语句
 复合语句
 	{} 包围的语句
+类型转换
+	参数传递 char short 转换成为int   float被转换成double
 ```
