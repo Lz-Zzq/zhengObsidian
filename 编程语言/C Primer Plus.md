@@ -119,4 +119,6 @@ sizeof
 	 #define TXT 0.04 编译时替换   明示常量/符号常量
 const
 	只读
+limits.h float.h中的明示常量
+	书中79页
 ```
