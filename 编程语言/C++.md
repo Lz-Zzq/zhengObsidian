@@ -176,4 +176,9 @@ inline 内联函数
 使用C++11提供的更简单的decltype   提取定义好的函数类型
 	typedef decltype(longerStr) Func2; //函数类型
 	typedef decltype(longerStr)* FuncP2; //函数指针类型
+	void selectStr(const string&, const string&,Func2);
+函数指针作为返回值
+	Func fun(int); //错误,不能使用函数返回函数类型
+	Func* fun(int);  //返回函数指针类型
+	Funcp fun(int); //返回定义好的函数指针类型
 ```
