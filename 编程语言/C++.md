@@ -181,4 +181,8 @@ inline 内联函数
 	Func fun(int); //错误,不能使用函数返回函数类型
 	Func* fun(int);  //返回函数指针类型
 	Funcp fun(int); //返回定义好的函数指针类型
+尾置返回类型
+	auto fun3(int) -> Func; //错误,不能使用函数返回函数类型
+	auto fun3(int) -> Func*;
+	auto fun4(int) -> Funcp;
 ```
