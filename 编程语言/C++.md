@@ -168,4 +168,7 @@ inline 内联函数
 	void selectStr(const string&, const string&, const string & (const string&,const string&)); //函数类型
 	void selectStr(const string&, const string&, const string & (*fp) (const string&,const string&)); //函数指针类型
 	void selectStr(const string&, const string&, const string & fp(const string&,const string&)); //函数指针类型
+定义类型别名
+	typedef const string& Func(const string&, const string&); //函数类型
+	typedef const string& (*Funcp)(const )
 ```
