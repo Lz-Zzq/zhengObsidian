@@ -159,5 +159,9 @@ inline 内联函数
 ```
 #### 函数指针
 ```
-
+函数指针
+	const string& (*fp) (const string&,const string&);
+	fp = logerStr; //直接将函数名作为指针赋值给fp
+	fp = &logerStr; //同上
+	cout << fp("hello","world");
 ```
