@@ -163,5 +163,9 @@ inline 内联函数
 	const string& (*fp) (const string&,const string&);
 	fp = logerStr; //直接将函数名作为指针赋值给fp
 	fp = &logerStr; //同上
-	cout << fp("hello","world");
+	cout << fp("hello" , "world");
+函数指针作为形参   函数本身不能作为形参使用
+	void selectStr(const string&, const string&, const string & (const string&,const string&)); //函数类型
+	void selectStr(const string&, const string&, const string & (*fp) (const string&,const string&)); //函数指针类型
+	void selectStr(const string&, const string&, const string & fp(const string&,const string&)); //函数指针类型
 ```
