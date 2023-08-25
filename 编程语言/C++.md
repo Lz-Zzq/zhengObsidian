@@ -170,5 +170,9 @@ inline 内联函数
 	void selectStr(const string&, const string&, const string & fp(const string&,const string&)); //函数指针类型
 定义类型别名
 	typedef const string& Func(const string&, const string&); //函数类型
-	typedef const string& (*Funcp)(const )
+	typedef const string& (*Funcp)(const string&, const string&); //函数指针类型
+	void selectStr(const string&,const string&, Func);
+	void selectStr(const string&,const string&, Funcp);
+使用C++11提供的更简单的decltype   提取定义好的函数类型
+	typedef decltype(longerStr)
 ```
