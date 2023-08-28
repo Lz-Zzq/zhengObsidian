@@ -41,9 +41,27 @@
 	get  n=cin.get(); 捕获的字符返回   或者cin.get(n) 直接传递到n
 ** 读写文件
 	ifstream <fstream>  IO库中提供了专门用于文件输入的ifstream类与文件输出ofstream  
-	ifstream input("input.txt");  //读取  ofstream output("output.txt");//写入
-	示例:  input >> word  单词读取  output << word  单词写入   getline(input,line)    output << line;   
+	ifstream input("input.txt");  //读取 
+	ofstream output("output.txt");//写入
+	示例:  input >> word  单词读取  output << word  单词写入   读行getline(input,line)   output << line;   
+逐词读取
+	string word;
+	while (input >> word)
+	cout << word << endl;
+逐行读取
+	string line;
+	while (getline(input, line))
+	cout << line << endl;
+逐字符读取
+	char ch;
+	while (input.get(ch))
+	cout << ch << endl;
 **enum 
+	enum week
+	{Mon, Tue, Wed, Thu, Fri, Sat, Sun}
+	默认情况下，会将整数值赋给枚举量；
+	枚举量默认从 0 开始，每个枚举量依次加 1；所以上面 week 枚举类型
+	中，一周七天枚举量分别对应着 0~6 的常量值
 ```
 ### 指针
 - 计算机内存分布是高位存储数据,低位补零
