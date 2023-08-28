@@ -43,7 +43,8 @@
 	ifstream <fstream>  IO库中提供了专门用于文件输入的ifstream类与文件输出ofstream  
 	ifstream input("input.txt");  //读取 
 	ofstream output("output.txt");//写入
-	示例:  input >> word  单词读取  output << word  单词写入   读行getline(input,line)   output << line;   
+	可以输出运算符<< 实现
+	示例:  input >> word  单词读取  output << word  单词写入   读行getline(input,line)   写入output << line;   
 逐词读取
 	string word;
 	while (input >> word)
