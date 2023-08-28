@@ -44,6 +44,7 @@
 	ifstream input("input.txt");  //读取 
 	ofstream output("output.txt");//写入
 	可以输出运算符<< 实现
+	!!! ofstream output("input.txt"); 此文件会被清空
 	示例:  input >> word  单词读取  output << word  单词写入   读行getline(input,line)   写入output << line;   
 逐词读取
 	string word;
