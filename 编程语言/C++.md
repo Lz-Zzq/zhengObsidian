@@ -43,6 +43,7 @@
 	ifstream <fstream>  IO库中提供了专门用于文件输入的ifstream类与文件输出ofstream  
 	ifstream input("input.txt");  //读取  ofstream output("output.txt");//写入
 	示例:  input >> word  单词读取  output << word  单词写入   getline(input,line)    output << line;   
+**enum 
 ```
 ### 指针
 - 计算机内存分布是高位存储数据,低位补零
