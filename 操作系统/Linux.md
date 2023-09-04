@@ -231,5 +231,9 @@ help
 		e: 编辑crontab定时任务
 		l : 查询crontab任务
 		r : 删除当前所有的crontab任务
+		例 : */1 * * * * ls -l /etc/ > /tmp/to.txt   每分钟执行一次 ls -l /etc/ > /tmp/to.txt命令
+	符号说明
+		* 代表任何时间,比如第一个 "*" 就代表一小时中每分钟都执行了一次的意思
+		* 
 	
 ```
