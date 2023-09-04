@@ -228,5 +228,8 @@ help
 ```
 ** crontab 进行定时任务调度
 	crontab [-e l r]
-		e: 编辑c'ron'ta'b
+		e: 编辑crontab定时任务
+		l : 查询crontab任务
+		r : 删除当前所有的crontab任务
+	
 ```
