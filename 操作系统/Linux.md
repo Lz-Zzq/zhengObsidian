@@ -224,3 +224,9 @@ help
 	chgrp newgroup 文件/目录 [改变所在组]
 
 ```
+### 6.任务调度
+```
+** crontab 进行定时任务调度
+	crontab [-e l r]
+		e: 编辑c'ron'ta'b
+```
