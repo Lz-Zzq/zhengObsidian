@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9932777968d86000",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.5"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +177,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "80bc0c3ada0e0c7a",
+  "active": "9932777968d86000",
   "lastOpenFiles": [
     "Git/Git.md",
     "编程语言/C++.md",
