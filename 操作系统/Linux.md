@@ -249,4 +249,7 @@ help
 	crontab -r 终止任务调度
 	crontab -l 列出任务调度
 	service crond restart 重启任务调度
+** at 定时任务 一次执行的定时计划任务  执行一个任务之后就不会在执行此任务了
+	at [选项] [时间]
+	
 ```
