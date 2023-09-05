@@ -272,5 +272,6 @@ help
 			count 数字
 			time-units是时间单位     这里可以是 minutes分钟 hours小时 days天 weeks星期
 		6.直接使用today 今天 tomorrow 明天
-	a't
+	atq 查询任务
+	atrm 删除任务
 ```
