@@ -267,6 +267,9 @@ help
 		2.使用midnight(深夜),noon(中午),teatimer(喝茶时间 4.00) 比较模糊的词语来指定时间
 		3.采用12小时计时制度,需要在时间后面家伙是那个AM(上午)或者PM(下午)
 		4.指定命令执行的具体日期,指定格式为month day (月 日) 或mm/dd/yy (月/日/年) dd.mm.yy (日/月/年) 指定的日期必须跟在指定时间的后面
-		5.相对计时,格式: now + count time-units, now就是当前时间, time-units是时间单位  这里可以是 minutes分钟 hours小时 days天 weeks星期
+		5.相对计时,格式: now + count(数字) time-units
+			now就是当前时间
+			count 数字
+			time-units是时间单位     这里可以是 minutes分钟 hours小时 days天 weeks星期
 		6.直接使用today 今天 tomorrow 明天
 ```
