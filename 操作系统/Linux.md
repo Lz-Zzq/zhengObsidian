@@ -250,6 +250,6 @@ help
 	crontab -l 列出任务调度
 	service crond restart 重启任务调度
 ** at 定时任务 一次执行的定时计划任务  执行一个任务之后就不会在执行此任务了
-	at [选项] [时间]
-	
+	at [选项] [时间]    Ctrl + D 结束at命令的输入
+	ps -ef | grep atd 检测当前正在执行的进程  检测atd是否正在运行 
 ```
