@@ -298,4 +298,9 @@ help
 	d 删除分区
 	w 写入并退出
 	说明: 开始分区后输入n,新增分区,然后选择p,分区类型为主分区.两次回车默认剩余全部空间,最后输入w写入分区并退出,若不保存退出输入q
+** mkfs -t ext4 /dev/sdb1   格式化磁盘
+	挂载: 将一个分区与一个目录联系起来
+	mount  设备名称 挂载目录   mount /dev/sdb1  /newdisk
+	umount 设备名称 / 挂载目录    umount  /dev/sdb1 或者  umount  /newdisk
+	注意:  命令行挂载重启后会失效
 ```
