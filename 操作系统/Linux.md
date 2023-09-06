@@ -301,6 +301,6 @@ help
 ** mkfs -t ext4 /dev/sdb1   格式化磁盘
 	挂载: 将一个分区与一个目录联系起来
 	mount  设备名称 挂载目录   mount /dev/sdb1  /newdisk
-	umount 设备名称 / 挂载目录    umount  /dev/sdb1 或者  umount  /newdisk
+	umount 设备名称 / 挂载目录    umount  /dev/sdb1 或者  umount  /newdisk  卸载
 	注意:  命令行挂载重启后会失效
 ```
