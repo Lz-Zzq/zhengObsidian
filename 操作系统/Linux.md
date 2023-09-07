@@ -304,4 +304,5 @@ help
 	umount 设备名称 / 挂载目录    umount  /dev/sdb1 或者  umount  /newdisk  卸载
 	注意:  命令行挂载重启后会失效
 	永久挂载: 通过修改/etc/fstab实现挂载  添加完成后执行mount -a即可生效
+	/dev/sdb1     /newdisk     ext4    defaults  0 0
 ```
