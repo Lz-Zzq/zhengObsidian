@@ -317,5 +317,6 @@ help
 	
 	例: 列出opt文件夹下的文件夹个数
 	ls -l /opt | grep "^-" | wc -l
-	列出opt文件夹下的文件与zi个数
+	列出opt文件夹下的文件与子文件个数
+	ls -lR /opt | grep "^-" | wc -l
 ```
