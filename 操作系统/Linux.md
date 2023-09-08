@@ -328,14 +328,14 @@ help
 修改配置文件来指定IP,并可以连接到外网
 	vim  /etc/systemctl/network-scripts/ifcfg-ens33
 	---------------------------------------------------
-	TYPE="Ethernet"
-	BOOTPROTO="static"
-	DEVICE="ens33"
-	ONBOOT="yes"
-	IPADDR="192.168.253.253"
-	NETMASK="255.255.255.0"
-	GATEWAY="192.168.253.2"
-	DNS1="8.8.8.8"
+	TYPE="Ethernet"     //网络类型  通常是ethemet
+	BOOTPROTO="static"      //IP配置方法  none  static bootp dhcp  (引导shi)  
+	DEVICE="ens33"    //接口名 设备/网卡
+	ONBOOT="yes"     //新系统启动时候网络接口是否有效   yes/no
+	IPADDR="192.168.253.253"         //IP地址
+	NETMASK="255.255.255.0"         
+	GATEWAY="192.168.253.2"       //网关
+	DNS1="8.8.8.8"          //域名解析器
 	DNS2="8.8.4.4"
 	
 ```
