@@ -328,8 +328,10 @@ help
 修改配置文件来指定IP,并可以连接到外网
 	vim  /etc/systemctl/network-scripts/ifcfg-ens33
 	---------------------------------------------------
+	UUID=""    //随机id
+	HWADDR="00:0c:2x...."  //MAC地址
 	TYPE="Ethernet"     //网络类型  通常是ethemet
-	BOOTPROTO="static"      //IP配置方法  none  static bootp dhcp  (引导shi)  
+	BOOTPROTO="static"      //IP配置方法  none  static bootp dhcp  (引导时不使用协议|静态分配IP|BOOTTP协议|DHCP协议)  
 	DEVICE="ens33"    //接口名 设备/网卡
 	ONBOOT="yes"     //新系统启动时候网络接口是否有效   yes/no
 	IPADDR="192.168.253.253"         //IP地址
