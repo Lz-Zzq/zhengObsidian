@@ -323,3 +323,9 @@ help
 ### 网络配置
 #### NTA网络模式
 ![[Pasted image 20230908103936.png | 500]]
+#### 指定网络IP方法
+```
+修改配置文件来指定IP,并可以连接到外网
+	vim  /etc/systemctl/network-scripts/ifcfg-ens33
+	
+```
