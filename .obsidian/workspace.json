@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/Linux.md"
+                "file": "编程语言/C++.md"
               }
             }
           },
@@ -169,6 +169,7 @@
   },
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
+    "操作系统/Linux.md",
     "Pasted image 20230908110115.png",
     "Pasted image 20230908103936.png",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
@@ -176,7 +177,6 @@
     "编程语言/C.md",
     "编程语言/C++.md",
     "编程语言/C Primer Plus.md",
-    "操作系统/Linux.md",
     "Git/Git.md",
     "操作系统/操作系统原理.md",
     "未命名 1.canvas",
@@ -195,7 +195,6 @@
     "PNG图片资源/Pasted image 20230604174947.png",
     "PNG图片资源/Pasted image 20230604171226.png",
     "PNG图片资源/Pasted image 20230604172616.png",
-    "PNG图片资源/Pasted image 20230526202430.png",
     "编程语言",
     "PNG图片资源",
     "网络安全",
