@@ -5,7 +5,7 @@
   "nativeMenus": false,
   "translucency": false,
   "baseFontSize": 16,
-  "textFontFamily": "JetBrains Mono",
-  "interfaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "Microsoft YaHei UI",
+  "interfaceFontFamily": "Microsoft YaHei UI",
   "monospaceFontFamily": "Microsoft YaHei UI"
 }
