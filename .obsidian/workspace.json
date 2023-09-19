@@ -145,6 +145,16 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "8cf2b9cf62faf7b1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
         "currentTab": 4
@@ -170,8 +180,8 @@
   "active": "ca4ce07fa812851a",
   "lastOpenFiles": [
     "操作系统/Linux.md",
-    "Pasted image 20230908110115.png",
-    "Pasted image 20230908103936.png",
+    "PNG图片资源/Pasted image 20230908110115.png",
+    "PNG图片资源/Pasted image 20230908103936.png",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "数据结构与算法/算法数据结构.md",
     "编程语言/C.md",
