@@ -224,4 +224,10 @@ inline 内联函数
 堆区: 由程序员分配和释放,若程序员不释放,程序结束由操作系统回收
 	通过new来在堆区开辟数据
 	释放空间可以使用delete
+new 操作符
+	利用new在堆区开辟数据
+	释放空间使用delete
+	int* arr = new int[10];
+	delete[] arr;
+
 ```
