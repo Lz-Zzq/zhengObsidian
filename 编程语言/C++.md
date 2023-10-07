@@ -229,5 +229,5 @@ new 操作符
 	释放空间使用delete
 	int* arr = new int[10];
 	delete[] arr;
-13913711322
+
 ```
