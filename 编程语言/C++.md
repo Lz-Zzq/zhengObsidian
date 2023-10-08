@@ -237,6 +237,6 @@ new 操作符
 	拷贝构造: Person(const Person& p) {}
 	Person p1; 默认情况不需要带括号  带括号就会被编译器认为函数的声明
 	Person(10); //匿名对象 
-	Person(person);  //不要利用拷贝构造函数 编译器会认为 Person (person) === Person person
+	Person(person);  //不要利用拷贝构造函数 编译器会认为 Person (person) === Person person   编译器会认为是对象的声明
 析构函数: 主要作用在对象销毁前系统自动调用,执行一些清理工作  语法: `~类名(){}`
 ```
