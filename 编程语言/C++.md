@@ -275,5 +275,18 @@ const修饰成员函数
 		全局函数做友元  friend 返回类型 函数名称与参数
 		类做友元  friend class 类名称 
 		成员函数做友元 friend 返回类型 类::函数名与参数
-	
+运算符重载
+	加号运算符重载
+		Person operator+(const Person& p)
+	左移运算符重载
+		ostream& operator<<(ostream& out, Person& p)
+		ostream对象只能存在一个,需要连续输入需要返回ostream对象,接收参数需要接收ostream对象与类
+	递增递减运算符重载
+		前置++
+			MyInteger& operator++()   先++在返回
+		后置++
+			MyInteger operator++(int) 先返回在++
+	赋值运算符
+		Person& operator=(Person &p)
+		浅拷贝会带来重复释放问题,需要在赋值运算符中启用深拷贝来解决
 ```
