@@ -308,5 +308,13 @@ const修饰成员函数
 	同名函数可以使用对象调用方式或者类名直接访问方式  a.age a.B::age  B::fun()  A::B::fun()
 c++多继承
 	一个子类可以继承多个父类
+棱形继承
+	a类继承多个类,多个类又有同一个父类,a类获取父类变量时候每一份都是单独的,资源会被浪费
+	 class Sheep : virtual public Animal{}   
+	 class Tuo : virtual public Animal{}
+	 class SheepTuo : public Sheep,public Tuo
+	使用虚继承使用虚继承后多个重名的成员变量会变为一个
+	使用虚继承后Sheep/Tuo继承的不在是单纯的父类成员变量,而是vbptr(虚基类指针),vbpter指向一个vbtable(虚基类表),vbpter加上偏移量之后可以找到该数据,该数据在多个类中只存在一份.共享的数据.
+	
 
 ```
