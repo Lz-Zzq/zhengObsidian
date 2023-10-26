@@ -295,3 +295,9 @@ const修饰成员函数
 		void operator()(string str)
 		int operator()(int a,int b)
 ```
+### 继承
+```
+继承语法
+	类 : 继承方式 父类
+	继承方式: 公共(public) 保护(protected) 私有(private) 
+```
