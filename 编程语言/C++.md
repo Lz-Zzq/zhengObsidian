@@ -289,5 +289,6 @@ const修饰成员函数
 	赋值运算符
 		Person& operator=(Person &p)
 		浅拷贝会带来重复释放问题,需要在赋值运算符中启用深拷贝来解决
-		
+	关系运算符重载
+		bool operator!=(Person &p)
 ```
