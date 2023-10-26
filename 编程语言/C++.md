@@ -299,5 +299,6 @@ const修饰成员函数
 ```
 继承语法
 	类 : 继承方式 父类
-	继承方式: 公共(public) 保护(protected) 私有(private) 
+	继承方式: 公共(public) 保护(protected) 私有(private)
+	子类会继承父类所有非静态成员变量 
 ```
