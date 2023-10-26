@@ -292,5 +292,6 @@ const修饰成员函数
 	关系运算符重载
 		bool operator!=(Person &p)
 	重载函数调用运算符
-		void operator()
+		void operator()(string str)
+		int operator()(int a,int b)
 ```
