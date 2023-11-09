@@ -338,8 +338,8 @@ c++多继承 class A : public B
 	无法实例化对象
 	子类必须重写抽象类中的纯虚函数,否则也属于抽象类
 原理
-	一个空类占用1  加上virtual关键字占用4字节 加上关键字之后会存在一个虚函数指针
-	虚函数指针vfptr会指向虚函数表vftable,表内记录了被virtual修饰的地址,当没有继承状态时,Cat类内部地址为&Animal::speak
+	一个空类占用1  函数加上virtual关键字占用4字节 加上关键字之后会存在一个虚函数指针
+	虚函数指针vfptr会指向虚函数表vftable,表内记录了被virtual修饰的函数地址,当没有继承状态时,Cat类内部地址为&Animal::speak
 	当出现继承状态时,会出现多态现象&Cat::speak
 ```
 ![[Pasted image 20231106195506.png|700]]
