@@ -440,7 +440,7 @@ class Person
 public:
 	char name[64];
 	int age;
-write
+write 
 	ofstream ofs("person.txt", ios::out | ios::binary);
 	//ofs.open("person.txt",ios::out | ios::binary)
 	Person p = { "张三",18 };
