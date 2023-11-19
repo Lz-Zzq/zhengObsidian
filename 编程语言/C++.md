@@ -435,3 +435,21 @@ C++中对文件操作需要包含头文件 \<fstream>
 函数原型：`istream& read(char *buffer,int len);`
 参数解释：字符指针buffer指向内存中一段存储空间。len是读写的字节数
 文件输入流对象 可以通过read函数，以二进制方式读数据
+```
+class Person 
+public:
+	char name[64];
+	int age;
+write
+	ofstream ofs("person.txt", ios::out | ios::binary);
+	//ofs.open("person.txt",ios::out | ios::binary)
+	Person p = { "张三",18 };
+	//读取当前对象内存地址 写入数据到当前地址中
+	ofs.write((const char*)&p,sizeof(p));
+	ofs.close();
+read
+	Person p1;
+	ifstream ifs("person.txt", ios::in | ios::binary);
+	ifs.read((char *)&p1,sizeof(p1));
+	cout << p1.age << " " << p1.name << endl;
+```
