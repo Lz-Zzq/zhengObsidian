@@ -342,6 +342,16 @@ help
 	--------------------------------------------------
 	reboot  / service network restart
 ```
+####
+设置主机名和hosts映射
+```
+windows
+	C:\Windwos\System32\drivers\etc\hosts 
+	111.111.111.111  [name]
+linux
+	/etc/hosts 
+	111.111.111.111 [name]
+```
 #### 防火墙
 ```
 ifconfig 查看linux的ip地址
