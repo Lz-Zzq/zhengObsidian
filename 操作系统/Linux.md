@@ -342,8 +342,7 @@ help
 	--------------------------------------------------
 	reboot  / service network restart
 ```
-####
-设置主机名和hosts映射
+#### 设置主机名和hosts映射
 ```
 windows
 	C:\Windwos\System32\drivers\etc\hosts 
@@ -351,6 +350,16 @@ windows
 linux
 	/etc/hosts 
 	111.111.111.111 [name]
+Hostst是什么
+	一个文本文件,用来记录IP和Hostname(主机名)的映射关系
+DNS
+	DNS,就是Domain Name System的缩写,翻译过来就是域名系统
+	就是互联网上作为域名和IP地址相互映射的一个分布式数据库
+输入www.baidu.com
+	1.浏览器会先检查浏览器缓存中有没有该域名解析IP,有就先调用,没有就检查DNS解析器缓存,如果有就返回IP完成解析.可以理解为本地解析器缓存
+	ipconfig /displaydns  //DNS域名解析缓存
+	ipconfig /flushdns   //手动清理DNS缓存
+	2.如果本地解析器缓存没有找到对应映射
 ```
 #### 防火墙
 ```
