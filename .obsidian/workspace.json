@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C++.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -157,7 +157,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,10 +177,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d945b589c1f78b8f",
+  "active": "4b2911abfbf41a33",
   "lastOpenFiles": [
-    "操作系统/Linux.md",
     "编程语言/C++.md",
+    "操作系统/Linux.md",
     "编程语言/C++ Primer.md",
     "编程语言/C Primer Plus.md",
     "操作系统/操作系统原理.md",
