@@ -405,7 +405,7 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 	ps -u 以用户的格式显示进程信息
 	ps -x 显示后台进程运行的参数
 		
-	ps -aux | grup xxx
+	ps -aux | grep xxx
 		System V 展示风格
 		USER：用户名称
 		PID：进程号
