@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/Linux.md",
+                "file": "编程语言/C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/Linux.md"
+                "file": "编程语言/C++.md"
               }
             }
           },
@@ -179,13 +179,13 @@
   },
   "active": "d945b589c1f78b8f",
   "lastOpenFiles": [
+    "操作系统/Linux.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
     "编程语言/C Primer Plus.md",
     "操作系统/操作系统原理.md",
     "数据结构与算法/算法数据结构.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "操作系统/Linux.md",
     "编程语言/C.md",
     "PNG图片资源/Pasted image 20231106195506.png",
     "Git/Git.md",
