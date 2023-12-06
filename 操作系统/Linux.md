@@ -439,4 +439,11 @@ service管理指令
 	1.service服务名 [ start | stop| restart | reload | status ]
 	2.在CentOS7后,很多服务不再使用service,而是systemctl
 	3.service指令管理的服务在/etc/init.d 查看
+	setup命令查看服务
+服务的运行级别,Linux系统有7种运行级别(runlevel) : 常用的是级别3和5
+	0 系统停机状态,系统默认运行级别不能设置0,否则不能正常运行
+	1 单用户工作状态,root权限,用于系统维护,禁止远程登陆
+	2 多用户状态(没有NFS),不支持网络
+	3 完全的多用户状态(有NFS),登陆后进入控制台命令行模式
+	4 系统未使用,
 ```
