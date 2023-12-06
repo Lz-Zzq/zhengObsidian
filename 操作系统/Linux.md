@@ -450,4 +450,13 @@ service管理指令
 	5 x11控制台,登陆后进入图形GUI模式
 	6.系统正常关闭重启,默认运行级别不能设置6,否则不能正常运行
 	[开机] -> [BIOS] -> [/boot] -> [systemd进程1] -> [运行级别] -> [运行对应的服务]
+
+chkconfig指令
+	1.通过chkconfig命令可以给服务的各个运行级别设置自 启动/关闭
+	2.chkconfig指令管理的服务在 /etc/init.d 查看
+	3.注意: CentOS7 后,很多服务使用systemctl管理
+chkconfig
+	查看服务 chkconfig --list [| grep xxx]
+	chkconfig 服务名 --list
+	chkconfig --level 5 服务名 on/off
 ```
