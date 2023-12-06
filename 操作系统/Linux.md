@@ -430,6 +430,13 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 pstree [选项],可以更加直观的来看进程信息
 	-p 显示进程的PID
 	-u 显示进程的所属用户
-
-
+```
+#### 服务(service)管理
+```
+服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
+	
+service管理指令
+	1.service服务名 [ start | stop| restart | reload | status ]
+	2.在CentOS7后,很多服务不再使用service,而是systemctl
+	3.service指令管理的服务在/etc/init.d 查看
 ```
