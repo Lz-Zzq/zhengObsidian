@@ -458,5 +458,5 @@ chkconfig指令
 chkconfig
 	查看服务 chkconfig --list [| grep xxx]
 	chkconfig 服务名 --list
-	chkconfig --level 5 服务名 on/off
+	chkconfig --level 5 服务名 on/off 
 ```
