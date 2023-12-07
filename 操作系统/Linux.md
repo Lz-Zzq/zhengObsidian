@@ -442,54 +442,58 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 	-u 显示进程的所属用户
 ```
 #### 服务(service)管理
-```
+
 服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
 
 service管理指令
-	1.service服务名 [ start | stop| restart | reload | status ]
-	2.在CentOS7后,很多服务不再使用service,而是systemctl
-	3.service指令管理的服务在/etc/init.d 查看
-	setup命令查看服务
+> 1.service服务名 [ start | stop| restart | reload | status ]
+> 2.在CentOS7后,很多服务不再使用service,而是systemctl
+> 3.service指令管理的服务在/etc/init.d 查看
+> setup命令查看服务
 
 服务的运行级别(runlevel),Linux系统有7种运行级别(runlevel) : 常用的是级别3和5
-	0 系统停机状态,系统默认运行级别不能设置0,否则不能正常运行
-	1 单用户工作状态,root权限,用于系统维护,禁止远程登陆
-	2 多用户状态(没有NFS),不支持网络
-	3 完全的多用户状态(有NFS),登陆后进入控制台命令行模式
-	4 系统未使用,保留
-	5 x11控制台,登陆后进入图形GUI模式
-	6.系统正常关闭重启,默认运行级别不能设置6,否则不能正常运行
-	[开机] -> [BIOS] -> [/boot] -> [systemd进程1] -> [运行级别] -> [运行对应的服务]
+> 0 系统停机状态,系统默认运行级别不能设置0,否则不能正常运行
+> 1 单用户工作状态,root权限,用于系统维护,禁止远程登陆
+> 2 多用户状态(没有NFS),不支持网络
+> 3 完全的多用户状态(有NFS),登陆后进入控制台命令行模式
+> 4 系统未使用,保留
+> 5 x11控制台,登陆后进入图形GUI模式
+> 6.系统正常关闭重启,默认运行级别不能设置6,否则不能正常运行
+> [开机] -> [BIOS] -> [/boot] -> [systemd进程1] -> [运行级别] -> [运行对应的服务]
 
 ** chkconfig指令
-	1.通过chkconfig命令可以给服务的各个运行级别设置自 启动/关闭
-	2.chkconfig指令管理的服务在 /etc/init.d 查看
-	3.注意: CentOS7 后,很多服务使用systemctl管理
+>1. 通过chkconfig命令可以给服务的各个运行级别设置自 启动/关闭
+>2. chkconfig指令管理的服务在 /etc/init.d 查看
+>3. 注意: CentOS7 后,很多服务使用systemctl管理
+  
 ** chkconfig
-	查看服务 chkconfig --list [| grep xxx]
-	chkconfig 服务名 --list
-	chkconfig --level 5 服务名 on/off 
+> 查看服务 chkconfig --list [| grep xxx]
+> chkconfig 服务名 --list 
+> chkconfig --level 5 服务名 on/off 
 
 ** systemctl 管理命令
-	1.基本语法 systemctl [ start | stop | restart | status ] 服务名
-	2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
+> 1.基本语法 systemctl [ start | stop | restart | status ] 服务名
+> 2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
+  
 ** systemctl 设置服务的自启动状态
-	1.systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
-	2.systemctl enable 服务名 (设置服务开机启动)
-	3.systemctl disable 服务名 (关闭服务开机启动)
-	4.systemct is-ebabled 服务名(查询某个服务是否自启动的)
+ 1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
+ 2. systemctl enable 服务名 (设置服务开机启动)
+ 3. systemctl disable 服务名 (关闭服务开机启动)
+ 4. systemct is-ebabled 服务名(查询某个服务是否自启动的)
 
 打开或者关闭指定端口
-** firewall
+==firewall== 
 打开端口
-	firewall-cmd --permanent --add-port=端口号/协议
+> firewall-cmd --permanent --add-port=端口号/协议
+
 关闭端口
-	firewall-cmd --permanent --remove-port=端口号/协议
+> firewall-cmd --permanent --remove-port=端口号/协议
+
 重新载入生效
-	firewall-cmd --reload
+> firewall-cmd --reload
+
 查询端口是否开放
-	firewall-cmd --query-port=端口/协议
-```
-#### 动态监控进程
-```
-```
+> firewall-cmd --query-port=端口/协议
+
+  
+  

@@ -173,23 +173,22 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "df107a889a18e57d",
   "lastOpenFiles": [
+    "操作系统/进制转换_原码_反码_补码_位运算.md",
+    "操作系统/Linux.md",
     "Excalidraw/Drawing 2023-12-06 20.33.57.excalidraw.md",
     "未命名.canvas",
     "2023-12-06.md",
     "Excalidraw/Drawing 2023-09-19 21.35.20.excalidraw.md",
-    "操作系统/Linux.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
     "编程语言/C Primer Plus.md",
     "操作系统/操作系统原理.md",
     "数据结构与算法/算法数据结构.md",
-    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "编程语言/C.md",
     "PNG图片资源/Pasted image 20231106195506.png",
     "Git/Git.md",
