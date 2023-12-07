@@ -460,4 +460,14 @@ chkconfig
 	chkconfig 服务名 --list
 	chkconfig --level 5 服务名 on/off 
 
+systemctl 管理命令
+	1.基本语法 systemctl [ start | stop | restart | status ] 服务名
+	2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
+systemctl 设置服务的自启动状态
+	1.systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
+	2.systemctl enable 服务名 (设置服务开机启动)
+	3.systemctl disable 服务名 (关闭服务开机启动)
+	4.systemct is-ebabled 服务名(查询某个服务是否自启动的)
+
+
 ```
