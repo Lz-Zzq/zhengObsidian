@@ -276,7 +276,7 @@ help
 	atq 查询任务
 	atrm 删除任务
 ```
-### Linux分区
+### 7.Linux分区
 ```
 原理介绍
 	1. Linux归根结底只有一个目录,独立唯一的文件结构
@@ -320,7 +320,7 @@ help
 	列出opt文件夹下的文件与子文件个数  (^d 代表目录  - 代表文件个数)
 	ls -lR /opt | grep "^-" | wc -l
 ```
-### 网络配置
+### 8.网络配置
 #### NTA网络模式
 ![[Pasted image 20230908103936.png | 500]]
 #### 指定网络IP方法
@@ -373,79 +373,82 @@ DNS
 	3.如果本地DNS解析器缓存和hosts文件中没有对应IP,则到域名服务器解析
 ```
 #### 防火墙
-```
+
 ifconfig 查看linux的ip地址
 systemctl status firewalld , firewall-cmd --state
-	查看防火墙状态
+>查看防火墙状态
+
 systemctl stop firewalld
-	暂时关闭防火墙
+>关闭防火墙
+
 systemctl disable firewalld
-	永久关闭防火墙
+>永久关闭防火墙
+
 systemctl stop firewalld.service
-	关闭防火墙  
+>关闭防火墙
+
 systemctl start firewalld
-	开启防火墙 
+>开启防火墙
+
 开放指定端口  
-	firewall-cmd --zone=public --add-port=8080/tcp --permanent)
+>firewall-cmd --zone=public --add-port=8080/tcp --permanent)
+>
 关闭指定端口  
-	firewall-cmd --zone=public --remove-port=8080/tcp --permanent)
+>firewall-cmd --zone=public --remove-port=8080/tcp --permanent)
 立即成效  
-	firewall-cmd --reload
+>firewall-cmd --reload
 查看开放端口  
-	firewall-cmd --zone=public --list-ports
+>firewall-cmd --zone=public --list-ports
 systemctl 是管理linux中服务的命令，可以对服务进行启动，停止，重新启动，查看状态等操作
 firewall-cmd是Linux中专门用于控制防火墙的命令
-```
-### 进程
+
+### 9.进程
 #### 进程详情
-```
-1.在Linux中,每个执行的程序都称为一个进程,每一个进程都分配一个ID号(PID,进程号)
-2.每个进程都可能存在两种方式存在,前台与后台,所谓前台进程就是用户目前的屏幕上可以进行操作的.后台进程则是实际操作,由于屏幕上无法看到的进程,通常使用后台方式执行.
-3.一般系统的服务都是以后台进程方式存在,而且都会常驻在系统中,直到关机才结束
-```
+1. 在Linux中,每个执行的程序都称为一个进程,每一个进程都分配一个ID号(PID,进程号)
+2. 每个进程都可能存在两种方式存在,前台与后台,所谓前台进程就是用户目前的屏幕上可以进行操作的.后台进程则是实际操作,由于屏幕上无法看到的进程,通常使用后台方式执行.
+3. 一般系统的服务都是以后台进程方式存在,而且都会常驻在系统中,直到关机才结束
 #### 显示系统执行的进程
-```
-** ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的状况.可以不加任何参数.
-	ps显示信息选项
-		PID 进程识别号
-		TTY 终端机号
-		TIME 此进程所消CPU时间
-		CMD 正在执行的命令或进程
-	ps -a  显示当前终端所有进程信息
-	ps -u 以用户的格式显示进程信息
-	ps -x 显示后台进程运行的参数
-		
-	ps -aux | grep xxx
-		System V 展示风格
-		USER：用户名称
-		PID：进程号
-		%CPU：进程占用 CPU 的百分比
-		%MEM：进程占用物理内存的百分比
-		VSZ：进程占用的虚拟内存大小（单位：KB）
-		RSS：进程占用的物理内存大小（单位：KB）
-		TTY：终端名称,缩写 .
-		STAT：进程状态，其中 S-睡眠，s-表示该进程是会话的先导进程，N-表示进程拥有比普通优先级更低的优先级，R-
-		正在运行，D-短期等待，Z-僵死进程，T-被跟踪或者被停止等等
-		STARTED：进程的启动时间
-		TIME：CPU 时间，即进程使用 CPU 的总时间
-		COMMAND：启动进程所用的命令和参数，如果过长会被截断显示
+
+ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的状况.可以不加任何参数.
+>ps显示信息选项
+>>PID 进程识别号
+>>TTY 终端机号
+>>TIME 此进程所消CPU时间
+>>CMD 正在执行的命令或进程
+>>ps -a  显示当前终端所有进程信息
+>>ps -u 以用户的格式显示进程信息
+>>ps -x 显示后台进程运行的参数
+
+>ps -aux | grep xxx
+>>System V 展示风格
+>>USER：用户名称
+>>PID：进程号
+>>%CPU：进程占用 CPU 的百分比
+>>%MEM：进程占用物理内存的百分比
+>>VSZ：进程占用的虚拟内存大小（单位：KB）
+>>RSS：进程占用的物理内存大小（单位：KB）
+>>TTY：终端名称,缩写 .
+>>STAT：进程状态，其中 S-睡眠，s-表示该进程是会话的先导进程，N-表示进程拥有比普通优先级更低的优先级，R-
+>>正在运行，D-短期等待，Z-僵死进程，T-被跟踪或者被停止等等
+>>STARTED：进程的启动时间
+>>TIME：CPU 时间，即进程使用 CPU 的总时间
+>>COMMAND：启动进程所用的命令和参数，如果过长会被截断显示
+
 ** kill [选项] 进程号 
-	终止进程
-	-9 强迫进程立即停止
-** killall 进程名称 
-	通过进程名称杀死进程,也支持通配符,在系统因负载过大而变得很慢时很有用
-```
+>终止进程
+>-9 强迫进程立即停止** killall 进程名称 
+>通过进程名称杀死进程,也支持通配符,在系统因负载过大而变得很慢时很有用
 #### 查看进程树
-```
+
 ** pstree [选项],可以更加直观的来看进程信息
-	-p 显示进程的PID
-	-u 显示进程的所属用户
-```
+> -p 显示进程的PID
+> -u 显示进程的所属用户
+
 #### 服务(service)管理
 
 服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
 
-service管理指令
+** service管理指令
 > 1.service服务名 [ start | stop| restart | reload | status ]
 > 2.在CentOS7后,很多服务不再使用service,而是systemctl
 > 3.service指令管理的服务在/etc/init.d 查看
@@ -476,13 +479,13 @@ service管理指令
 > 2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
   
 ** systemctl 设置服务的自启动状态
- 1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
- 2. systemctl enable 服务名 (设置服务开机启动)
- 3. systemctl disable 服务名 (关闭服务开机启动)
- 4. systemct is-ebabled 服务名(查询某个服务是否自启动的)
+ > 1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
+> 2. systemctl enable 服务名 (设置服务开机启动)
+> 3. systemctl disable 服务名 (关闭服务开机启动)
+> 4. systemct is-ebabled 服务名(查询某个服务是否自启动的)
 
 打开或者关闭指定端口
-==firewall== 
+** firewall
 打开端口
 > firewall-cmd --permanent --add-port=端口号/协议
 
