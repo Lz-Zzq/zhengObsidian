@@ -505,5 +505,6 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
   >q 退出top
 
 #### 监控网络进程
-- netstat [选项]
-- 
+- netstat [选项] 
+  >-an 按一定顺序排列输出
+  >-p 显示哪个进程在调用
