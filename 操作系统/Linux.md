@@ -306,7 +306,7 @@ help
 	永久挂载: 通过修改/etc/fstab实现挂载  添加完成后执行mount -a即可生效
 	/dev/sdb1     /newdisk     ext4    defaults  0 0
 ** df -h
-	查询系统整体磁盘使用情况
+	查询系统整体磁盘使用情况 
 ** du -h /目录
 	查询指定目录的磁盘占用情况
 	-s 指定目录占用大小汇总
@@ -326,6 +326,16 @@ help
 #### 指定网络IP方法
 ```
 修改配置文件来指定IP,并可以连接到外网
+
+VMnet1
+	这是一个VMware Workstation中默认的虚拟网络
+	通常用于主机和虚拟机之间的Host-Only网络连接。这意味着只有主机和其上的虚拟机之间可以相互通信，而无法访问外部网络，如互联网。
+
+VMnet8
+	这是另一个VMware Workstation默认的虚拟网络
+	通常被用作NAT（Network Address Translation）网络。这允许虚拟机能够共享主机系统的IP地址，并通过主机系统访问外部网络，如互联网。
+
+	查看vm8的网关 子网掩码
 	vim  /etc/systemctl/network-scripts/ifcfg-ens33
 	---------------------------------------------------
 	UUID=""    //随机id
@@ -335,8 +345,8 @@ help
 	DEVICE="ens33"    //接口名 设备/网卡
 	ONBOOT="yes"     //新系统启动时候网络接口是否有效   yes/no
 	IPADDR="192.168.253.253"         //IP地址
-	NETMASK="255.255.255.0"         
-	GATEWAY="192.168.253.2"       //网关
+	NETMASK="255.255.255.0"        //子网掩码     
+	GATEWAY="192.168.253.2"       //网关  vm8
 	DNS1="8.8.8.8"          //域名解析器
 	DNS2="8.8.4.4"
 	--------------------------------------------------
@@ -479,4 +489,7 @@ service管理指令
 	firewall-cmd --reload
 查询端口是否开放
 	firewall-cmd --query-port=端口/协议
+```
+#### 动态监控进程
+```
 ```
