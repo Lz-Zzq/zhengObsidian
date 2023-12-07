@@ -427,7 +427,7 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 ```
 #### 查看进程树
 ```
-pstree [选项],可以更加直观的来看进程信息
+** pstree [选项],可以更加直观的来看进程信息
 	-p 显示进程的PID
 	-u 显示进程的所属用户
 ```
@@ -451,23 +451,32 @@ service管理指令
 	6.系统正常关闭重启,默认运行级别不能设置6,否则不能正常运行
 	[开机] -> [BIOS] -> [/boot] -> [systemd进程1] -> [运行级别] -> [运行对应的服务]
 
-chkconfig指令
+** chkconfig指令
 	1.通过chkconfig命令可以给服务的各个运行级别设置自 启动/关闭
 	2.chkconfig指令管理的服务在 /etc/init.d 查看
 	3.注意: CentOS7 后,很多服务使用systemctl管理
-chkconfig
+** chkconfig
 	查看服务 chkconfig --list [| grep xxx]
 	chkconfig 服务名 --list
 	chkconfig --level 5 服务名 on/off 
 
-systemctl 管理命令
+** systemctl 管理命令
 	1.基本语法 systemctl [ start | stop | restart | status ] 服务名
 	2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
-systemctl 设置服务的自启动状态
+** systemctl 设置服务的自启动状态
 	1.systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
 	2.systemctl enable 服务名 (设置服务开机启动)
 	3.systemctl disable 服务名 (关闭服务开机启动)
 	4.systemct is-ebabled 服务名(查询某个服务是否自启动的)
 
-
+打开或者关闭指定端口
+** firewall
+打开端口
+	firewall-cmd --permanent --add-port=端口号/协议
+关闭端口
+	firewall-cmd --permanent --remove-port=端口号/协议
+重新载入生效
+	firewall-cmd --reload
+查询端口是否开放
+	firewall-cmd --query-port=端口/协议
 ```
