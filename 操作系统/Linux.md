@@ -324,18 +324,17 @@ help
 #### NTA网络模式
 ![[Pasted image 20230908103936.png | 500]]
 #### 指定网络IP方法
-```
+
 修改配置文件来指定IP,并可以连接到外网
 
 VMnet1
-	这是一个VMware Workstation中默认的虚拟网络
-	通常用于主机和虚拟机之间的Host-Only网络连接。这意味着只有主机和其上的虚拟机之间可以相互通信，而无法访问外部网络，如互联网。
+>这是一个VMware Workstation中默认的虚拟网络,通常用于主机和虚拟机之间的Host-Only网络连接。这意味着只有主机和其上的虚拟机之间可以相互通信，而无法访问外部网络，如互联网。
 
 VMnet8
-	这是另一个VMware Workstation默认的虚拟网络
-	通常被用作NAT（Network Address Translation）网络。这允许虚拟机能够共享主机系统的IP地址，并通过主机系统访问外部网络，如互联网。
+>这是另一个VMware Workstation默认的虚拟网络,通常被用作NAT（Network Address Translation）网络。这允许虚拟机能够共享主机系统的IP地址，并通过主机系统访问外部网络，如互联网。
 
-	查看vm8的网关 子网掩码
+```
+查看vm8的网关 子网掩码
 	vim  /etc/systemctl/network-scripts/ifcfg-ens33
 	---------------------------------------------------
 	UUID=""    //随机id
@@ -353,53 +352,60 @@ VMnet8
 	reboot  / service network restart
 ```
 #### 设置主机名和hosts映射
-```
+
 windows
-	C:\Windwos\System32\drivers\etc\hosts 
-	111.111.111.111  [name]
+>C:\Windwos\System32\drivers\etc\hosts 
+>111.111.111.111  [name]
+
 linux
-	/etc/hosts 
-	111.111.111.111 [name]
+>/etc/hosts 
+>111.111.111.111 [name]
+
 Hostst是什么
-	一个文本文件,用来记录IP和Hostname(主机名)的映射关系
+>一个文本文件,用来记录IP和Hostname(主机名)的映射关系
+
 DNS
-	DNS,就是Domain Name System的缩写,翻译过来就是域名系统
-	就是互联网上作为域名和IP地址相互映射的一个分布式数据库
+>DNS,就是Domain Name System的缩写,翻译过来就是域名系统
+>就是互联网上作为域名和IP地址相互映射的一个分布式数据库
+
 输入www.baidu.com
-	1.浏览器会先检查浏览器缓存中有没有该域名解析IP,有就先调用,没有就检查DNS解析器缓存,如果有就返回IP完成解析.可以理解为本地解析器缓存
-	ipconfig /displaydns  //DNS域名解析缓存
-	ipconfig /flushdns   //手动清理DNS缓存
-	2.如果本地解析器缓存没有找到对应映射,检查系统中hosts文件中有没有配置对应的域名IP映射,如果有返回
-	3.如果本地DNS解析器缓存和hosts文件中没有对应IP,则到域名服务器解析
-```
+>1.浏览器会先检查浏览器缓存中有没有该域名解析IP,有就先调用,没有就检查DNS解析器缓存,如果有就返回IP完成解析.可以理解为本地解析器缓存
+>2.如果本地解析器缓存没有找到对应映射,检查系统中hosts文件中有没有配置对应的域名IP映射,如果有返回
+>3.如果本地DNS解析器缓存和hosts文件中没有对应IP,则到域名服务器解析
+>>pconfig /displaydns  //DNS域名解析缓存
+>>pconfig /flushdns   //手动清理DNS缓存
+
 #### 防火墙
 
 ifconfig 查看linux的ip地址
-systemctl status firewalld , firewall-cmd --state
+- systemctl status firewalld , firewall-cmd --state
 >查看防火墙状态
 
-systemctl stop firewalld
+- systemctl stop firewalld
 >关闭防火墙
 
-systemctl disable firewalld
+- systemctl disable firewalld
 >永久关闭防火墙
 
-systemctl stop firewalld.service
+- systemctl stop firewalld.service
 >关闭防火墙
 
-systemctl start firewalld
+- systemctl start firewalld
 >开启防火墙
 
-开放指定端口  
+- 开放指定端口  
 >firewall-cmd --zone=public --add-port=8080/tcp --permanent)
->
-关闭指定端口  
+
+- 关闭指定端口  
 >firewall-cmd --zone=public --remove-port=8080/tcp --permanent)
-立即成效  
+
+- 立即成效  
 >firewall-cmd --reload
-查看开放端口  
+
+- 查看开放端口  
 >firewall-cmd --zone=public --list-ports
-systemctl 是管理linux中服务的命令，可以对服务进行启动，停止，重新启动，查看状态等操作
+
+- systemctl 是管理linux中服务的命令，可以对服务进行启动，停止，重新启动，查看状态等操作
 firewall-cmd是Linux中专门用于控制防火墙的命令
 
 ### 9.进程
@@ -409,7 +415,7 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 3. 一般系统的服务都是以后台进程方式存在,而且都会常驻在系统中,直到关机才结束
 #### 显示系统执行的进程
 
-ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的状况.可以不加任何参数.
+- ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的状况.可以不加任何参数.
 >ps显示信息选项
 >>PID 进程识别号
 >>TTY 终端机号
@@ -419,7 +425,7 @@ ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的
 >>ps -u 以用户的格式显示进程信息
 >>ps -x 显示后台进程运行的参数
 
->ps -aux | grep xxx
+- ps -aux | grep xxx
 >>System V 展示风格
 >>USER：用户名称
 >>PID：进程号
@@ -434,27 +440,25 @@ ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的
 >>TIME：CPU 时间，即进程使用 CPU 的总时间
 >>COMMAND：启动进程所用的命令和参数，如果过长会被截断显示
 
-** kill [选项] 进程号 
+- kill [选项] 进程号 
 >终止进程
 >-9 强迫进程立即停止** killall 进程名称 
 >通过进程名称杀死进程,也支持通配符,在系统因负载过大而变得很慢时很有用
 #### 查看进程树
 
-** pstree [选项],可以更加直观的来看进程信息
+- pstree [选项],可以更加直观的来看进程信息
 > -p 显示进程的PID
 > -u 显示进程的所属用户
-
 #### 服务(service)管理
 
-服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
+- 服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
 
-** service管理指令
+- service管理指令
 > 1.service服务名 [ start | stop| restart | reload | status ]
 > 2.在CentOS7后,很多服务不再使用service,而是systemctl
 > 3.service指令管理的服务在/etc/init.d 查看
 > setup命令查看服务
-
-服务的运行级别(runlevel),Linux系统有7种运行级别(runlevel) : 常用的是级别3和5
+- 服务的运行级别(runlevel),Linux系统有7种运行级别(runlevel) : 常用的是级别3和5
 > 0 系统停机状态,系统默认运行级别不能设置0,否则不能正常运行
 > 1 单用户工作状态,root权限,用于系统维护,禁止远程登陆
 > 2 多用户状态(没有NFS),不支持网络
@@ -463,40 +467,28 @@ ps 命令用来查看目前系统中,有哪些正在执行,以及他们执行的
 > 5 x11控制台,登陆后进入图形GUI模式
 > 6.系统正常关闭重启,默认运行级别不能设置6,否则不能正常运行
 > [开机] -> [BIOS] -> [/boot] -> [systemd进程1] -> [运行级别] -> [运行对应的服务]
-
-** chkconfig指令
+- chkconfig指令
 >1. 通过chkconfig命令可以给服务的各个运行级别设置自 启动/关闭
 >2. chkconfig指令管理的服务在 /etc/init.d 查看
 >3. 注意: CentOS7 后,很多服务使用systemctl管理
-  
-** chkconfig
+- chkconfig
 > 查看服务 chkconfig --list [| grep xxx]
 > chkconfig 服务名 --list 
 > chkconfig --level 5 服务名 on/off 
-
-** systemctl 管理命令
+- systemctl 管理命令
 > 1.基本语法 systemctl [ start | stop | restart | status ] 服务名
 > 2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
-  
-** systemctl 设置服务的自启动状态
+- systemctl 设置服务的自启动状态
  > 1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
 > 2. systemctl enable 服务名 (设置服务开机启动)
 > 3. systemctl disable 服务名 (关闭服务开机启动)
 > 4. systemct is-ebabled 服务名(查询某个服务是否自启动的)
-
-打开或者关闭指定端口
-** firewall
+- firewall 打开或者关闭指定端口 
 打开端口
 > firewall-cmd --permanent --add-port=端口号/协议
-
-关闭端口
+- 关闭端口
 > firewall-cmd --permanent --remove-port=端口号/协议
-
-重新载入生效
+- 重新载入生效
 > firewall-cmd --reload
-
-查询端口是否开放
+- 查询端口是否开放
 > firewall-cmd --query-port=端口/协议
-
-  
-  
