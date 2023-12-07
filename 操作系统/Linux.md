@@ -1,4 +1,4 @@
-### 1. 网络的三种模式
+### 1.网络的三种模式
 - 1  桥接网络模式
 	桥接网络是指本地物理网卡和虚拟网卡通过VMnet0虚拟交换机进行桥接，物理网卡和虚拟网卡在拓扑图上处于同等地位(虚拟网卡既不是Adepter VMnet1也不是Adepter VMnet8)。
 	这里的VMnet0相当于一个交换机，最终通过这个虚拟交换机使其两端在一个网段中。
@@ -40,7 +40,7 @@ DNS1="8.8.8.8"
 
 systemctl restart network
 ```
-### 2. 目录结构
+### 2.目录结构
 ```
 1)  linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的
 目录。
@@ -60,7 +60,7 @@ systemctl restart network
 	存放普通用户的主目录
 ```
 ![[Pasted image 20230703220424.png|500]]
-### 3. 用户管理
+### 3.用户管理
 ```
 设置用户名
 	useradd  [name]
@@ -86,7 +86,7 @@ systemctl restart network
 	组(group)的配置文件,记录Linux 包含的组的信息
 	每行含义: 组名:口令:组标识号:组内用户列表
 ```
-### 4. 实用指令
+### 4.实用指令
 #### 4.1 运行级别
 ```
 级别
@@ -183,7 +183,7 @@ help
 		usermod -d 目录名 用户名 改变用户登陆的初始目录  用户需要有进入到新目录的权限
 	
 ```
-### 5. 权限
+### 5.权限
 ```
 **ls -l 中显示的内容
 **-rwxrw-r 1 root root 1213 Feb 2 09:30 abc
@@ -479,7 +479,7 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 > 1.基本语法 systemctl [ start | stop | restart | status ] 服务名
 > 2.systemctl 指令管理的服务在 /usr/lib/systemd/system 查看
 - systemctl 设置服务的自启动状态
- > 1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
+ >1. systemctl list-unit-files [ | grep 服务名] (查看服务开机启动状态,grep 可以进行过滤)
 > 2. systemctl enable 服务名 (设置服务开机启动)
 > 3. systemctl disable 服务名 (关闭服务开机启动)
 > 4. systemct is-ebabled 服务名(查询某个服务是否自启动的)
@@ -492,3 +492,9 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 > firewall-cmd --reload
 - 查询端口是否开放
 > firewall-cmd --query-port=端口/协议
+
+#### 动态监控进程
+- top [选项] 显示运行的进程(动态)
+  > -d 秒数 指定top命令每隔几秒更新 默认3s
+  > -i 使top不显示任何闲置或僵死进程
+  > -p 通过指定监控进程ID来仅仅监控某个进程的状态
