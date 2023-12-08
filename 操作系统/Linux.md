@@ -562,6 +562,13 @@ rpm -ivh mysql-community-server-5.7.26-1.el7.x86_64.rpm
 7.运行mysql -u root  -p，用root用户登录，提示输入密码可用上述的，可以成功登陆进入mysql命令行
 8.设置root密码，对于个人开发环境，如果要设比较简单的密码（生产环境服务器要设复杂密码），可以运行
 set global validate_password_policy=0;  提示密码设置策略（validate_password_policy默认值1，）
+
+ 遇到问题请修改此
+	set global validate_password_mixed_case_count=0;
+	set global validate_password_number_count=3;
+	set global validate_password_special_char_count=0;
+	set global validate_password_length=4;
+
 9.set password for 'root'@'localhost' =password('hspedu100');
 10.运行flush privileges;使密码设置生效
 ```
