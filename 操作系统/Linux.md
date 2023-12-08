@@ -508,3 +508,13 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 - netstat [选项] 
   >-an 按一定顺序排列输出
   >-p 显示哪个进程在调用
+#### rpm包管理
+- rpm包的简单指令
+  >查询已经安装的rpm列表 rpm -qa|grep xx
+- rpm包基本格式
+  > 一个rpm包名: firefox-66.6.6-1.el7.centos.x86_64
+  > 名称: firefox
+  > 版本号 : 66.6.6-1
+  > 适用操作系统: el7.centos.x86_64
+  > 表示centos7.x的64位系统
+  > 如果是i686 i386表示32位系统,noarch表示通用

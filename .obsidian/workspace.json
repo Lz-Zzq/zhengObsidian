@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "操作系统/Linux.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#include",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -177,7 +176,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "c9a639e9b89a101d",
+  "active": "df107a889a18e57d",
   "lastOpenFiles": [
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
