@@ -518,3 +518,19 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
   > 适用操作系统: el7.centos.x86_64
   > 表示centos7.x的64位系统
   > 如果是i686 i386表示32位系统,noarch表示通用
+- rmp包的其他查询指令
+  >rpm -qa 查询所安装的所有rpm软件包
+  >rpm -qa | more
+  >rpm -qa | grep X [rpm -qa | grep firefox]
+  >
+  >rpm -q 软件包名 : 查询软件包是否安装
+  >
+  >rpm -qi 软件包名 : 查询软件包是否安装
+  >
+  >rpm -ql 软件报名 : 查询软件包种的文件
+  >
+  >rpm -qf 文件全路径名 查询文件所属的软件包
+  >>rpm -qf /etc/passwd
+  >
+  >
+  >
