@@ -532,5 +532,14 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
   >rpm -qf 文件全路径名 查询文件所属的软件包
   >>rpm -qf /etc/passwd
   >
-  >
-  >
+- 卸载rpm包
+  >rpm -e RPM包名称
+
+#### yum
+- yum是Shell前端软件包管理器,基于RPM包管理,能够指定的服务器自动下载RPM包并且安装,可以自动处理依赖性关系,并且一次安装所有依赖的软件包
+- yum的基本指令
+  >查询yum服务是否有需要安装的软件包
+  >   
+-     yum install xxx
+>	安装软件包
+>
