@@ -161,7 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 247
+    "width": 244
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,6 +178,7 @@
   },
   "active": "df107a889a18e57d",
   "lastOpenFiles": [
+    "Pasted image 20231209011218.png",
     "操作系统/Linux.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "网络/计算机网络.md",
