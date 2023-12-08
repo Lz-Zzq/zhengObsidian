@@ -158,9 +158,9 @@ help
 		date +%d 天
 		date "+%Y-%m-%d %H:%M:%S"  年月日时分秒
 	**cal 查看日历 
-	**find 指令
+	**find 查找指令
 		find [-name 按照名称 user用户名 size文件大小 搜索范围] find指令将从指定目录向下递归遍历各个子目录,将满足条件的文件在终端显示
-	**locate
+	**locate  查找
 		locate 搜索文件  可以快速定位文件路径  使用之前需要执行updatedb指令
 	**which 
 		可以查看指令存在的目录
@@ -405,7 +405,7 @@ ifconfig 查看linux的ip地址
 - 查看开放端口  
 >firewall-cmd --zone=public --list-ports
 
-- systemctl 是管理linux中服务的命令，可以对服务进行启动，停止，重新启动，查看状态等操作
+systemctl 是管理linux中服务的命令，可以对服务进行启动，停止，重新启动，查看状态等操作
 firewall-cmd是Linux中专门用于控制防火墙的命令
 
 ### 9.进程
@@ -451,7 +451,7 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
 > -u 显示进程的所属用户
 #### 服务(service)管理
 
-- 服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
+服务(service)本质就是一个进程,但是运行在后台的,通常都会监听某个端口,等待其他程序的请求,比如(mysql,sshd,防火墙等),因此我们又称为守护进程,是Linux中非常重要的知识点.
 
 - service管理指令
 > 1.service服务名 [ start | stop| restart | reload | status ]
@@ -534,12 +534,15 @@ firewall-cmd是Linux中专门用于控制防火墙的命令
   >
 - 卸载rpm包
   >rpm -e RPM包名称
+  >rpm -e --nodeps 强制删除
 
 #### yum
-- yum是Shell前端软件包管理器,基于RPM包管理,能够指定的服务器自动下载RPM包并且安装,可以自动处理依赖性关系,并且一次安装所有依赖的软件包
-- yum的基本指令
+yum是Shell前端软件包管理器,基于RPM包管理,能够指定的服务器自动下载RPM包并且安装,可以自动处理依赖性关系,并且一次安装所有依赖的软件包
+-  yum list | grep xx软件列表
   >查询yum服务是否有需要安装的软件包
-  >   
--     yum install xxx
->	安装软件包
->
+-  yum install xxx
+>安装软件包
+- vim /etc/profile
+  >修改环境变量
+- source /etc/profile
+  >让文件生效
