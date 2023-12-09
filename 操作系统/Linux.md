@@ -572,3 +572,5 @@ set global validate_password_policy=0;  提示密码设置策略（validate_pass
 9.set password for 'root'@'localhost' =password('hspedu100');
 10.运行flush privileges;使密码设置生效
 ```
+### 10.Shell
+Shell是命令行解释器,它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序,用户可以用Shell来启动,挂起,停止甚至是编写一些程序
