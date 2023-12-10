@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/计算机网络.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/计算机网络.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -178,8 +178,8 @@
   },
   "active": "108b1a490d14c435",
   "lastOpenFiles": [
-    "Image_png/Pasted image 20231210155745.png",
     "网络/计算机网络.md",
+    "Image_png/Pasted image 20231210155745.png",
     "Image_png/Pasted image 20231210155932.png",
     "中间件_框架/Nginx.md",
     "Image_png/Pasted image 20231210155338.png",
