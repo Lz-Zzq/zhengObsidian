@@ -632,3 +632,21 @@ ___
 	  2. 注意expr运算符间要有空格 如果希望将expr结果赋给某个变量 使用 \`\`
 	  3. expr m -n
 	  4. expr \\*  / % 算数运算符
+```
+#!/bin/bash
+#案例1:计算(2+3)*4的值
+A=2
+B=3
+SUM=$[(A+B)*4]
+echo $SUM
+C=`expr 3 + 3`
+D=`expr $C \* 4`
+echo $D
+unset SUM
+#案例2:求出命令行的两个参数和
+SUMS=$[$1+$2]
+echo $SUMS
+```
+- 条件判断
+	1. \[ condition ] (注意condition前后要有空格)
+	2. \#非空返回ture,可使用%?验证( 0为true , >1为fasle )
