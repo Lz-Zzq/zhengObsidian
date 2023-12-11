@@ -718,4 +718,21 @@ do
 done
 注意：while 和 [有空格，条件判断式和 [也有空格
 ```
-
+read
+```
+read(选项)(参数)
+选项：
+-p：指定读取值时的提示符；
+-t：指定读取值时等待的时间（秒），如果没有在指定的时间内输入，就不再等待了。。
+参数
+变量：指定读取值的变量名
+```
+- 函数
+Shell 编程和其它编程语言一样，有系统函数，也可以自定义函数
+- 系统函数
+>basename 基本语法
+>功能：返回完整路径最后 / 的部分，常用于获取文件名
+>basename \[pathname] \[suffix]
+>basename \[string] \[suffix]
+>功能描述：basename 命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来。
+>suffix 为后缀，如果 suffix 被指定了，basename 会将 pathname 或 string 中的 suffix 去掉。
