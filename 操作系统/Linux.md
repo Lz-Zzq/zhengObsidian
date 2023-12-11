@@ -727,12 +727,38 @@ read(选项)(参数)
 参数
 变量：指定读取值的变量名
 ```
-- 函数
-Shell 编程和其它编程语言一样，有系统函数，也可以自定义函数
 - 系统函数
->basename 基本语法
->功能：返回完整路径最后 / 的部分，常用于获取文件名
->basename \[pathname] \[suffix]
->basename \[string] \[suffix]
->功能描述：basename 命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来。
->suffix 为后缀，如果 suffix 被指定了，basename 会将 pathname 或 string 中的 suffix 去掉。
+```
+basename 功能：返回完整路径最后 / 的部分，常用于获取文件名
+basename \[pathname] \[suffix]
+basename \[string] \[suffix]
+	功能描述：basename 命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来。
+suffix 为后缀，如果 suffix 被指定了，basename 会将 pathname 或 string 中的 suffix 去掉。
+
+dirname 功能：返回完整路径最后 / 的前面的部分，常用于返回路径部分
+dirname 文件绝对路径 （功能描述：从给定的包含绝对路径的文件名中去除文件名（非目录的部分），然后返回剩
+下的路径（目录的部分））
+```
+- 自定义函数
+```
+[ function ] funname[()]
+{
+Action;
+[return int;]
+}
+调用直接写函数名：funname
+[值]
+
+例:
+#!/bin/bash
+function getSum(){
+        #SUM=$[$n1+$n2]
+        SUM=$[$1+$2]
+        echo $SUM
+}
+#read -p "请输入一个数" n1
+#read -p "请输入一个数" n2
+#getSum $n1 $n2
+getSum $1 $n2
+
+```
