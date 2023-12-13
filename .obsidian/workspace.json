@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "58b0c03e3d4ef96e",
+        "id": "e8f5e7fa77a827d1",
         "type": "tabs",
         "children": [
           {
-            "id": "108b1a490d14c435",
+            "id": "7c5773cf2b32091c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "编程语言/汇编.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -176,19 +176,30 @@
       "publish:发布更改": false
     }
   },
-  "active": "108b1a490d14c435",
+  "active": "7c5773cf2b32091c",
   "lastOpenFiles": [
-    "操作系统/Linux.md",
-    "数据结构与算法/大话数据结构.md",
+    "book/计算机网络-自顶向下方法第七版.pdf",
+    "book/编码：隐匿在计算机软硬件背后的语言.pdf",
+    "book/深度探索Linux操作系统：系统构建和原理解析.pdf",
+    "book/《鸟哥的Linux私房菜-基础篇》第四版.pdf",
+    "book/图解HTTP+彩色版.pdf",
+    "book/深入理解计算机系统_第三版【高清文字非扫描】 带目录中文原版.pdf",
+    "book/图解TCPIP(第5版).pdf",
+    "book/Primer c++ 第5版.pdf",
+    "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
+    "book",
+    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "数据结构与算法/算法数据结构.md",
+    "数据结构与算法/大话数据结构.md",
+    "BOOK/《鸟哥的Linux私房菜-基础篇》第四版.pdf",
+    "编程语言/汇编.md",
+    "操作系统/Linux.md",
     "网络/计算机网络.md",
     "中间件_框架/docker.md",
     "编程语言/C++.md",
     "编程语言/C Primer Plus.md",
     "编程语言/C++ Primer.md",
     "操作系统/操作系统原理.md",
-    "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "编程语言/汇编.md",
     "编程语言/C.md",
     "Image_png/Pasted image 20231210155745.png",
     "Image_png/Pasted image 20231210155932.png",
@@ -210,22 +221,11 @@
     "Excalidraw/Drawing 2023-12-06 20.33.57.excalidraw.md",
     "2023-12-06.md",
     "Git/Git.md",
-    "Excalidraw",
     "2023-08-25.md",
     "数据结构与算法/数据结构.md",
     "数据结构与算法/数据结构算法.md",
     "操作系统/数字逻辑电路.md",
-    "编程语言",
-    "Image_png",
-    "网络安全",
-    "中间件_框架",
-    "Git",
-    "数据库",
-    "数据结构与算法",
-    "netty",
-    "网络",
     "2023-03-12.md",
-    "未命名.md",
-    "Excalidraw/Drawing 2023-03-12 10.32.17.excalidraw.md"
+    "未命名.md"
   ]
 }
