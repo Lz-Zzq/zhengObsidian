@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
+                "file": "操作系统/Linux.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
+                "file": "操作系统/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "操作系统/进制转换_原码_反码_补码_位运算.md",
+                "file": "操作系统/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "操作系统/进制转换_原码_反码_补码_位运算.md"
+                "file": "操作系统/Linux.md"
               }
             }
           },
@@ -178,6 +178,7 @@
   },
   "active": "7c5773cf2b32091c",
   "lastOpenFiles": [
+    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "编程语言/汇编.md",
     "中间件_框架/docker.md",
     "中间件_框架/Nginx.md",
@@ -193,7 +194,6 @@
     "book/Primer c++ 第5版.pdf",
     "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
     "book",
-    "操作系统/进制转换_原码_反码_补码_位运算.md",
     "数据结构与算法/算法数据结构.md",
     "数据结构与算法/大话数据结构.md",
     "网络/计算机网络.md",

@@ -4,8 +4,8 @@
   "theme": "obsidian",
   "nativeMenus": false,
   "translucency": false,
-  "baseFontSize": 27,
-  "textFontFamily": "Microsoft YaHei UI",
-  "interfaceFontFamily": "Microsoft YaHei UI",
-  "monospaceFontFamily": "Microsoft YaHei UI"
+  "baseFontSize": 30,
+  "textFontFamily": "黑体",
+  "interfaceFontFamily": "黑体",
+  "monospaceFontFamily": "黑体"
 }
