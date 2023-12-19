@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/C Primer Plus.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/C Primer Plus.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/C Primer Plus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/汇编.md"
+                "file": "编程语言/C Primer Plus.md"
               }
             }
           },
@@ -178,12 +178,14 @@
   },
   "active": "7c5773cf2b32091c",
   "lastOpenFiles": [
+    "编程语言/C++.md",
+    "编程语言/C++ Primer.md",
+    "编程语言/C Primer Plus.md",
+    "编程语言/汇编.md",
     "操作系统/Linux.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "编程语言/汇编.md",
     "中间件_框架/docker.md",
     "中间件_框架/Nginx.md",
-    "编程语言/C++ Primer.md",
     "book/计算机网络-自顶向下方法第七版.pdf",
     "book/编码：隐匿在计算机软硬件背后的语言.pdf",
     "book/深度探索Linux操作系统：系统构建和原理解析.pdf",
@@ -197,8 +199,6 @@
     "数据结构与算法/算法数据结构.md",
     "数据结构与算法/大话数据结构.md",
     "网络/计算机网络.md",
-    "编程语言/C++.md",
-    "编程语言/C Primer Plus.md",
     "操作系统/操作系统原理.md",
     "编程语言/C.md",
     "Image_png/Pasted image 20231210155745.png",
