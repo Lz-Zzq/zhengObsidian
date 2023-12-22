@@ -801,4 +801,14 @@ echo "备份数据库${DATABASE}成功!"
 - /var/log/ 目录就是系统日志文件保存位置
 ![[Pasted image 20231222153954.png]]
 
->错误 : maillog message  
+>错误 : maillog message lastlog 
+
+#### 日志管理服务 rsyslogd
+CentOS7.6日志服务是rsyslogd , CentOS6.x 日志服务是syslogd. rsyslogd功能更强大.
+rsyslogd的使用,日志文件格式,和syslogd服务兼容的
+- 查询Linux中的rsyslogd服务是否启动
+>ps aux | grep "rsyslog" | grep -v "grep"   //grep -v 反向匹配
+- 查询rsyslogd服务的自启动状态
+>systemctl list-unit-files | grep rsyslog
+- 配置文件 /etc/rsyslog.conf
+>编辑文件格式: \*.*   存放日志文件
