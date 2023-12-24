@@ -27,19 +27,6 @@
 	Host-Only的宗旨就是建立一个与外界隔绝的内部网络，来提高内网的安全性。这个功能或许对普通用户来说没有多大意义，但大型服务商会常常利用这个功能。如果你想为VMnet1网段提供路由功能，那就需要使用RRAS，而不能使用XP或2000的ICS，因为ICS会把内网的IP地址改为 192.168.0.1，但虚拟机是不会给VMnet1虚拟网卡分配这个地址的，那么主机和虚拟机之间就不能通信了。
 	在Host-only模式下，相当于虚拟机通过双绞线和宿主计算机直连，而宿主计算机不提供任何路由服务。因此在Host-only模式下，虚拟机可以和宿主计算机互相访问，但是虚拟机无法访问外部网络。
 	当我们要组成一个与物理网络相隔离的虚拟网络时，无疑非常适合使用Host-only模式。
-```
-设置网络  vim /etc/sysconfig/network-scripts/ifcfg-ens33  
-TYPE="Ethernet"
-BOOTPROTO="static"
-DEVICE="ens33"
-ONBOOT="yes"
-IPADDR="192.168.xxx.xxx"
-NETMASK="255.255.255.0"
-GATEWAY="192.168.0.1"
-DNS1="8.8.8.8"
-
-systemctl restart network
-```
 ### 2.目录结构
 ```
 1)  linux 的文件系统是采用级层式的树状目录结构，在此结构中的最上层是根目录“/”，然后在此目录下再创建其他的
@@ -843,7 +830,7 @@ rsyslogd的使用,日志文件格式,和syslogd服务兼容的
 	  3. 产生时间的服务名或程序名
 	  4. 时间的具体信息
 #### 日志轮替
-- 日志论题就是把旧的文件移动改名,简历新的空日志文件,旧的日志超过保存范围就会删除
+- 日志轮替就是把旧的文件移动改名,简历新的空日志文件,旧的日志超过保存范围就会删除
 - 日志论题文件命名
 	1. centos7使用logrotate进行日志轮替管理,想要改变日志轮替文件名,通过/etc/logrotate.conf配置文件中 "dateext" 参数:
 	2. 如果配置文件中有"dateext"参数,那么日志会用==日期==来作为日志文件的后缀,例如:secure-202020210 这样的日志文件名称不会重叠,也就不需要日志文件的改名,只需要指定保存日志个数,删除多余的日志文件即可.
@@ -896,3 +883,17 @@ sharedscripts     在此关键字之后的脚本只执行一次。
 prerotate/endscript     在日志轮替之前执行脚本命令。
 postrotate/endscript    在日志轮替之后执行脚本命令。
 ```
+- 将自己的日志加入日志轮替
+	  1. 直接在/etc/logrotate.conf配置文件中写入该日志的轮替策略
+	  2. 在/etc/logrotate.d/目录中新建该日志的轮替文件,在该轮替文件中写入正确的轮替策略,因为该目录文件都会被"include"到主配置文件中  建议使用该方法
+- 日志轮替机制原理
+	  本质上是依赖系统定时任务,在/etc/cron.daily/目录,就会发现这个目录中logrotate文件(可执行),logrotate通过这个文件依赖定时任务执行的.
+![[Pasted image 20231224193837.png]]
+#### 内存日志
+- journalctl 可以查看内存日志
+>journalctl   ##查看全部
+>journalctl   -n 3  ##查看最新 3 条
+>journalctl  --since 19:00  --until 19:10:10  \#查看起始时间到结束时间的日志可加日期
+>journalctl  -p err   ##报错日志
+>journalctl  -o verbose  ##日志详细内容
+>journalctl  \_PID1245 \_COMM=sshd    ##查看包含这些参数的日志（在详细日志查看）或者 journalctl  |  grep sshd
