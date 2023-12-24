@@ -905,9 +905,7 @@ size 大小
 日志只有大于指定大小才进行日志轮替，而不是按照时间轮替。
 dateext
 使用日期作为日志轮替文件的后缀。
-韩顺平 2021 图解 Linux 全面升级
-更多学习资料 ，学习路线 ， 职业规划 关注微信公众号 hspcode
-第 134页
+
 sharedscripts
 在此关键字之后的脚本只执行一次。
 prerotate/endscript
