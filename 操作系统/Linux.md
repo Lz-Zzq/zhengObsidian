@@ -322,19 +322,23 @@ VMnet8
 
 ```
 查看vm8的网关 子网掩码
-	vim  /etc/systemctl/network-scripts/ifcfg-ens33
+	设置网络  vim /etc/sysconfig/network-scripts/ifcfg-ens33  
 	---------------------------------------------------
-	UUID=""    //随机id
-	HWADDR="00:0c:2x...."  //MAC地址
-	TYPE="Ethernet"     //网络类型  通常是ethemet
-	BOOTPROTO="static"      //IP配置方法  none  static bootp dhcp  (引导时不使用协议|静态分配IP|BOOTTP协议|DHCP协议)  
+	TYPE="Ethernet"                     //网络类型
+	PROXY_METHOD="none"      
+	BROWSER_ONLY="no"
+	BOOTPROTO="static"              //none static bootp dhcp (引导不使用协议|静态分配|BOOTTP协议 DHCP协议)
+	DEFROUTE="yes"   
+	NAME="ens33"       
 	DEVICE="ens33"    //接口名 设备/网卡
-	ONBOOT="yes"     //新系统启动时候网络接口是否有效   yes/no
-	IPADDR="192.168.253.253"         //IP地址
-	NETMASK="255.255.255.0"        //子网掩码     
-	GATEWAY="192.168.253.2"       //网关  vm8
-	DNS1="8.8.8.8"          //域名解析器
+	ONBOOT="yes"
+	UUID="2b7b4f56-a3b2-46df-9f11-86d7c1d12039"
+	IPADDR="192.168.8.8"    //IP
+	NETMASK="255.255.255.0"  //子网掩码
+	GATEWAY="192.168.8.2"   //网关
+	DNS1="8.8.8.8"    //域名解析器
 	DNS2="8.8.4.4"
+	ZONE=public
 	--------------------------------------------------
 	reboot  / service network restart
 ```

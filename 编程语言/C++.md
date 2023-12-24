@@ -453,3 +453,15 @@ read
 	ifs.read((char *)&p1,sizeof(p1));
 	cout << p1.age << " " << p1.name << endl;
 ```
+
+### 模板
+#### 函数模板
+- C++ 泛型编程 主要利用技术就是模板
+- C++ 提供两种模板机制: 函数模板和类模板
+```
+template<typename T>
+函数声明或者定义
+	template --声明创建模板
+	typename --表面其后面的符号是一种数据类型,可以用class代替
+	T 通用数据类型
+```
