@@ -842,3 +842,76 @@ rsyslogd的使用,日志文件格式,和syslogd服务兼容的
 	  2. 产生时间的服务器的主机名
 	  3. 产生时间的服务名或程序名
 	  4. 时间的具体信息
+#### 日志轮替
+- 日志论题就是把旧的文件移动改名,简历新的空日志文件,旧的日志超过保存范围就会删除
+- 日志论题文件命名
+	1. centos7使用logrotate进行日志轮替管理,想要改变日志轮替文件名,通过/etc/logrotate.conf配置文件中 "dateext" 参数:
+	2. 如果配置文件中有"dateext"参数,那么日志会用==日期==来作为日志文件的后缀,例如:secure-202020210 这样的日志文件名称不会重叠,也就不需要日志文件的改名,只需要指定保存日志个数,删除多余的日志文件即可.
+	3. 如果配置文件中没有"dateext"参数,日志文件就需要进行改名了.当第一次进行日志轮替时,当前的=="secure"日志会自动改名为"secure.1"然后新建"secure"日志,用来保存新的日志.== 进行日志轮替时, "secure.1" 会自动改名为 "secure.2" ,当前的 "secure" 日志会自动改名为 "secure.1" , 然后也会新建 "secure" 日志,用来保存新的日志
+- logrotate 配置文件
+/etc/logrotate.conf 为 logrotate 的全局配置文件
+```
+# rotate log files weekly, 每周对日志文件进行一次轮替
+weekly
+# keep 4 weeks worth of backlogs, 共保存 4 份日志文件，当建立新的日志文件时，旧的将会被删除
+rotate 4
+# create new (empty) log files after rotating old ones, 创建新的空的日志文件，在日志轮替后
+create
+# use date as a suffix of the rotated file, 使用日期作为日志轮替文件的后缀
+dateext
+# uncomment this if you want your log files compressed, 日志文件是否压缩。如果取消注释，则日志会在转储的同时进行压缩
+#compress
+#RPM packages drop log rotation information into this directory
+include /etc/logrotate.d
+# 包含 /etc/logrotate.d/ 目录中所有的子配置文件。也就 是说会把这个目录中所有子配置文件读取进来
+#下面是单独设置，优先级更高。
+# no packages own wtmp and btmp -- we'll rotate them here
+/var/log/wtmp {
+	monthly # 每月对日志文件进行一次轮替
+	create 0664 root utmp # 建立的新日志文件，权限是 0664 ，所有者是 root ，所属组是 utmp 组
+	minsize 1M # 日志文件最小轮替大小是 1MB 。也就是日志一定要超过 1MB 才会轮替，否则就算时间达到一个月，也不进行日志转储
+rotate 1 # 仅保留一个日志备份。也就是只有 wtmp 和 wtmp.1 日志保留而已
+}
+/var/log/btmp {
+	missingok # 如果日志不存在，则忽略该日志的警告信息
+	monthly
+	create 0600 root utmp
+	rotate 1
+}
+
+参数说明
+daily
+日志的轮替周期是每天
+weekly
+日志的轮替周期是每周
+monthly
+日志的轮替周期是每月
+rotate 数字
+保留的日志文件的个数。0 指没有备份
+compress
+日志轮替时，旧的日志进行压缩
+create mode owner group
+建立新日志，同时指定新日志的权限与所有者和所属组。
+mail address
+当日志轮替时，输出内容通过邮件发送到指定的邮件地址。
+missingok
+如果日志不存在，则忽略该日志的警告信息
+notifempty
+如果日志为空文件，则不进行日志轮替
+minsize 大小
+日志轮替的最小值。也就是日志一定要达到这个最小值才会轮替，否则就算时间达到也
+不轮替
+size 大小
+日志只有大于指定大小才进行日志轮替，而不是按照时间轮替。
+dateext
+使用日期作为日志轮替文件的后缀。
+韩顺平 2021 图解 Linux 全面升级
+更多学习资料 ，学习路线 ， 职业规划 关注微信公众号 hspcode
+第 134页
+sharedscripts
+在此关键字之后的脚本只执行一次。
+prerotate/endscript
+在日志轮替之前执行脚本命令。
+postrotate/endscript
+在日志轮替之后执行脚本命令。
+```
