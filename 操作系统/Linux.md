@@ -918,4 +918,7 @@ postrotate/endscript    在日志轮替之后执行脚本命令。
 2. initrd文件: intiramfs-3.10.0.957.el.x86_64.img
 
 #### 思路分析
-1. 在现有的Linux系统(Centos7.6)上加一块硬盘/dev/sdb 在硬盘上分两个分区,一个是/boot,一个是/
+1. 在现有的Linux系统(Centos7.6)上加一块硬盘/dev/sdb 在硬盘上分两个分区,一个是/boot,一个是/,并将其格式化,需要明确的是,现在加的这两个硬盘在现有的Linux系统中是/dev/sdb,但是,当我们把东西全部设置好时,要把这个硬盘拔出,放在新系统上,此时,就是/dev/sda
+2. 在/dev/sdb硬盘上,将其打造成独立的Linux系统,里面的所有文件是需要拷贝进去的
+3. 作为能独立运行的Linux系统,内核是一定不能少,要把内核文件和initramfs文件也一起拷到/dev/sdb上
+4. 以上步骤完成,我们自制的Linux就完成,创建一个新的Linux虚拟机,将其硬盘指向我们创建的硬盘,success
