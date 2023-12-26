@@ -154,10 +154,16 @@
 1. 函数的返回值不能是数组和函数
 2. 引用数组作为函数参数: 
 	int(&arr)[6]  注: 范围for循环无法循环不知道指定长度的数组
-1. 当一个函数被调用时候,调用的地方会创建一个临时变量拷贝返回值,但是如果在返回值类型后添加&,则返回引用  (sting &)
-2. 返回数组指针的定义: int ( * fun(int x) )[5]  
-3. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
-4. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
+	void f1(int arr[]) {}
+	void f2(int arr[8]) {}
+	void f3(int(arr)[]) {}
+	void f4(int(arr)[9]) {}
+	void f5(int* arr) {}
+	以上完全等价
+3. 当一个函数被调用时候,调用的地方会创建一个临时变量拷贝返回值,但是如果在返回值类型后添加&,则返回引用  (sting &)
+4. 返回数组指针的定义: int ( * fun(int x) )[5]  
+5. 数组指针定义较为频繁 可以使用typedef来简化  typedef int arrayT[5]     arrayT *fun(int x);
+6. 尾置返回类型  auto 自动推断返回值类型    auto fun3(int x) -> int(*)[5];
 7. 返回类型是 数组指针 
 	auto fun3(int x) -> int(*)[5] {}
 	int(*fun(int x))[5] {}
