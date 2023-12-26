@@ -464,4 +464,5 @@ template<typename T>
 	template --声明创建模板
 	typename --表面其后面的符号是一种数据类型,可以用class代替
 	T 通用数据类型
+模板不能单独使用,如果需要单独使用必须指定类型
 ```
