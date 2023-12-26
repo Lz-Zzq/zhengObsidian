@@ -901,3 +901,21 @@ postrotate/endscript    在日志轮替之后执行脚本命令。
 >journalctl  -p err   ##报错日志
 >journalctl  -o verbose  ##日志详细内容
 >journalctl  \_PID1245 \_COMM=sshd    ##查看包含这些参数的日志（在详细日志查看）或者 journalctl  |  grep sshd
+
+### 12.定制自己的linux
+#### 基本原理
+启动流程:
+	制作Linux小系统之前,了解以下Linux的启动流程
+>1. 首先Linux需要通过自检,检查硬件设备有没有故障
+>2. 如果有多块启动盘的话,需要在BIOS中选择启动磁盘
+>3. 启动MBR中的bootloader引导程序
+>4. 加载内核文件
+>5. 执行所有的进程的父进程,老祖宗systemd
+>6. success
+
+在linux启动流程中,加载内核文件时的关键文件:
+1. kernel文件: vmlinuz-3.10.0-957.el9.x86_64
+2. initrd文件: intiramfs-3.10.0.957.el.x86_64.img
+
+#### 思路分析
+1. 在现有的Linux系统(Centos7.6)上加一块硬盘/dev/sdb 在硬盘上分两个分区,一个是/boot,一个是/
