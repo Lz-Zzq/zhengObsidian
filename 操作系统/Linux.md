@@ -923,3 +923,5 @@ postrotate/endscript    在日志轮替之后执行脚本命令。
 3. 作为能独立运行的Linux系统,内核是一定不能少,要把内核文件和initramfs文件也一起拷到/dev/sdb上
 4. 以上步骤完成,我们自制的Linux就完成,创建一个新的Linux虚拟机,将其硬盘指向我们创建的硬盘,success
 ### 13.Linux内核源码
+#### init下面的main.c
+![[Pasted image 20231228134137.png]]
