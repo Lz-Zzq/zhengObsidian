@@ -486,3 +486,15 @@ template<typename T>
 	 2. 具体化优先于常规模板
 		template<> bool myCompare(Person &p1, Person &p2)
 #### 类模板
+- 建立一个通用类，类中的成员 数据类型可以不具体制定，用一个虚拟的类型来代表
+>template\<typename T>
+>类
+>template<class NameType, class AgeType>
+>class Person
+- 类模板与函数模板的区别
+	1. 类模板没有自动类型推导的使用方式
+	2. 类模板在模板参数列表中可以有默认参数
+	> template(class NameTyep, class AgeType = int )  默认int
+- 类模板中成员函数创建时机
+	1. 普通类中的成员函数一开始就可以创建
+	2. 类模板中的成员函数在调用时才创建
