@@ -925,3 +925,7 @@ postrotate/endscript    在日志轮替之后执行脚本命令。
 ### 13.Linux内核源码
 #### init下面的main.c
 ![[Pasted image 20231228134137.png]]
+#### 备份与恢复
+- 安装命令
+  >yum -y install dump
+>  yum -y install restore
