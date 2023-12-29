@@ -500,5 +500,16 @@ template<typename T>
 	2. 类模板中的成员函数在调用时才创建
 - 类模板对象做函数做参数
 	1. 指定传入的类型    直接显示对象的数据类型
+	```
+	void printPerson1(Person<string,int> &p)
+	```
 	2. 参数模板化           将对象中的参数变为模板进行传递
+	```
+	template<class T1,class T2>   
+	void printPerson2(Person<T1, T2>& p)
+	```
 	3. 整个类模板化        将这个对象类型 模板化进行传递
+	```
+	template<class T>
+	void printPerson3(T &p)
+	```
