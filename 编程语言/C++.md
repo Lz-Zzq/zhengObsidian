@@ -552,4 +552,26 @@ void Person<T1, T2>::showPerson1() {
 ```
 #### 类模板与友元
 - 全局函数类内实现 - 直接在类内声明友元
+```
+//普通函数声明
+friend void printPerson(Person001<T1, T2> p) {
+	cout << "姓名: " << p.m_Name << "年龄: " << p.m_Age << endl;
+}
+```
 - 全局函数类外实现 - 需要提前让编译器知道全局函数的存在
+```
+//声明类,让编译器看到   建议
+template<class T1, class T2>
+class Person;
+
+//方法实现   函数模板实现
+template<class T1, class T2>
+void printPerson(Person001<T1, T2> p) {
+	cout << "姓名: " << p.m_Name << "年龄: " << p.m_Age << endl;
+}
+
+//类外声明函数 需要加上<> 证明该函数是模板 
+//类内不需要使用模板是因为普通函数接收了一个模板对象,而本函数在外部声明,需要加上<>声明为函数模板
+friend void printPerson<>(Person001<T1, T2> p);
+
+```
