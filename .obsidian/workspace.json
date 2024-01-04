@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4b5d8c1eeeecfe21",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -152,7 +163,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -176,7 +189,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "7c5773cf2b32091c",
+  "active": "4b5d8c1eeeecfe21",
   "lastOpenFiles": [
     "编程语言/C++.md",
     "操作系统/Linux.md",
