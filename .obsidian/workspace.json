@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/C Primer Plus.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/C Primer Plus.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/C Primer Plus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C++.md"
+                "file": "编程语言/C Primer Plus.md"
               }
             }
           },
@@ -180,9 +180,10 @@
   },
   "active": "7c5773cf2b32091c",
   "lastOpenFiles": [
+    "编程语言/C.md",
+    "编程语言/C++.md",
     "中间件_框架/Nginx.md",
     "网络/计算机网络.md",
-    "编程语言/C++.md",
     "编程语言/C++ Primer.md",
     "Git/Git.md",
     "编程语言/C Primer Plus.md",
@@ -191,7 +192,6 @@
     "反向链接/未命名.md",
     "反向链接",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
-    "编程语言/C.md",
     "Image_png/Pasted image 20231224193837.png",
     "Image_png/Pasted image 20231222153954.png",
     "编程语言/汇编.md",
