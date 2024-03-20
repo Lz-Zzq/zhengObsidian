@@ -13,25 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "网络/计算机网络.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
-          },
-          {
-            "id": "4ddd9868beb82b63",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "网络/计算机网络.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "网络/计算机网络.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C++.md"
+                "file": "网络/计算机网络.md"
               }
             }
           },
@@ -189,12 +178,12 @@
       "publish:发布更改": false
     }
   },
-  "active": "4ddd9868beb82b63",
+  "active": "7c5773cf2b32091c",
   "lastOpenFiles": [
+    "编程语言/C++.md",
     "编程语言/C++ Primer.md",
     "操作系统/Linux.md",
     "Git/Git.md",
-    "编程语言/C++.md",
     "编程语言/C Primer Plus.md",
     "编程语言/C.md",
     "中间件_框架/Nginx.md",
