@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4ddd9868beb82b63",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +189,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "7c5773cf2b32091c",
+  "active": "4ddd9868beb82b63",
   "lastOpenFiles": [
     "编程语言/C++ Primer.md",
     "操作系统/Linux.md",
