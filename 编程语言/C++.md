@@ -574,4 +574,6 @@ void printPerson(Person001<T1, T2> p) {
 //类内不需要使用模板是因为普通函数接收了一个模板对象,而本函数在外部声明,需要加上<>声明为函数模板
 friend void printPerson<>(Person001<T1, T2> p);
 
+
+
 ```
