@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9991a3b9c6d96187",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +189,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "80bc0c3ada0e0c7a",
+  "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
     "编程语言/C Primer Plus.md",
     "编程语言/C.md",
