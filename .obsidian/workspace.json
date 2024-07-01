@@ -32,9 +32,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c7a82b16ca68472d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -192,7 +202,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "9991a3b9c6d96187",
+  "active": "c7a82b16ca68472d",
   "lastOpenFiles": [
     "编程语言/C.md",
     "中间件_框架/Nginx.md",
