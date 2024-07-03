@@ -578,7 +578,7 @@ friend void printPerson<>(Person001<T1, T2> p);
 
 
 ```
-### 6 STL
+## 6 STL
 #### STL基本概念
 - STL (Standard Template Library,标准模板库)
 - STL 从广义上分为: <b>容器(container)算法(algorithm) 迭代器(iterator)</b>
@@ -605,4 +605,4 @@ friend void printPerson<>(Person001<T1, T2> p);
 常用的容器中迭代器种类为双向迭代器，和随机访问迭代器
 
 #### 容器算法迭代器初始
-#####vector 存放内置数据类型
+##### vector 存放内置数据类型
