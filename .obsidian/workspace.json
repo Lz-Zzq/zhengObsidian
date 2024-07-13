@@ -26,8 +26,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据结构与算法/算法数据结构.md",
-                "mode": "preview",
+                "file": "编程语言/汇编.md",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构与算法/算法数据结构.md",
+                "file": "编程语言/汇编.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据结构与算法/算法数据结构.md",
+                "file": "编程语言/汇编.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据结构与算法/算法数据结构.md"
+                "file": "编程语言/汇编.md"
               }
             }
           },
@@ -194,6 +194,7 @@
   },
   "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
+    "数据结构与算法/算法数据结构.md",
     "数据结构与算法/大话数据结构.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "操作系统/Linux.md",
@@ -221,7 +222,6 @@
     "book/图解TCPIP(第5版).pdf",
     "book/Primer c++ 第5版.pdf",
     "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
-    "数据结构与算法/算法数据结构.md",
     "操作系统/操作系统原理.md",
     "Image_png/Pasted image 20231210155745.png",
     "Image_png/Pasted image 20231210155932.png",
