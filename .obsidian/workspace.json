@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7c5773cf2b32091c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "编程语言/C++.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "9991a3b9c6d96187",
             "type": "leaf",
             "state": {
@@ -33,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,10 +180,12 @@
   },
   "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
+    "6876022f2576eb713dffe8dc699a079.jpg",
+    "编程语言/C++.md",
+    "编程语言/汇编.md",
     "Image_png/e31e54f6467a0f6f2f99ac204a36626.jpg",
     "Image_png/07d1f672b8abae8f4e16a6793110f82.jpg",
     "12773328f3229f5d86fd277631e4487.jpg",
-    "编程语言/汇编.md",
     "Image_png/e8799bafbce348447c938ebe34cba86.png",
     "编程语言/C Primer Plus.md",
     "e8799bafbce348447c938ebe34cba86 1.png",
@@ -206,7 +194,6 @@
     "数据结构与算法/大话数据结构.md",
     "操作系统/进制转换_原码_反码_补码_位运算.md",
     "操作系统/Linux.md",
-    "编程语言/C++.md",
     "编程语言/C++ Primer.md",
     "Image_png/Pasted image 20240701105414.png",
     "编程语言/C.md",
@@ -229,7 +216,6 @@
     "book/Primer c++ 第5版.pdf",
     "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
     "操作系统/操作系统原理.md",
-    "Image_png/Pasted image 20231210155745.png",
     "未命名 1.canvas",
     "2023-12-07.md",
     "未命名.canvas",
