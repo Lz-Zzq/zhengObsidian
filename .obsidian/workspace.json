@@ -19,8 +19,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "048ef2332862c386",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +189,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "9991a3b9c6d96187",
+  "active": "048ef2332862c386",
   "lastOpenFiles": [
     "Image_png/6876022f2576eb713dffe8dc699a079.jpg",
     "编程语言/C++.md",
