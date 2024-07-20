@@ -19,19 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "048ef2332862c386",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,8 +178,10 @@
       "publish:发布更改": false
     }
   },
-  "active": "048ef2332862c386",
+  "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
+    "Pasted image 20240720202822.png",
+    "Pasted image 20240720202240.png",
     "Image_png/6876022f2576eb713dffe8dc699a079.jpg",
     "编程语言/C++.md",
     "编程语言/汇编.md",
@@ -214,8 +205,6 @@
     "Image_png/Pasted image 20231228134137.png",
     "反向链接/未命名.md",
     "反向链接",
-    "Image_png/Pasted image 20231224193837.png",
-    "Image_png/Pasted image 20231222153954.png",
     "中间件_框架/docker.md",
     "book/计算机网络-自顶向下方法第七版.pdf",
     "book/编码：隐匿在计算机软硬件背后的语言.pdf",
