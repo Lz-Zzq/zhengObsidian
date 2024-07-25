@@ -159,7 +159,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -178,8 +178,10 @@
       "publish:发布更改": false
     }
   },
-  "active": "9991a3b9c6d96187",
+  "active": "80bc0c3ada0e0c7a",
   "lastOpenFiles": [
+    "Image_png/Pasted image 20240725141413.png",
+    "Image_png/Pasted image 20240725141110.png",
     "编程语言/汇编.md",
     "Image_png/f9fa46947c58f2310ca8b641f764b53.jpg",
     "Image_png/db30cbbe4744b24c6782a898eaa77cd.jpg",
@@ -191,7 +193,6 @@
     "Image_png/07d1f672b8abae8f4e16a6793110f82.jpg",
     "Image_png/28ad8799026ea1ccda50b0e3a4552bf.jpg",
     "Image_png/9720edb2c6b19d28ed7c346f8d67cf5.jpg",
-    "Image_png/6876022f2576eb713dffe8dc699a079.jpg",
     "编程语言/C++.md",
     "编程语言/C Primer Plus.md",
     "数据结构与算法/算法数据结构.md",
