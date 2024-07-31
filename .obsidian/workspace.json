@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/汇编语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/汇编语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/汇编.md",
+                "file": "编程语言/汇编语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/汇编.md"
+                "file": "编程语言/汇编语言.md"
               }
             }
           },
@@ -183,7 +183,7 @@
     "编程语言/C++ Primer.md",
     "编程语言/C Primer Plus.md",
     "Git/Git.md",
-    "编程语言/汇编.md",
+    "编程语言/汇编语言.md",
     "Image_png/a24c7cf68e42ad7d1439f4b5995f308.jpg",
     "Image_png/Pasted image 20240729104654.png",
     "Image_png/Pasted image 20240727125626.png",
