@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/汇编语言附注.md",
+                "file": "编程语言/汇编语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/汇编语言附注.md",
+                "file": "编程语言/汇编语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/汇编语言附注.md",
+                "file": "编程语言/汇编语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/汇编语言附注.md"
+                "file": "编程语言/汇编语言.md"
               }
             }
           },
@@ -158,8 +158,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -178,10 +177,12 @@
       "publish:发布更改": false
     }
   },
-  "active": "9991a3b9c6d96187",
+  "active": "80bc0c3ada0e0c7a",
   "lastOpenFiles": [
-    "基础原理/进制转换_原码_反码_补码_位运算.md",
+    "Image_png/aeb326ddee72c33629e279bb83bc639.jpg",
+    "Image_png/02448233dfeadc9ad9d83b0ba6c69e0.jpg",
     "编程语言/汇编语言附注.md",
+    "基础原理/进制转换_原码_反码_补码_位运算.md",
     "编程语言/汇编语言.md",
     "Image_png/ea4abc0dbaae77d1245a5f0d95eb049.jpg",
     "Image_png/Pasted image 20230526202430.png",
@@ -192,7 +193,6 @@
     "Image_png/Pasted image 20240727125626.png",
     "Image_png/Pasted image 20240807145831.png",
     "Image_png/Pasted image 20240812161545.png",
-    "Image_png/Pasted image 20240812162134.png",
     "编程语言/C Primer Plus.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
@@ -227,7 +227,6 @@
     "2023-08-25.md",
     "数据结构与算法/数据结构.md",
     "数据结构与算法/数据结构算法.md",
-    "操作系统/数字逻辑电路.md",
-    "2023-03-12.md"
+    "操作系统/数字逻辑电路.md"
   ]
 }
