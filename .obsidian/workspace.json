@@ -158,7 +158,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -177,22 +178,21 @@
       "publish:发布更改": false
     }
   },
-  "active": "80bc0c3ada0e0c7a",
+  "active": "c9a639e9b89a101d",
   "lastOpenFiles": [
-    "Image_png/aeb326ddee72c33629e279bb83bc639.jpg",
-    "Image_png/02448233dfeadc9ad9d83b0ba6c69e0.jpg",
     "编程语言/汇编语言附注.md",
-    "基础原理/进制转换_原码_反码_补码_位运算.md",
     "编程语言/汇编语言.md",
-    "Image_png/ea4abc0dbaae77d1245a5f0d95eb049.jpg",
-    "Image_png/Pasted image 20230526202430.png",
-    "Image_png/Pasted image 20231210155932.png",
-    "Image_png/Pasted image 20231228134137.png",
-    "Image_png/Pasted image 20240721144109.png",
-    "Image_png/Pasted image 20240725141110.png",
-    "Image_png/Pasted image 20240727125626.png",
-    "Image_png/Pasted image 20240807145831.png",
-    "Image_png/Pasted image 20240812161545.png",
+    "Image/aeb326ddee72c33629e279bb83bc639.jpg",
+    "Image/02448233dfeadc9ad9d83b0ba6c69e0.jpg",
+    "基础原理/进制转换_原码_反码_补码_位运算.md",
+    "Image/ea4abc0dbaae77d1245a5f0d95eb049.jpg",
+    "Image/Pasted image 20230526202430.png",
+    "Image/Pasted image 20231210155932.png",
+    "Image/Pasted image 20231228134137.png",
+    "Image/Pasted image 20240721144109.png",
+    "Image/Pasted image 20240725141110.png",
+    "Image/Pasted image 20240727125626.png",
+    "Image/Pasted image 20240807145831.png",
     "编程语言/C Primer Plus.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
