@@ -74,8 +74,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -181,20 +180,20 @@
   },
   "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
-    "Pasted image 20240817122131.png",
-    "Pasted image 20240817122105.png",
-    "编程语言/汇编语言附注.md",
+    "基础原理/操作系统原理.md",
     "编程语言/汇编语言.md",
+    "基础原理/进制转换_原码_反码_补码_位运算.md",
+    "编程语言/汇编语言附注.md",
+    "Image/Pasted image 20240817122131.png",
+    "Image/Pasted image 20240817122105.png",
     "Image/aeb326ddee72c33629e279bb83bc639.jpg",
     "Image/02448233dfeadc9ad9d83b0ba6c69e0.jpg",
-    "基础原理/进制转换_原码_反码_补码_位运算.md",
     "Image/ea4abc0dbaae77d1245a5f0d95eb049.jpg",
     "Image/Pasted image 20230526202430.png",
     "Image/Pasted image 20231210155932.png",
     "Image/Pasted image 20231228134137.png",
     "Image/Pasted image 20240721144109.png",
     "Image/Pasted image 20240725141110.png",
-    "Image/Pasted image 20240727125626.png",
     "编程语言/C Primer Plus.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
@@ -217,7 +216,6 @@
     "book/图解TCPIP(第5版).pdf",
     "book/Primer c++ 第5版.pdf",
     "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
-    "基础原理/操作系统原理.md",
     "未命名 1.canvas",
     "2023-12-07.md",
     "未命名.canvas",
