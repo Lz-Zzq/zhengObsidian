@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#reg",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,8 +179,10 @@
       "publish:发布更改": false
     }
   },
-  "active": "0d6e828b01107a1a",
+  "active": "9991a3b9c6d96187",
   "lastOpenFiles": [
+    "Pasted image 20240817122131.png",
+    "Pasted image 20240817122105.png",
     "编程语言/汇编语言附注.md",
     "编程语言/汇编语言.md",
     "Image/aeb326ddee72c33629e279bb83bc639.jpg",
@@ -193,7 +195,6 @@
     "Image/Pasted image 20240721144109.png",
     "Image/Pasted image 20240725141110.png",
     "Image/Pasted image 20240727125626.png",
-    "Image/Pasted image 20240807145831.png",
     "编程语言/C Primer Plus.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
