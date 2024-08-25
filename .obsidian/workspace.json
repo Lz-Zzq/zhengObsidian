@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e8f5e7fa77a827d1",
+        "id": "283ee941a19525b5",
         "type": "tabs",
         "children": [
           {
-            "id": "9991a3b9c6d96187",
+            "id": "c57379bbc8852a6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -178,10 +178,12 @@
       "publish:发布更改": false
     }
   },
-  "active": "c9a639e9b89a101d",
+  "active": "c57379bbc8852a6b",
   "lastOpenFiles": [
-    "编程语言/汇编语言附注.md",
+    "Image/855544e9c97086e6db07c7c223481de 1.jpg",
     "编程语言/汇编语言.md",
+    "Image/855544e9c97086e6db07c7c223481de.jpg",
+    "编程语言/汇编语言附注.md",
     "基础原理/Linux.md",
     "基础原理/操作系统原理.md",
     "基础原理/进制转换_原码_反码_补码_位运算.md",
@@ -193,8 +195,6 @@
     "Image/Pasted image 20230526202430.png",
     "Image/Pasted image 20231210155932.png",
     "Image/Pasted image 20231228134137.png",
-    "Image/Pasted image 20240721144109.png",
-    "Image/Pasted image 20240725141110.png",
     "编程语言/C Primer Plus.md",
     "编程语言/C++.md",
     "编程语言/C++ Primer.md",
