@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/汇编语言.md",
+                "file": "编程语言/C++.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/汇编语言.md",
+                "file": "编程语言/C++.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/汇编语言.md",
+                "file": "编程语言/C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/汇编语言.md"
+                "file": "编程语言/C++.md"
               }
             }
           },
@@ -180,8 +180,8 @@
   },
   "active": "c57379bbc8852a6b",
   "lastOpenFiles": [
-    "Image/855544e9c97086e6db07c7c223481de 1.jpg",
     "编程语言/汇编语言.md",
+    "Image/855544e9c97086e6db07c7c223481de 1.jpg",
     "Image/855544e9c97086e6db07c7c223481de.jpg",
     "编程语言/汇编语言附注.md",
     "基础原理/Linux.md",
