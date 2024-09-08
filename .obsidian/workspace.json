@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/Python.md",
+                "file": "编程语言/汇编语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/Python.md",
+                "file": "编程语言/汇编语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/Python.md",
+                "file": "编程语言/汇编语言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/Python.md"
+                "file": "编程语言/汇编语言.md"
               }
             }
           },
@@ -180,18 +180,18 @@
   },
   "active": "b1aa2686a04e0184",
   "lastOpenFiles": [
+    "编程语言/汇编语言附注.md",
+    "基础原理/Linux.md",
+    "基础原理/进制转换_原码_反码_补码_位运算.md",
+    "基础原理/操作系统原理.md",
     "编程语言/汇编语言.md",
     "编程语言/Python.md",
     "未命名.canvas",
-    "编程语言/汇编语言附注.md",
     "编程语言/C++ Primer.md",
     "编程语言/C++.md",
     "2024-09-05.md",
     "Image/855544e9c97086e6db07c7c223481de 1.jpg",
     "Image/855544e9c97086e6db07c7c223481de.jpg",
-    "基础原理/Linux.md",
-    "基础原理/操作系统原理.md",
-    "基础原理/进制转换_原码_反码_补码_位运算.md",
     "Image/Pasted image 20240817122131.png",
     "Image/Pasted image 20240817122105.png",
     "Image/aeb326ddee72c33629e279bb83bc639.jpg",
