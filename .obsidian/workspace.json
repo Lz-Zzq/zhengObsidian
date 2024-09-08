@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "283ee941a19525b5",
+        "id": "beb95bd3cf67f447",
         "type": "tabs",
         "children": [
           {
-            "id": "c57379bbc8852a6b",
+            "id": "b1aa2686a04e0184",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/Python.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/Python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/C++.md",
+                "file": "编程语言/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C++.md"
+                "file": "编程语言/Python.md"
               }
             }
           },
@@ -178,12 +178,17 @@
       "publish:发布更改": false
     }
   },
-  "active": "c57379bbc8852a6b",
+  "active": "b1aa2686a04e0184",
   "lastOpenFiles": [
     "编程语言/汇编语言.md",
+    "编程语言/Python.md",
+    "未命名.canvas",
+    "编程语言/汇编语言附注.md",
+    "编程语言/C++ Primer.md",
+    "编程语言/C++.md",
+    "2024-09-05.md",
     "Image/855544e9c97086e6db07c7c223481de 1.jpg",
     "Image/855544e9c97086e6db07c7c223481de.jpg",
-    "编程语言/汇编语言附注.md",
     "基础原理/Linux.md",
     "基础原理/操作系统原理.md",
     "基础原理/进制转换_原码_反码_补码_位运算.md",
@@ -196,8 +201,6 @@
     "Image/Pasted image 20231210155932.png",
     "Image/Pasted image 20231228134137.png",
     "编程语言/C Primer Plus.md",
-    "编程语言/C++.md",
-    "编程语言/C++ Primer.md",
     "编程语言/C.md",
     "Git/Git.md",
     "中间件_框架/Nginx.md",
@@ -218,7 +221,6 @@
     "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
     "未命名 1.canvas",
     "2023-12-07.md",
-    "未命名.canvas",
     "PNG图片资源/未命名.md",
     "未命名 2.canvas",
     "Excalidraw/Drawing 2023-09-19 21.35.20.excalidraw.md",
@@ -226,7 +228,6 @@
     "2023-12-06.md",
     "2023-08-25.md",
     "数据结构与算法/数据结构.md",
-    "数据结构与算法/数据结构算法.md",
-    "操作系统/数字逻辑电路.md"
+    "数据结构与算法/数据结构算法.md"
   ]
 }
