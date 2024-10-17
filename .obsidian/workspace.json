@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b1aa2686a04e0184",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "基础原理/Linux.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f011b68a014a27a1",
             "type": "leaf",
             "state": {
@@ -33,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "630a796890b83c7c",
@@ -177,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,11 +182,11 @@
   },
   "active": "f011b68a014a27a1",
   "lastOpenFiles": [
+    "编程语言/汇编语言.md",
+    "数据库/MySQL.md",
     "数据库",
     "数据库.md",
-    "数据库/MySQL.md",
     "基础原理/Linux.md",
-    "编程语言/汇编语言.md",
     "未命名.canvas",
     "2024-09-05.md",
     "编程语言/汇编语言附注.md",
@@ -235,7 +223,6 @@
     "book/深入理解计算机系统_第三版【高清文字非扫描】 带目录中文原版.pdf",
     "book/图解TCPIP(第5版).pdf",
     "book/Primer c++ 第5版.pdf",
-    "book/557813 计算机组成与设计  硬件软件接口 原书第5版.pdf",
     "未命名 1.canvas",
     "2023-12-07.md",
     "PNG图片资源/未命名.md",
