@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "630a796890b83c7c",
@@ -164,8 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,7 +178,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "f011b68a014a27a1",
+  "active": "80bc0c3ada0e0c7a",
   "lastOpenFiles": [
     "编程语言/汇编语言.md",
     "数据库/MySQL.md",
