@@ -50,3 +50,71 @@ ORM思想 (Object Relational Mapping)体现：
 # 第二章 数据库环境搭建
 [数据库环境搭建](D:\User\桌面\MySQL\第02章_MySQL环境搭建.pdf)
 # 第三章 基本的SELECT语句
+#### 1.SQL分类
+SQL语言在功能上主要分入三大类：
+- <font color="yellow">DDL (Data Definition Languages,数据定义语言)</font>，这些语句定义了不同的数据库，表，视图，索引等数据库对象，还可以用来创建，删除，修改数据库和数据表的结构。
+  - 主要的语句关键字包括<font color="yellow">CREATE DROP ALTER</font>等。
+- <font color="yellow">DML (Data Manipulation Language 数据操作语言)</font>，用于添加，删除，更新查询数据库记录，并且检查数据完整性。
+  - 主要语句关键字包括<font color="yellow">INSERT DELETE UPDATE SELECT</font>等。
+  - <font color="yellow">SELECT是SQL语言的基础，最为重要</font>
+- <font color="yellow">DCL （Data Control Language 数据控制语言）</font>，用于定义数据库，表，字段，用户的访问权限和安全级别。
+  - 主要的语句关键字包括<font color="yellow">GRANT REVOKE COMMIT ROLLBACK SAVEPOINT</font>等。
+ ```
+ 因为查询语句使用的非常频繁，所以很多人把查询语句单独拎出来：DQL（数据查询语言）。
+ 还有单独将COMMIT ROLLBACK取出来称之为TCL（Transaction Control Language 事务控制语言）。
+```
+#### 2.SQL大小写规范
+MySQL 在 Windows 环境下是大小写不敏感的
+MySQL 在 Linux 环境下是大小写敏感的
+
+推荐采用统一的书写规范：
+数据库名、表名、表别名、字段名、字段别名等都小写
+SQL 关键字、函数名、绑定变量等都大写
+#### 3.注释
+```
+单行注释：#注释文字(MySQL特有的方式)
+单行注释：-- 注释文字(--后面必须包含一个空格。)
+多行注释：/* 注释文字 */
+```
+#### 4.数据指令导入
+`source d:\mysqldb.sql`
+#### 5.基本的SELECT语句
+**SELECT**
+```
+SELECT 1;没有任何子句
+SELECT 9/2;#没有任何子句
+```
+**SELECT...FORM**
+```
+SELECT 标识选择哪些列
+FROM 标识从哪个表中选择
+```
+选择全部列
+```
+SElECT * FROM departments;  一般情况下我们不使用SELECT*
+```
+选择特定的列
+```
+SELECT department_id, location_id
+FROM departments;
+```
+#### 6.列的别名
+可以使用as 或者不使用
+```
+SELECT last_name AS name, commission_pct comm
+FROM employees;
+空格应该添加双引号
+SELECT last_name "Name", salary*12 "Annual Salary"
+FROM employees;
+```
+#### 7.去除重复行
+DISTINCT
+默认情况下，查询会返回全部行，包括重复行
+```
+SELECT DISTINCT department_id 
+FROM employees;
+```
+有两点需要注意
+1. DISTINCT 需要放到所有列名的前面，如果写成 SELECT salary, DISTINCT department_id
+FROM employees 会报错。
+2. DISTINCT 其实是对后面所有列名的组合进行去重，你能看到最后的结果是 74 条，因为这 74 个部门id不同，都有 salary 这个属性值。如果你想要看都有哪些不同的部门（department_id），只需要写 DISTINCT department_id 即可，后面不需要再加其他的列名了。
