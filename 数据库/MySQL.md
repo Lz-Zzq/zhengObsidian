@@ -117,4 +117,29 @@ FROM employees;
 有两点需要注意
 1. DISTINCT 需要放到所有列名的前面，如果写成 SELECT salary, DISTINCT department_id
 FROM employees 会报错。
-2. DISTINCT 其实是对后面所有列名的组合进行去重，你能看到最后的结果是 74 条，因为这 74 个部门id不同，都有 salary 这个属性值。如果你想要看都有哪些不同的部门（department_id），只需要写 DISTINCT department_id 即可，后面不需要再加其他的列名了。
+1. DISTINCT 其实是对后面所有列名的组合进行去重，你能看到最后的结果是 74 条，因为这 74 个部门id不同，都有 salary 这个属性值。如果你想要看都有哪些不同的部门（department_id），只需要写 DISTINCT department_id 即可，后面不需要再加其他的列名了。
+   
+#### 8.空值运算符
+- 所有运算符或者列值遇到null值，运算结果都为null
+```sql
+select employee_id,salary,commission_pct,
+12 * salary * (1 + commission_pct) "annual_sal"
+from employees;
+```
+MySQL里面，空值不等于空字符串。一个空字符串的长度是0，空值长度是空，空占用空间
+#### 9.着重号
+错误的
+```sql
+mysql> SELECT * FROM ORDER;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MySQL server version for the right syntax to use near 'ORDER' at
+line 1
+```
+正确的
+```sql
+mysql> SELECT * FROM `ORDER`;
+mysql> SELECT * FROM `order`;
+```
+如果我们的字段，表名与mysql保留字相同，需要使用着重号''
+
+#### 10.查询常数
