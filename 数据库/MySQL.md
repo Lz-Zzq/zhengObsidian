@@ -316,9 +316,41 @@ SELECT 'a' NOT IN ('a','b','c'), 1 NOT IN (2,3);
 #### LIKE运算符 
 LIKE运算符主要用来匹配字符串，通常用于模糊匹配，如果满足条件则返回1，否则返回
 0。如果给定的值或者匹配条件为NULL，则返回结果为NULL。
-
-
-
+通配符
+```
+“%”：匹配0个或多个字符。
+“_”：只能匹配一个字符。
+```
+SQL语句
+```sql
+SELECT NULL LIKE 'abc', 'abc' LIKE NULL;
+```
+![[Pasted image 20241103230220.png]]
+```sql
+第一个字母带有S的
+select first_name from employees where first_name like 'S%' 
+带有S的
+select first_name from employees where first_name like '%S%' 
+第二个字母为o的
+select first_name from employees where first_name like '_o%'
+第三个字母为o的
+select first_name from employees where first_name like '__o%'
+```
+#### ESCAPE(逃避)
+回避特殊符号的：使用转义符。例如：将\[%]转为\[\$%]、\[]转为\[\$]，然后再加上\[ESCAPE‘$’]即可。
+```sql
+SELECT job_id
+FROM jobs
+WHERE job_id LIKE 'IT\_%';  将_转义，_就是_而不是通配符
+```
+如果使用\表示转义，要省略ESCAPE。如果不是\，则要加上ESCAPE。
+```sql
+SELECT job_id
+FROM jobs
+WHERE job_id LIKE 'IT$_%' ESCAPE '$'; 
+```
+#### REGEXP运算符
+REGEXP运算符用来匹配字符串，语法格式为： expr REGEXP 匹配条件 。如果expr满足匹配条件，返回1；如果不满足，则返回0。若expr或匹配条件任意一个为NULL，则结果为NULL。
 
 
 
