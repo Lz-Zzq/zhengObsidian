@@ -188,13 +188,14 @@ WHERE department_id=90;
 - 一个整数类型的值对浮点数进行加法和减法操作，结果是一个浮点数；
 - 加法和减法的优先级相同，进行先加后减操作与进行先减后加操作的结果是一样的；
 在Java中，+的左右两边如果有字符串，那么表示字符串的拼接。==但是在MySQL中+只表示数值相加。如果遇到非数值类型，先尝试转成数值，如果转失败，就按0计算。（补充：MySQL中字符串拼接要使用字符串函数CONCAT()实现）==
+![[Pasted image 20241103194350.png]]
 #### 乘法除法
 - 一个数乘以整数1和除以整数1后仍得原数；
 - 一个数乘以浮点数1和除以浮点数1后变成浮点数，数值与原数相等；
-- 一个数除以整数后，不管是否能除尽，结果都为一个浮点数；
-- 一个数除以另一个数，除不尽时，结果为一个浮点数，并保留到小数点后4位；
+- ==一个数除以整数后，不管是否能除尽，结果都为一个浮点数；==
+- ==一个数除以另一个数，除不尽时，结果为一个浮点数，并保留到小数点后4位==；
 - 乘法和除法的优先级相同，进行先乘后除操作与先除后乘操作，得出的结果相同。
-- 在数学运算中，0不能用作除数，在MySQL中，一个数除以0为NULL。
+- 在数学运算中，0不能用作除数，<font color="yellow">在MySQL中，一个数除以0为NULL</font>。![[Pasted image 20241103194427.png]]
 #### 求模（求余）运算符
 ```sql
 select 12%3, 12 mod 5 from dual;
@@ -213,8 +214,11 @@ select * from employees where employee_id % 2 = 0
 - 两边都是整数，则MySQL会按照整数来比较。
 - 一个整数一个字符串，将字符串转为数字进行比较。
 - ==如果有一个为NULL，则结果为NULL。==
+- <font color="yellow">任何无法解析的字符串会被视为0,列入字符串'a','b'等，他们与数字0相等</font>
+![[Pasted image 20241103193517.png]]![[Pasted image 20241103193529.png]]
 #### 安全等于运算符
 安全等于运算符==（<=>）==与=的区别是可以对NULL进行判断。<font color="yellow">两个操作数均为NULL时，返回值为1，而不是NULL；当一个操作数为NULL时，返回值为0，而不为NULL。 </font>
+![[Pasted image 20241103193430.png]]
 ==两个NULL比较为1，一个NULL比较为0。==
 列：查询commission_pct为0.4的数据
 如果查询commission_pct为NULL的数据呢？
@@ -235,6 +239,89 @@ SELECT * FROM employees WHERE commission_pct <=> NULL
 ```sql
 SELECT NULL IS NULL, ISNULL(NULL), ISNULL('a'), 1 IS NULL;
 ```
+![[Pasted image 20241103193328.png | 400]]
+比较commission_pct等于NULL的四种写法
+```sql
+SELECT * FROM employees WHERE commission_pct IS NULL ;
+SELECT * FROM employees WHERE ISNULL(commission_pct) ;
+SELECT * FROM employees WHERE commission_pct <=> NULL;
+SELECT * FROM employees WHERE commission_pct = NULL ;
+```
+#### 非空运算符 
+非空运算符 非空运算符（IS NOT NULL）判断一个值是否不为NULL，如果不为NULL则返回1，否则返回0。 
+```sql
+SELECT NULL IS NOT NULL, 'a' IS NOT NULL, 1 IS NOT NULL;
+```
+![[Pasted image 20241103193311.png | 400]]
+查询commission_pct不等于NULL
+```sql
+select * from employees where commission_pct is not null
+SELECT * FROM employees WHERE not commission_pct <=> NULL
+SELECT * FROM employees WHERE not isnull(commission_pct)  
+```
+
+#### 最小值运算符
+语法格式为：LEAST(值1，值2，...，值n)。其中，“值n”表示参数列表中有n个值。在有
+两个或多个参数的情况下，返回最小值。
+```sql
+SELECT LEAST (1,0,2), LEAST('b','a','c'), LEAST(1,NULL,2);
+```
+![[Pasted image 20241103193243.png|400]]
+- 当参数是整数或者浮点数时，LEAST将返回其中最小的值；
+- 当参数为字符串时，返回字母表中顺序最靠前的字符；
+- 当比较值列表中有NULL时，不能判断大小，返回值为NULL。
+#### 最大值运算符 
+语法格式为：GREATEST(值1，值2，...，值n)。其中，n表示参数列表中有n个值。当有
+两个或多个参数时，返回值为最大值。假如任意一个自变量为NULL，则GREATEST()的返回值为NULL。
+```sql
+SELECT GREATEST(1,0,2), GREATEST('b','a','c'), GREATEST(1,NULL,2);
+```
+![[Pasted image 20241103200227.png | 500]]
+
+- 当参数中是整数或者浮点数时，GREATEST将返回其中最大的值；
+- 当参数为字符串时，返回字母表中顺序最靠后的字符；
+- 当比较值列表中有NULL时，不能判断大小，返回值为NULL。
+#### BETWEEN AND运算符 
+BETWEEN运算符使用的格式通常为SELECT D FROM TABLE WHERE C BETWEEN A
+AND B，此时，当C大于或等于A，并且C小于或等于B时，结果为1，否则结果为0。
+```sql
+SELECT 1 BETWEEN 0 AND 1, 10 BETWEEN 11 AND 12, 'b' BETWEEN 'a' AND 'c';
+```
+![[Pasted image 20241103200506.png]]
+查询工资2500-3500之间（包括）的数据
+```sql
+SELECT last_name, salary
+FROM employees
+WHERE salary BETWEEN 2500 AND 3500;
+```
+#### IN运算符
+IN运算符用于判断给定的值是否是IN列表中的一个值，如果是则返回1，否则返回0。如果给
+定的值为NULL，或者IN列表中存在NULL，则结果为NULL。
+```sql
+ SELECT 'a' IN ('a','b','c'), 1 IN (2,3), NULL IN ('a','b'), 'a' IN ('a', NULL);
+```
+![[Pasted image 20241103201514.png]]
+查询manager_id中是否包含以下三个数
+```sql
+select * from employees where manager_id in (100,101,102)
+```
+#### NOT IN运算符
+NOT IN运算符用于判断给定的值是否不是IN列表中的一个值，如果不是IN列表中的一
+个值，则返回1，否则返回0。
+```sql
+SELECT 'a' NOT IN ('a','b','c'), 1 NOT IN (2,3);
+```
+![[Pasted image 20241103201818.png |400]]
+
+#### LIKE运算符 
+LIKE运算符主要用来匹配字符串，通常用于模糊匹配，如果满足条件则返回1，否则返回
+0。如果给定的值或者匹配条件为NULL，则返回结果为NULL。
+
+
+
+
+
+
 
 ### 3.逻辑运算符
 
