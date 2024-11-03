@@ -50,7 +50,8 @@ ORM思想 (Object Relational Mapping)体现：
 # 第二章 数据库环境搭建
 [数据库环境搭建](D:\User\桌面\MySQL\第02章_MySQL环境搭建.pdf)
 # 第三章 基本的SELECT语句
-#### 1.SQL分类
+### 1.SQL分类
+
 SQL语言在功能上主要分入三大类：
 - <font color="yellow">DDL (Data Definition Languages,数据定义语言)</font>，这些语句定义了不同的数据库，表，视图，索引等数据库对象，还可以用来创建，删除，修改数据库和数据表的结构。
   - 主要的语句关键字包括<font color="yellow">CREATE DROP ALTER</font>等。
@@ -63,22 +64,23 @@ SQL语言在功能上主要分入三大类：
  因为查询语句使用的非常频繁，所以很多人把查询语句单独拎出来：DQL（数据查询语言）。
  还有单独将COMMIT ROLLBACK取出来称之为TCL（Transaction Control Language 事务控制语言）。
 ```
-#### 2.SQL大小写规范
+### 2.SQL大小写规范
+
 MySQL 在 Windows 环境下是大小写不敏感的
 MySQL 在 Linux 环境下是大小写敏感的
 
 推荐采用统一的书写规范：
 数据库名、表名、表别名、字段名、字段别名等都小写
 SQL 关键字、函数名、绑定变量等都大写
-#### 3.注释
+#### 注释
 ```
 单行注释：#注释文字(MySQL特有的方式)
 单行注释：-- 注释文字(--后面必须包含一个空格。)
 多行注释：/* 注释文字 */
 ```
-#### 4.数据指令导入
+#### 数据指令导入
 `source d:\mysqldb.sql`
-#### 5.基本的SELECT语句
+### 3.基本的SELECT语句
 **SELECT**
 ```
 SELECT 1;没有任何子句
@@ -98,7 +100,7 @@ SElECT * FROM departments;  一般情况下我们不使用SELECT*
 SELECT department_id, location_id
 FROM departments;
 ```
-#### 6.列的别名
+#### 列的别名
 可以使用as 或者不使用
 ```
 SELECT last_name AS name, commission_pct comm
@@ -107,7 +109,7 @@ FROM employees;
 SELECT last_name "Name", salary*12 "Annual Salary"
 FROM employees;
 ```
-#### 7.去除重复行
+#### 去除重复行
 DISTINCT
 默认情况下，查询会返回全部行，包括重复行
 ```
@@ -119,7 +121,7 @@ FROM employees;
 FROM employees 会报错。
 1. DISTINCT 其实是对后面所有列名的组合进行去重，你能看到最后的结果是 74 条，因为这 74 个部门id不同，都有 salary 这个属性值。如果你想要看都有哪些不同的部门（department_id），只需要写 DISTINCT department_id 即可，后面不需要再加其他的列名了。
    
-#### 8.空值运算符
+#### 空值运算符
 - 所有运算符或者列值遇到null值，运算结果都为null
 ```sql
 select employee_id,salary,commission_pct,
@@ -127,7 +129,7 @@ select employee_id,salary,commission_pct,
 from employees;
 ```
 MySQL里面，空值不等于空字符串。一个空字符串的长度是0，空值长度是空，空占用空间
-#### 9.着重号
+#### 着重号
 错误的
 ```sql
 mysql> SELECT * FROM ORDER;
@@ -142,4 +144,100 @@ mysql> SELECT * FROM `order`;
 ```
 如果我们的字段，表名与mysql保留字相同，需要使用着重号''
 
-#### 10.查询常数
+#### 查询常数
+SELECT 查询还可以对常数进行查询，在SELECT查询结果中增加一列固定的常数列。==这列的取值是我们指定的，而不是数据表中动态取出的==
+为什么要对常数查询？
+SQL中的SELECT语法的确提供了这个功能，一般来说我们只从一个表中查询数据，通常不需要增加一个固定的常数列，但如果我们向整合不同的数据源，用常数列作为这个表的标记，就需要查询这个常数。
+比如说，我们相对employees数据表中的员工姓名进行查询，同时增加一列字段corporation，这个字段固定值为“尚硅谷”，可以这样写
+```sql
+select '尚硅谷' as corporation, last_name from employees;
+```
+### 4.显示表结构
+DESCRIBE 或者DESC命令
+```sql
+describe employees;
+desc employees;
+```
+![[Pasted image 20241103174926.png|400]]
+Field：标识字段名称
+Type：表示字段类型，这里barcode,goodsname是文本类型的，price是整数类型的
+Null表示该列是否可以存储NULL值
+Key：表示该列是否已编制索引。PRI表示该列是表主键的一部分；UNI表示该列是UNIQUE索引的一部分；MUL表示在列中某个给定值允许出现多次
+Default：表示该列是否又默认值，如果有，那么值是多少
+Extra：表示可以获取与给定列有关的附加信息，列入AUTO_INCREMENT等。
+### 5.过滤数据
+WHERE
+语法：
+```sql
+SELECT 字段1,字段2
+FROM 表名
+WHERE 过滤条件
+```
+列，取出部门号90所有员工数据
+```sql
+SELECT * FROM employees
+WHERE department_id=90;
+```
+
+
+# 第四章 运算符
+![[Pasted image 20241103181229.png|500]]
+### 1.算数运算符
+#### 加法减法
+- 一个整数类型的值对整数进行加法和减法操作，结果还是一个整数；
+- 一个整数类型的值对浮点数进行加法和减法操作，结果是一个浮点数；
+- 加法和减法的优先级相同，进行先加后减操作与进行先减后加操作的结果是一样的；
+在Java中，+的左右两边如果有字符串，那么表示字符串的拼接。==但是在MySQL中+只表示数值相加。如果遇到非数值类型，先尝试转成数值，如果转失败，就按0计算。（补充：MySQL中字符串拼接要使用字符串函数CONCAT()实现）==
+#### 乘法除法
+- 一个数乘以整数1和除以整数1后仍得原数；
+- 一个数乘以浮点数1和除以浮点数1后变成浮点数，数值与原数相等；
+- 一个数除以整数后，不管是否能除尽，结果都为一个浮点数；
+- 一个数除以另一个数，除不尽时，结果为一个浮点数，并保留到小数点后4位；
+- 乘法和除法的优先级相同，进行先乘后除操作与先除后乘操作，得出的结果相同。
+- 在数学运算中，0不能用作除数，在MySQL中，一个数除以0为NULL。
+#### 求模（求余）运算符
+```sql
+select 12%3, 12 mod 5 from dual;
+```
+列：取出id偶数员工
+```sql
+select * from employees where employee_id % 2 = 0
+```
+### 2.比较运算符
+比较运算符用来对表达式左边的操作数和右边的操作数进行比较，比较的结果为真则返回1，比较的结果为假则返回0，其他情况则返回NULL。
+![[Pasted image 20241103182653.png | 500]]
+#### 等号运算符
+判断两边表达式，字段,值是否相等,相等返回1，否则返回0
+使用等号运算符有如下规则：
+- 两边值字符串表达式都为字符串，则MySQL按照字符串比较，比较的是每个字符串中字符ANSI编码。
+- 两边都是整数，则MySQL会按照整数来比较。
+- 一个整数一个字符串，将字符串转为数字进行比较。
+- ==如果有一个为NULL，则结果为NULL。==
+#### 安全等于运算符
+安全等于运算符==（<=>）==与=的区别是可以对NULL进行判断。<font color="yellow">两个操作数均为NULL时，返回值为1，而不是NULL；当一个操作数为NULL时，返回值为0，而不为NULL。 </font>
+==两个NULL比较为1，一个NULL比较为0。==
+列：查询commission_pct为0.4的数据
+如果查询commission_pct为NULL的数据呢？
+```sql
+select * from employees where commission_pct = 0.40
+使用=无法查询到NULL的数据，因为使用=查询commission_pct为NULL，结果也为NULL
+SELECT * FROM employees WHERE commission_pct <=> NULL
+我们使用<=>比较时，条件为NULL，表中数据为NULL，则返回1，就返回了数据 
+可能 WHERE是返回1查询成功,0失败？
+```
+#### 不等于运算符
+不等于运算符（<> !=）用于判断两边数字，字符串，表达式值是否不相等，如果不想当返回1，相等返回0。不等于运算符不能判断null值。如果两边的值有任意一个为NULL，或者两边都NULL，则结果NULL。
+此外，还有非符号运算符
+![[Pasted image 20241103191622.png|500]]
+#### 空运算符
+空运算符（IS NULL或者ISNULL）判断一个值是否为NULL，如果为NULL则返回1，否则返回
+0。
+```sql
+SELECT NULL IS NULL, ISNULL(NULL), ISNULL('a'), 1 IS NULL;
+```
+
+### 3.逻辑运算符
+
+### 4.位运算符
+
+### 5.运算符的优先级
