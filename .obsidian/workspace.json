@@ -13,29 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据库/MySQL练习题.md",
+                "file": "数据库/MySQL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL练习题"
-            }
-          },
-          {
-            "id": "48fc23af251a4dd0",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.5"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
+              "title": "MySQL"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -163,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据库/MySQL练习题.md"
+                "file": "数据库/MySQL.md"
               },
               "icon": "lucide-list",
-              "title": "MySQL练习题 的大纲"
+              "title": "MySQL 的大纲"
             }
           },
           {
@@ -213,11 +200,11 @@
       "publish:发布更改": false
     }
   },
-  "active": "48fc23af251a4dd0",
+  "active": "80bc0c3ada0e0c7a",
   "lastOpenFiles": [
-    "数据库/MySQL.md",
     "数据库/MySQL练习题.md",
-    "Pasted image 20241105175650.png",
+    "数据库/MySQL.md",
+    "Image/Pasted image 20241105175650.png",
     "Image/Pasted image 20241105175438.png",
     "Image/Pasted image 20241105175355.png",
     "Image/Pasted image 20241105174100.png",
