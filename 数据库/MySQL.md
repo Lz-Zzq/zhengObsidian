@@ -547,3 +547,44 @@ SELECT last_name,department_name FROM employees INNER JOIN departments;
 SELECT last_name,department_name FROM employees JOIN departments;
 ```
 
+错误会在下面条件产生
+- 省略多个表的连接
+- 连接条件无效
+- 所有表中的所有行都互相连接
+==为了避免笛卡尔积，可以使用where加入有效的连接==
+```sql
+SELECT table1.column, table2.column
+FROM table1, table2
+WHERE table1.column1 = table2.column2;
+```
+正确写法
+```sql
+#案例：查询员工的姓名及其部门名称
+SELECT last_name, department_name
+FROM employees, departments
+WHERE employees.department_id = departments.department_id;
+```
+### 多表查询分类
+#### 分类1：等值连接 vs 非等值连接
+等值连接
+![[Pasted image 20241110224533.png | 300]]
+连接 n个表,至少需要n-1个连接条件。比如，连接三个表，至少需要两个连接条件。
+
+非等值连接
+![[Pasted image 20241110231948.png | 300]]
+```sql
+SELECT e.`last_name`,e.salary,j.`grade_level` FROM employees e,job_grades j 
+WHERE e.`salary` BETWEEN j.`lowest_sal` AND j.`highest_sal`
+```
+#### 分类2：自连接 vs 非自连接
+![[Pasted image 20241110232404.png | 500]]
+- 当table1和table2本质上是同一张表，只是用取别名的方式虚拟成两张表以代表不同的意义。然后两个表再进行内连接，外连接等查询。
+查询employees表，返回“Xxx works for Xxx”
+```sql
+SELECT CONCAT(worker.last_name ,' works for ', manager.last_name)
+FROM employees worker, employees manager 
+WHERE worker.manager_id = manager.employee_id ;
+```
+==COUCAT 拼接字符串 COUNT 计算数量 LENGTH 计算字符串长度==
+
+#### 分类3：内连接 vs 外连接
