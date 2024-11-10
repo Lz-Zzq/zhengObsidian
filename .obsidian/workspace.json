@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数据库/MySQL练习题.md",
+                "file": "数据库/MySQL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL练习题"
+              "title": "MySQL"
             }
           }
         ]
@@ -150,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据库/MySQL练习题.md"
+                "file": "数据库/MySQL.md"
               },
               "icon": "lucide-list",
-              "title": "MySQL练习题 的大纲"
+              "title": "MySQL 的大纲"
             }
           },
           {
@@ -202,8 +202,10 @@
   },
   "active": "f011b68a014a27a1",
   "lastOpenFiles": [
-    "数据库/MySQL.md",
     "数据库/MySQL练习题.md",
+    "数据库/MySQL.md",
+    "编程语言/Python.md",
+    "编程语言/汇编语言.md",
     "Image/Pasted image 20241105175650.png",
     "Image/Pasted image 20241105175438.png",
     "Image/Pasted image 20241105175355.png",
@@ -214,9 +216,7 @@
     "Image/Pasted image 20241105172156.png",
     "Image/Pasted image 20241105172034.png",
     "Image/Pasted image 20241105170253.png",
-    "编程语言/汇编语言.md",
     "编程语言/汇编语言附注.md",
-    "编程语言/Python.md",
     "编程语言/C++.md",
     "2024-10-27.md",
     "数据库",

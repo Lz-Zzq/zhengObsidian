@@ -90,3 +90,4 @@ SELECT first_name,job_id,department_id FROM employees WHERE  department_id betwe
 # 9.显示出表 employees 的 manager_id 是 100,101,110 的员工姓名、工资、管理者id
 select first_name,salary,manager_id from employees where manager_id in(100,101,110)
 ```
+# 第五章

@@ -57,7 +57,7 @@ SQL语言在功能上主要分入三大类：
   - 主要的语句关键字包括<font color="yellow">CREATE DROP ALTER</font>等。
 - <font color="yellow">DML (Data Manipulation Language 数据操作语言)</font>，用于添加，删除，更新查询数据库记录，并且检查数据完整性。
   - 主要语句关键字包括<font color="yellow">INSERT DELETE UPDATE SELECT</font>等。
-  - <font color="yellow">SELECT是SQL语言的基础，最为重要</font>
+  - SELECT是SQL语言的基础，最为重要
 - <font color="yellow">DCL （Data Control Language 数据控制语言）</font>，用于定义数据库，表，字段，用户的访问权限和安全级别。
   - 主要的语句关键字包括<font color="yellow">GRANT REVOKE COMMIT ROLLBACK SAVEPOINT</font>等。
  ```
@@ -261,7 +261,7 @@ SELECT * FROM employees WHERE not isnull(commission_pct)
 ```
 
 #### 最小值运算符
-语法格式为：LEAST(值1，值2，...，值n)。其中，“值n”表示参数列表中有n个值。在有
+语法格式为：==LEAST(值1，值2，...，值n)==。其中，“值n”表示参数列表中有n个值。在有
 两个或多个参数的情况下，返回最小值。
 ```sql
 SELECT LEAST (1,0,2), LEAST('b','a','c'), LEAST(1,NULL,2);
@@ -271,10 +271,10 @@ SELECT LEAST (1,0,2), LEAST('b','a','c'), LEAST(1,NULL,2);
 - 当参数为字符串时，返回字母表中顺序最靠前的字符；
 - 当比较值列表中有NULL时，不能判断大小，返回值为NULL。
 #### 最大值运算符 
-语法格式为：GREATEST(值1，值2，...，值n)。其中，n表示参数列表中有n个值。当有
+语法格式为：==GREATEST(值1，值2，...，值n)==。其中，n表示参数列表中有n个值。当有
 两个或多个参数时，返回值为最大值。假如任意一个自变量为NULL，则GREATEST()的返回值为NULL。
 ```sql
-SELECT GREATEST(1,0,2), GREATEST('b','a','c'), GREATEST(1,NULL,2);
+SELECT GREATEST(1,0,2), GREATEST('b','a','c'), GREATEST(1,NULL,2); 
 ```
 ![[Pasted image 20241103200227.png | 500]]
 
@@ -408,7 +408,8 @@ OR可以和AND一起使用，但是在使用时要注意两者的优先级，。
 #### 逻辑异或运算符 逻辑异或（XOR）
 ==运算符是当给定的值中任意一个值为NULL时，则返回NULL；==如果两个非NULL的值都是0或者都不等于0时，则返回0；如果一个值为0，另一个值不为0时，则返回1。
 ![[Pasted image 20241105170253.png]]
-有NULL为NULL，两值一个0一个不是0返回1，两个值都是0或者都不等于0，返回0。
+==有NULL为NULL，两值一个0一个不是0返回1，两个值都是0或者都不等于0，返回0。==
+<font color='yellow'>不考虑null。两个值一个0，另一个 "?" ，才会返回1，否则一定返回0</font>
 ### 4.位运算符
 位运算符是在二进制数上进行计算的运算符。位运算符会先将操作数变成二进制数，然后进行位运算，最后将计算结果从二进制变回十进制数。
 ![[Pasted image 20241105172034.png]]
@@ -457,3 +458,61 @@ OR可以和AND一起使用，但是在使用时要注意两者的优先级，。
 ![[Pasted image 20241105175438.png|500]]
 ### 拓展：使用正则表达式查询
 ![[Pasted image 20241105175650.png | 500]]
+# 第五章 排序与分页
+### 排序循序
+#### 排序规则
+<font color='yellow'>使用order by 进行排序</font>
+- ASC 升序
+- DESC 降序
+<font color='yellow'>order by 在select语句的结尾</font>
+#### 单列排序
+```sql
+SELECT last_name, job_id, department_id, hire_date
+FROM employees
+ORDER BY hire_date ;   # 默认升序排列
+ORDER BY hire_date DESC; # 降序
+```
+#### 多列排序
+```sql
+SELECT last_name, department_id, salary
+FROM employees
+ORDER BY department_id, salary DESC;
+```
+- 在对多列进行排序的时候，首先排序的第一列必须有相同的列值，才会对第二列进行排序。如果第一列数据中所有的值都是唯一的，将不再对第二列进行排序
+### 分页
+#### 背景
+背景1：查询返回的记录太多了，查看起来很不方便，怎么样能够实现分页查询呢？
+背景2：表里有 4 条数据，我们只想要显示第 2、3 条数据怎么办呢？
+#### 实现规则
+- 分页原理
+  所谓分页显示，就是将数据库中的结果集，一段一段显示出来需要的条件。
+- MySQL中使用 LIMIT 实现分页
+  格式：
+```sql
+LIMIT [位置偏移量,] 行数
+```
+第一个“位置偏移量”参数指示MySQL从哪一行开始显示，是一个可选参数，如果不指定“位置偏移量”，将会从表中的第一条记录开始（第一条记录的位置偏移量是0，第二条记录1）；第二个参数“行数”指示返回记录条数。
+
+>MySQL 8.0中可以使用“LIMIT 3 OFFSET 4”，意思是获取从第5条记录开始后面的3条记录，和“LIMIT 4,3;”返回的结果相同。
+
+```sql
+# MySQL8  从第4行 获得五条记录
+SELECT * FROM employees LIMIT 3,5
+SELECT * FROM employees LIMIT 5 OFFSET 3
+```
+- ==分页显式公式：（当前页数-1）\*每页条数，每页条数==
+```sql
+SELECT * FROM table
+LIMIT(PageNo - 1)*PageSize,PageSize;
+```
+==注意：LIMIT 子句必须放在整个SELECT语句的最后！==
+```sql 
+select * from employees limit 0,8    # 第1页
+select * from employees limit 8,8    # 第2页
+select * from employees limit 16,8  # 第3页
+select * from employees limit 24,8  # 第4页
+select * from employees limit 32,8  # 第5页
+```
+
+使用limit的好处
+约束返回结果的数量可以==减少数据表的网络传输量,提升查询效率。如果我们知道返回结果只有1条直接limit 1，select不需要扫描整张表，只需要检索到一条数据即可返回==
