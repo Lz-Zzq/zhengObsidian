@@ -516,3 +516,34 @@ select * from employees limit 32,8  # 第5页
 
 使用limit的好处
 约束返回结果的数量可以==减少数据表的网络传输量,提升查询效率。如果我们知道返回结果只有1条直接limit 1，select不需要扫描整张表，只需要检索到一条数据即可返回==
+
+# 第六章 多表查询
+### 案例
+前提条件：这些一起查询的表之间是有关系的（一对一、一对多），它们之间一定是有关联字段，这个关联字段可能建立了外键，也可能没有建立外键。
+```sql
+# 查询员工姓名部门
+select last_name,department_name from employees,departments;
+```
+查询出了2996条数据,很多重复
+![[Pasted image 20241110205248.png | 400]]
+```sql
+# 错误情况 笛卡尔积错误
+select count(employee_id) from employees;
+select count(department_id) from departments;
+select 107*28 from dual;
+=2996
+```
+
+#### 笛卡尔积
+笛卡尔乘积是一个数学运算。假设我有两个集合 X 和 Y，那么 X 和 Y 的笛卡尔积就是==X 和 Y 的所有可能组合==，也就是第一个对象来自于 X，第二个对象来自于 Y 的所有可能。组合的个数即为两个集合中元素个数的乘积数。
+![[Pasted image 20241110205407.png | 400]]
+
+SQL92中，笛卡尔积也称为 交叉连接 ，英文是 CROSS JOIN 。在 SQL99 中也是使用 CROSS JOIN表示交叉连接。它的作用就是可以把任意表进行连接，即使这两张表不相关。在MySQL中==如下情况会出现笛卡尔积：==
+```sql
+#查询员工姓名和所在部门名称
+SELECT last_name,department_name FROM employees,departments;
+SELECT last_name,department_name FROM employees CROSS JOIN departments;
+SELECT last_name,department_name FROM employees INNER JOIN departments;
+SELECT last_name,department_name FROM employees JOIN departments;
+```
+

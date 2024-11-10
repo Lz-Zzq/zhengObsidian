@@ -90,4 +90,14 @@ SELECT first_name,job_id,department_id FROM employees WHERE  department_id betwe
 # 9.显示出表 employees 的 manager_id 是 100,101,110 的员工姓名、工资、管理者id
 select first_name,salary,manager_id from employees where manager_id in(100,101,110)
 ```
-# 第五章
+# 第五章 分页与排序
+```sql
+#1. 查询员工的姓名和部门号和年薪，按年薪降序,按姓名升序显示
+SELECT first_name,salary*12 salary_year, manager_id FROM employees ORDER BY salary_year DESC,first_name ASC
+#2. 选择工资不在 8000 到 17000 的员工的姓名和工资，按工资降序，显示第21到40位置的数据
+SELECT first_name,salary FROM employees WHERE salary NOT BETWEEN 8000 AND 17000 ORDER BY salary DESC LIMIT 20,20
+#3. 查询邮箱中包含 e 的员工信息，并先按邮箱的字节数降序，再按部门号升序
+SELECT email FROM employees WHERE email REGEXP '[e]' # like '%e%' 
+ORDER BY LENGTH(email) DESC,manager_id ASC
+```
+# 第六章
