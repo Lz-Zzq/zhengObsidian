@@ -588,3 +588,43 @@ WHERE worker.manager_id = manager.employee_id ;
 ==COUCAT 拼接字符串 COUNT 计算数量 LENGTH 计算字符串长度==
 
 #### 分类3：内连接 vs 外连接
+除了查询满足条件的记录以外，外连接还可以查询某一方不满足条件的记录。
+![[Pasted image 20241111231353.png | 300]]
+
+- ==内连接: 满足条件的数据查出来，其他的没有查出来 (交集)==
+- ==外连接: 满足条件的数据查出来，还查询到了左表或右表不匹配的行==
+- 如果是左外连接，则连接条件中左边的表也称为 主表 ，右边的表称为 从表 。
+- 如果是右外连接，则连接条件中右边的表也称为 主表 ，左边的表称为 从表 。
+- 还有一个满外连接，左中右全部输出
+==SQL92：使用(+)创建连接==
+- 在 SQL92 中采用（+）代表从表所在的位置。即左或右外连接中，(+) 表示哪个是从表。
+- Oracle 对 SQL92 支持较好，而 MySQL 则不支持 SQL92 的外连接。
+```sql
+#左外连接
+SELECT last_name,department_name
+FROM employees ,departments
+WHERE employees.department_id = departments.department_id(+);
+#右外连接
+SELECT last_name,department_name
+FROM employees ,departments
+WHERE employees.department_id(+) = departments.department_id;
+```
+- 而且在 SQL92 中，只有左外连接和右外连接，没有满（或全）外连接。
+### SQL99语法实现多表查询
+#### 基本语法
+- ==使用join on子句创建连接的语法结构==
+```sql
+SELECT table1.column, table2.column,table3.column
+FROM table1
+JOIN table2 ON table1 和 table2 的连接条件
+JOIN table3 ON table2 和 table3 的连接条件
+```
+例：查询员工姓名地址部门信息
+```sql
+SELECT e.`last_name`, d.`department_id`,l.`city` 
+FROM employees e join departments d on 
+e.`department_id` = d.`department_id` 
+join locations l  on d.`location_id` = l.`location_id`
+```
+- ==关键字 JOIN、INNER JOIN、CROSS JOIN 的含义是一样的，都表示内连接==
+#### 内连接 （INNER JOIN）的实现
