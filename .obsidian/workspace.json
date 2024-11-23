@@ -13,29 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/汇编语言.md",
+                "file": "数据库/MySQL.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "汇编语言"
-            }
-          },
-          {
-            "id": "b46823f91a0c93dc",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.6"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "title": "MySQL"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -163,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/汇编语言.md"
+                "file": "数据库/MySQL.md"
               },
               "icon": "lucide-list",
-              "title": "汇编语言 的大纲"
+              "title": "MySQL 的大纲"
             }
           },
           {
@@ -213,8 +200,9 @@
       "publish:发布更改": false
     }
   },
-  "active": "b46823f91a0c93dc",
+  "active": "f011b68a014a27a1",
   "lastOpenFiles": [
+    "编程语言/汇编语言.md",
     "数据库/MySQL.md",
     "Image/Pasted image 20241111231353.png",
     "网络/图解HTTP.md",
@@ -230,7 +218,6 @@
     "Image/Pasted image 20241110205248.png",
     "数据库/MySQL练习题.md",
     "编程语言/Python.md",
-    "编程语言/汇编语言.md",
     "Image/Pasted image 20241105175650.png",
     "Image/Pasted image 20241105175438.png",
     "Image/Pasted image 20241105175355.png",

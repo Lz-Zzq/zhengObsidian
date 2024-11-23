@@ -600,6 +600,10 @@ WHERE worker.manager_id = manager.employee_id ;
 - 在 SQL92 中采用（+）代表从表所在的位置。即左或右外连接中，(+) 表示哪个是从表。
 - Oracle 对 SQL92 支持较好，而 MySQL 则不支持 SQL92 的外连接。
 ```sql
+#92内连接
+SELECT employees.last_name,departments.department_name
+FROM employees,departments 
+WHERE employees.department_id = departments.department_id
 #左外连接
 SELECT last_name,department_name
 FROM employees ,departments
@@ -628,3 +632,55 @@ join locations l  on d.`location_id` = l.`location_id`
 ```
 - ==关键字 JOIN、INNER JOIN、CROSS JOIN 的含义是一样的，都表示内连接==
 #### 内连接 （INNER JOIN）的实现
+内连接inner join与join一样
+```sql
+SELECT 字段列表
+FROM A表 INNER JOIN B表
+ON 关联条件
+WHERE 等其他子句
+```
+#### 外连接(OUT JOIN)的实现
+##### 左外连接(LEFT OUTER JOIN)
+```sql
+# 查询A表满足条件与不满足条件的行
+SELECT 字段列表
+FROM A表 LEFT JOIN B表
+ON 关联条件
+WHERE 等其他子句
+```
+##### 右外连接(RIGHT OUTER JOIN)
+```sql
+# 查询B表满足条件与不满足条件的行
+SELECT 字段列表
+FROM A表 RIGHT JOIN B表
+ON 关联条件
+WHERE 等其他子句
+```
+##### 满外连接(FULL OUTER JOIN)
+MySQL99不支持FULL 
+```sql
+# 可以使用 UNION
+SELECT last_name,department_name
+FROM employees e LEFT JOIN departments d
+ON e.`department_id` = d.`department_id`
+UNION 
+SELECT last_name,department_name
+FROM employees e RIGHT JOIN  departments d
+ON e.`department_id` = d.`department_id`
+```
+#### UNION
+合并查询结果，利用union关键字。可以给出多条SELECT语句,并将他们的结果合成单个结果集。
+合并时,两个表对应的列数和数据类型必须相同,并且相互对应。各个SELECT语句之间使用union或者union all关键字分隔
+
+语法：
+```sql
+SELECT column,... FROM table1
+UNION [ALL]
+SELECT column,... FROM table2
+```
+UNION操作符
+- 返回查询结果的并集，去除重复记录
+UNION ALL
+- 返回查询结果的并集，不去除重复记录
+
+尽量使用UNION ALL，效率高
