@@ -615,7 +615,7 @@ WHERE employees.department_id(+) = departments.department_id;
 ```
 - 而且在 SQL92 中，只有左外连接和右外连接，没有满（或全）外连接。
 ### SQL99语法实现多表查询
-#### 基本语法
+#### 1.基本语法
 - ==使用join on子句创建连接的语法结构==
 ```sql
 SELECT table1.column, table2.column,table3.column
@@ -631,7 +631,7 @@ e.`department_id` = d.`department_id`
 join locations l  on d.`location_id` = l.`location_id`
 ```
 - ==关键字 JOIN、INNER JOIN、CROSS JOIN 的含义是一样的，都表示内连接==
-#### 内连接 （INNER JOIN）的实现
+#### 2.内连接 （INNER JOIN）的实现
 内连接inner join与join一样
 ```sql
 SELECT 字段列表
@@ -639,7 +639,7 @@ FROM A表 INNER JOIN B表
 ON 关联条件
 WHERE 等其他子句
 ```
-#### 外连接(OUT JOIN)的实现
+#### 3.外连接(OUT JOIN)的实现
 ##### 左外连接(LEFT OUTER JOIN)
 ```sql
 # 查询A表满足条件与不满足条件的行
@@ -668,8 +668,8 @@ SELECT last_name,department_name
 FROM employees e RIGHT JOIN  departments d
 ON e.`department_id` = d.`department_id`
 ```
-#### UNION
-合并查询结果，利用union关键字。可以给出多条SELECT语句,并将他们的结果合成单个结果集。
+#### 4.UNION
+**UNION 操作符用于合并两个或多个 SELECT 语句的结果集**，利用union关键字。可以给出多条SELECT语句,并将他们的结果合成单个结果集。
 合并时,两个表对应的列数和数据类型必须相同,并且相互对应。各个SELECT语句之间使用union或者union all关键字分隔
 
 语法：
@@ -685,7 +685,7 @@ UNION ALL
 
 尽量使用UNION ALL，效率高
 
-#### 7种SQL JOINS的实现
+#### 5. 7种SQL JOINS的实现
 ![[Pasted image 20241123103552.png | 400]]
 左中图
 ```sql 
@@ -711,3 +711,58 @@ FROM employees e RIGHT JOIN departments d
 ON e.`department_id` = d.`department_id`
 WHERE e.`department_id` IS NULL # 筛选d与e不相关的数据
 ```
+左外连接或右外连接，想要拿到与另一张表不相关的数据，可以用上述方法。
+左主表与右表中，外连接查询完毕，WHERE过滤右表为null的数据，即可取得坐表与右表不相关的数据
+
+左下图 满外连接   结合左右外连接的数据
+```sql
+SELECT employee_id,last_name,department_name
+FROM employees e LEFT JOIN departments d
+ON e.`department_id` = d.`department_id`
+UNION ALL
+SELECT employee_id,last_name,department_name
+FROM employees e RIGHT JOIN departments d
+ON e.`department_id` = d.`department_id`
+```
+
+右下图 结合左右外连接的互相不匹配数据  
+```sql
+SELECT employee_id,last_name,department_name
+FROM employees e LEFT JOIN departments d
+ON e.`department_id` = d.`department_id`
+WHERE d.`department_id`IS NULL
+UNION ALL
+SELECT employee_id,last_name,department_name
+FROM employees e RIGHT JOIN departments d
+ON e.`department_id` = d.`department_id`
+WHERE e.`department_id`IS NULL
+```
+
+### SQL99语法新特性
+#### 1.自然连接
+SQL99 在 SQL92 的基础上提供了一些特殊语法，比如 **NATURAL JOIN** 用来表示自然连接。我们可以把自然连接理解为 SQL92 中的等值连接。**它会帮你自动查询两张连接表中 所有相同的字段 ，然后进行 等值连接** 。
+SQL92标准
+```sql
+SELECT employee_id,last_name,department_name
+FROM employees e JOIN departments d
+ON e.`department_id` = d.`department_id`
+AND e.`manager_id` = d.`manager_id`;
+```
+SQL99标准
+```sql
+SELECT employee_id,last_name,department_name
+FROM employees e NATURAL JOIN departments d;
+```
+#### 2.USING连接
+当我们进行连接的时候，SQL99还支持使用 USING 指定数据表里的 同名字段 进行等值连接。但是只能配合JOIN一起使用。比如：
+```sql
+SELECT employee_id,last_name,department_name
+FROM employees e JOIN departments d
+USING (department_id);
+```
+
+#### 小节
+表连接约束方式有三种：WHERE ON USING
+- WHERE：适用于所有关联查询
+- ON：只能和join一起使用，是能写关联条件，虽然关联条件可以使用WHERE，分开可读性更好
+- USING：只能和JOIN一起使用，而且要求两个关联字段在关联表中名称一致，而且只能表示关联字段值相等
