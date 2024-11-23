@@ -626,8 +626,8 @@ JOIN table3 ON table2 和 table3 的连接条件
 例：查询员工姓名地址部门信息
 ```sql
 SELECT e.`last_name`, d.`department_id`,l.`city` 
-FROM employees e join departments d on 
-e.`department_id` = d.`department_id` 
+FROM employees e join departments d 
+on e.`department_id` = d.`department_id` 
 join locations l  on d.`location_id` = l.`location_id`
 ```
 - ==关键字 JOIN、INNER JOIN、CROSS JOIN 的含义是一样的，都表示内连接==
@@ -754,7 +754,7 @@ SELECT employee_id,last_name,department_name
 FROM employees e NATURAL JOIN departments d;
 ```
 #### 2.USING连接
-当我们进行连接的时候，SQL99还支持使用 USING 指定数据表里的 同名字段 进行等值连接。但是只能配合JOIN一起使用。比如：
+当我们进行连接的时候，SQL99还支持使用 **USING** **指定数据表里的 同名字段 进行等值连接**。但是只能配合JOIN一起使用。比如：
 ```sql
 SELECT employee_id,last_name,department_name
 FROM employees e JOIN departments d
