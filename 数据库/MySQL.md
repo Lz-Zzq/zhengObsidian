@@ -684,3 +684,30 @@ UNION ALL
 - 返回查询结果的并集，不去除重复记录
 
 尽量使用UNION ALL，效率高
+
+#### 7种SQL JOINS的实现
+![[Pasted image 20241123103552.png | 400]]
+左中图
+```sql 
+# 查询e与d表中匹配的行与e表中不匹配的行数据，然后筛选出d表id为null的数据。
+# 因为e与d对应的数据id一定对应存在，所以查询到的数据是e表中不匹配的数据
+# 为什么筛选条件是d的null呢？
+# 因为需要筛选出的是e表数据（纯e表数据），需要排除掉匹配的行，两个表id相等就是匹配。所以筛选条件是d表的null
+# 总的来说就是筛选出e表数据，条件是与筛选出与d表不相关的数据
+SELECT employee_id,last_name,department_name
+FROM employees e LEFT JOIN departments d
+ON e.`department_id` = d.`department_id`
+WHERE d.`department_id` IS NULL # 筛选出e与d不相关的数据
+```
+右中图
+```sql
+# 查询e表与d表中匹配的行与d表中不匹配的行数据，然后筛选出e表id为null的数据。
+# 因为e与d对应数据id一定对应存在，所以查询到的数据是d表中不匹配的数据
+# 为什么筛选条件是e的null呢？
+# 因为需要筛选出是d表的数据（纯d表数据），需要排除掉匹配的行，两个表id相等就是匹配。所以筛选条件是e表的null
+# 总的来说就是筛选出d表数据，条件是与筛选出与e表不相关的数据
+SELECT employee_id,last_name,department_name
+FROM employees e RIGHT JOIN departments d
+ON e.`department_id` = d.`department_id`
+WHERE e.`department_id` IS NULL # 筛选d与e不相关的数据
+```
