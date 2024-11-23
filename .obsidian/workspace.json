@@ -21,8 +21,21 @@
               "icon": "lucide-file",
               "title": "汇编语言"
             }
+          },
+          {
+            "id": "b46823f91a0c93dc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,7 +213,7 @@
       "publish:发布更改": false
     }
   },
-  "active": "f011b68a014a27a1",
+  "active": "b46823f91a0c93dc",
   "lastOpenFiles": [
     "数据库/MySQL.md",
     "Image/Pasted image 20241111231353.png",
