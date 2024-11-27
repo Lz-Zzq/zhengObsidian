@@ -187,3 +187,93 @@ FROM employees e,departments d
 WHERE e.department_id = d.`department_id`
 AND d.`department_name` IN ('Sales','IT');
 ```
+```sql
+【题目】
+#1.所有有门派的人员信息
+select `name`,age,empno 
+from t_emp e join t_dept d
+on d.id = e.deptid
+
+select *
+from t_emp a inner join t_dept b
+on a.deptId = b.id;
+
+（ A、B两表共有）
+#2.列出所有用户，并显示其机构信息
+select `name`,age,empno,deptName,address
+from t_emp	e left join t_dept d
+on e.deptid = d.id
+
+select *
+from t_emp a left join t_dept b
+on a.deptId = b.id;
+
+（A的全集）
+#3.列出所有门派
+select * from t_dept
+
+（B的全集）
+#4.所有不入门派的人员
+select * from t_emp  e left join t_dept d
+on e.deptid = d.id
+where d.id is null
+
+select *
+from t_emp a left join t_dept b
+on a.deptId = b.id
+where b.id is null;
+
+ （A的独有）
+#5.所有没人入的门派
+select * from t_emp  e right join t_dept d
+on e.deptid = d.id
+where e.deptid is null
+
+select *
+from t_dept b left join t_emp a
+on a.deptId = b.id
+where a.deptId is null;
+
+（B的独有）
+#6.列出所有人员和机构的对照关系
+select * from 
+t_emp e left join t_dept d
+on e.deptid = d.id
+union
+select * from 
+t_emp e right join t_dept d
+on e.deptid = d.id
+
+SELECT *
+FROM t_emp A LEFT JOIN t_dept B
+ON A.deptId = B.id
+UNION
+SELECT *
+FROM t_emp A RIGHT JOIN t_dept B
+ON A.deptId = B.id
+
+(AB全有)
+#MySQL Full Join的实现 因为MySQL不支持FULL JOIN,下面是替代方法
+#left join + union(可去除重复数据)+ right join
+#7.列出所有没入派的人员和没人入的门派
+select * from 
+t_emp e left join t_dept d
+on e.deptid = d.id
+where d.id is null
+union
+select * from 
+t_emp e right join t_dept d
+on e.deptid = d.id
+where e.deptid is null
+
+SELECT *
+FROM t_emp A LEFT JOIN t_dept B
+ON A.deptId = B.id
+WHERE B.`id` IS NULL
+UNION
+SELECT *
+FROM t_emp A RIGHT JOIN t_dept B
+ON A.deptId = B.id
+WHERE A.`deptId` IS NULL;
+（A的独有+B的独有）
+```
