@@ -277,3 +277,6 @@ ON A.deptId = B.id
 WHERE A.`deptId` IS NULL;
 （A的独有+B的独有）
 ```
+
+# 第七章 单行函数
+

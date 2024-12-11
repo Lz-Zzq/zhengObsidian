@@ -11,5 +11,6 @@
   },
   "livePreview": true,
   "spellcheck": false,
-  "trashOption": "local"
+  "trashOption": "local",
+  "alwaysUpdateLinks": true
 }
