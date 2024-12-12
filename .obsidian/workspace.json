@@ -13,16 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "汇编语言/汇编语言.md",
+                "file": "汇编语言/第一章 基础知识.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "汇编语言"
+              "title": "第一章 基础知识"
+            }
+          },
+          {
+            "id": "ba3437a20962cd14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "汇编语言/第一章 基础知识.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "第一章 基础知识"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "汇编语言/汇编语言.md"
+                "file": "汇编语言/第一章 基础知识.md"
               },
               "icon": "lucide-list",
-              "title": "汇编语言 的大纲"
+              "title": "第一章 基础知识 的大纲"
             }
           },
           {
@@ -200,54 +216,54 @@
       "publish:发布更改": false
     }
   },
-  "active": "bb3f3916806e5af6",
+  "active": "ba3437a20962cd14",
   "lastOpenFiles": [
-    "C Primer/第一章 初识C语言.md",
-    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
-    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
-    "汇编语言/汇编语言.md",
+    "汇编语言/第五章 BX和loop指令.md",
+    "汇编语言/第十章 CALL和RET指令.md",
+    "汇编语言/第三章 寄存器(内存访问).md",
+    "汇编语言/第二章 寄存器.md",
+    "汇编语言/第一章 基础知识.md",
     "汇编语言/汇编语言附注.md",
-    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8 1.jpg",
-    "C Primer/第二章 C语言概述.md",
-    "基础原理/原码_反码_补码_位运算.md",
+    "数据库/MySQL.md",
+    "网络/image/Pasted image 20230330203212.png",
+    "网络/计算机网络.md",
+    "网络/image/Pasted image 20231210155932.png",
     "基础原理/Linux.md",
+    "网络/image/Pasted image 20230330210027.png",
+    "网络/image/Pasted image 20230330210156.png",
+    "网络/image/Pasted image 20230330211247.png",
+    "网络/image/Pasted image 20230407164656.png",
+    "网络/image/Pasted image 20230407171139.png",
+    "网络/image/Pasted image 20230407171157.png",
+    "网络/image/Pasted image 20230407173246.png",
+    "网络/image/Pasted image 20230407185105.png",
+    "网络/image",
+    "网络/新建文件夹",
+    "基础原理/未命名.md",
+    "基础原理/image",
+    "基础原理/原码_反码_补码_位运算.md",
+    "C Primer/第二章 C语言概述.md",
+    "数据库/image",
+    "汇编语言/第四章 第一个程序.md",
+    "汇编语言/第十一章 标志寄存器.md",
+    "汇编语言/第六章 包含多个段的程序.md",
+    "汇编语言/img",
+    "新建文件夹",
+    "C Primer/第一章 初识C语言.md",
+    "汇编语言/汇编语言.md",
+    "汇编语言/第九章 转移指令原理.md",
+    "汇编语言/第八章 数据处理的两个基本问题.md",
+    "汇编语言/第七章 更灵活的定位内存地址的方法.md",
+    "未命名",
     "C Primer/image",
     "进制转换_原码_反码_补码_位运算.md",
     "中间件_框架/Nginx.md",
     "中间件_框架/docker.md",
-    "网络/计算机网络.md",
     "网络/图解HTTP.md",
     "数据库/MySQL练习题.md",
-    "数据库/MySQL.md",
-    "数据结构与算法/算法数据结构.md",
-    "数据结构与算法/大话数据结构.md",
-    "基础原理/操作系统原理.md",
-    "基础原理/进制转换_原码_反码_补码_位运算.md",
     "C Primer",
-    "编程语言/未命名.md",
-    "编程语言/C++.md",
-    "编程语言/C.md",
-    "Image/Pasted image 20241203173127.png",
-    "Image/Pasted image 20241203173106.png",
-    "Image/Pasted image 20241203173039.png",
-    "Image/Pasted image 20241203172944.png",
-    "Image/Pasted image 20241203172853.png",
-    "Image/Pasted image 20241203172838.png",
-    "Image/Pasted image 20241203172809.png",
-    "Git/Git.md",
-    "编程语言/Python.md",
-    "编程语言/C Primer Plus.md",
-    "编程语言/C++ Primer.md",
-    "2024-10-27.md",
     "数据库",
     "未命名.canvas",
-    "反向链接",
-    "book/计算机网络-自顶向下方法第七版.pdf",
-    "book/编码：隐匿在计算机软硬件背后的语言.pdf",
-    "book/深度探索Linux操作系统：系统构建和原理解析.pdf",
-    "book/《鸟哥的Linux私房菜-基础篇》第四版.pdf",
-    "book/图解HTTP+彩色版.pdf",
-    "book/深入理解计算机系统_第三版【高清文字非扫描】 带目录中文原版.pdf",
     "未命名 1.canvas",
     "未命名 2.canvas"
   ]
