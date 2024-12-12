@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C Primer/第一章 初识C语言.md",
+                "file": "汇编语言/汇编语言.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第一章 初识C语言"
+              "title": "汇编语言"
             }
           }
         ]
@@ -150,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C Primer/第一章 初识C语言.md"
+                "file": "汇编语言/汇编语言.md"
               },
               "icon": "lucide-list",
-              "title": "第一章 初识C语言 的大纲"
+              "title": "汇编语言 的大纲"
             }
           },
           {
@@ -202,9 +202,9 @@
   },
   "active": "bb3f3916806e5af6",
   "lastOpenFiles": [
-    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
-    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
     "C Primer/第一章 初识C语言.md",
+    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
+    "C Primer/image/f825ee5eb5cbd7478e5378611c394e8.jpg",
     "汇编语言/汇编语言.md",
     "汇编语言/汇编语言附注.md",
     "C Primer/image/f825ee5eb5cbd7478e5378611c394e8 1.jpg",
@@ -234,7 +234,6 @@
     "Image/Pasted image 20241203172853.png",
     "Image/Pasted image 20241203172838.png",
     "Image/Pasted image 20241203172809.png",
-    "Image/Pasted image 20241203172736.png",
     "Git/Git.md",
     "编程语言/Python.md",
     "编程语言/C Primer Plus.md",
