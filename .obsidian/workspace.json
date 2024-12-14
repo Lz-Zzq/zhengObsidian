@@ -4,41 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "78e8a34f82a61877",
+        "id": "ebea754d2d6fbee6",
         "type": "tabs",
         "children": [
           {
-            "id": "bb3f3916806e5af6",
+            "id": "ff58da200e6f530b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "汇编语言/第一章 基础知识.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "第一章 基础知识"
-            }
-          },
-          {
-            "id": "ba3437a20962cd14",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "汇编语言/第一章 基础知识.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "第一章 基础知识"
+              "title": "新标签页"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,11 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "汇编语言/第一章 基础知识.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "第一章 基础知识 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -216,19 +193,37 @@
       "publish:发布更改": false
     }
   },
-  "active": "ba3437a20962cd14",
+  "active": "ff58da200e6f530b",
   "lastOpenFiles": [
-    "汇编语言/第五章 BX和loop指令.md",
-    "汇编语言/第十章 CALL和RET指令.md",
-    "汇编语言/第三章 寄存器(内存访问).md",
-    "汇编语言/第二章 寄存器.md",
-    "汇编语言/第一章 基础知识.md",
-    "汇编语言/汇编语言附注.md",
-    "数据库/MySQL.md",
+    "Linux/13 Linux内核源码.md",
+    "Linux/Linux.md",
+    "Linux/12 定制自己的linux.md",
+    "Linux/11 日志.md",
+    "Linux/10 Shell.md",
+    "Linux/9 进程.md",
+    "Linux/8 网络配置.md",
+    "Linux/7 Linux分区.md",
+    "Linux/6 任务调度.md",
+    "Linux/5 权限.md",
+    "Linux/3 用户管理.md",
+    "Linux/4 实用指令.md",
+    "Linux/2 目录结构.md",
+    "Linux/1 网络的三种模式.md",
+    "原理/原码_反码_补码_位运算.md",
+    "原理",
+    "汇编语言/11 标志寄存器.md",
+    "汇编语言/10 CALL和RET指令.md",
+    "汇编语言/9 转移指令原理.md",
+    "汇编语言/8 数据处理的两个基本问题.md",
+    "汇编语言/7 更灵活的定位内存地址的方法.md",
+    "汇编语言/6 包含多个段的程序.md",
+    "汇编语言/5 BX和loop指令.md",
+    "汇编语言/4 第一个程序.md",
+    "汇编语言/3 寄存器(内存访问).md",
+    "汇编语言/2 寄存器.md",
+    "汇编语言/1 基础知识.md",
     "网络/image/Pasted image 20230330203212.png",
-    "网络/计算机网络.md",
     "网络/image/Pasted image 20231210155932.png",
-    "基础原理/Linux.md",
     "网络/image/Pasted image 20230330210027.png",
     "网络/image/Pasted image 20230330210156.png",
     "网络/image/Pasted image 20230330211247.png",
@@ -239,28 +234,11 @@
     "网络/image/Pasted image 20230407185105.png",
     "网络/image",
     "网络/新建文件夹",
-    "基础原理/未命名.md",
-    "基础原理/image",
-    "基础原理/原码_反码_补码_位运算.md",
-    "C Primer/第二章 C语言概述.md",
+    "Linux/image",
     "数据库/image",
-    "汇编语言/第四章 第一个程序.md",
-    "汇编语言/第十一章 标志寄存器.md",
-    "汇编语言/第六章 包含多个段的程序.md",
     "汇编语言/img",
     "新建文件夹",
-    "C Primer/第一章 初识C语言.md",
-    "汇编语言/汇编语言.md",
-    "汇编语言/第九章 转移指令原理.md",
-    "汇编语言/第八章 数据处理的两个基本问题.md",
-    "汇编语言/第七章 更灵活的定位内存地址的方法.md",
-    "未命名",
     "C Primer/image",
-    "进制转换_原码_反码_补码_位运算.md",
-    "中间件_框架/Nginx.md",
-    "中间件_框架/docker.md",
-    "网络/图解HTTP.md",
-    "数据库/MySQL练习题.md",
     "C Primer",
     "数据库",
     "未命名.canvas",
