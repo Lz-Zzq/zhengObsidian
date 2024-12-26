@@ -280,3 +280,62 @@ WHERE A.`deptId` IS NULL;
 
 # 第七章 单行函数
 
+```sql
+# 1.显示系统时间(注：日期+时间)
+SELECT NOW() FROM DUAL
+# 2.查询员工号，姓名，工资，以及工资提高百分之20%后的结果（new salary）
+SELECT employee_id,first_name,salary,salary*1.2 'new salary' FROM employees;
+
+# 3.将员工的姓名按首字母排序，并写出姓名的长度（length）
+select first_name, length(first_name) from employees order by first_name;
+
+# 4.查询员工id,last_name,salary，并作为1列输出，别名为OUT_PUT
+select concat(employee_id,',',last_name,',',salary)out_put from employees
+
+# 5.查询公司各员工工作的年数、工作的天数，并按工作年数的降序排序
+SELECT  first_name,truncate(DATEDIFF(sysdate(),hire_date) / 365 ,0)'work_year' ,DATEDIFF(sysdate(),hire_date) 'work_day' 
+FROM employees order by work_year desc
+
+# 6.查询员工姓名，hire_date , department_id，满足以下条件：雇用时间在1997年之后，department_id 为80 或 90 或110, commission_pct不为空
+
+select first_name,hire_date,department_id from employees 
+#WHERE hire_date >= '1997-01-01'
+#WHERE hire_date >= STR_TO_DATE('1997-01-01', '%Y-%m-%d')
+where date_format(hire_date,'%y') >= '1997'
+
+select first_name,hire_date,department_id from employees 
+where year(hire_date) >= 1997 and department_id in(80,90,110) and commission_pct is not null
+
+# 7.查询公司中入职超过10000天的员工姓名、入职时间
+select first_name,hire_date from employees
+where datediff(sysdate(),hire_date) > 10000
+
+# 8.做一个查询，产生下面的结果 
+#<last_name> earns <salary> monthly but wants <salary*3>
+-- Dream Salary
+-- King earns 24000 monthly but wants 72000
+select concat(last_name,' earns ',truncate(salary,0) ,' monthly but wants ',truncate(salary*3,0)) "Dream Salary"
+from employees
+
+select * from employees
+# 使用CASE-WHEN，按照下面的条件：
+-- job grade
+-- AD_PRES A
+-- ST_MAN B
+-- IT_PROG C
+-- SA_REP D
+-- ST_CLERK E
+-- 产生下面的结果
+-- Last_name Job_id Grade
+-- king AD_PRES A
+select last_name Last_name,job_id Job_id,case job_id when 'AD_PRES' then 'A'  
+												when 'ST_MAN' then 'B'
+												WHEN 'IT_PROG' THEN 'C'
+												WHEN 'SA_REP' THEN 'D'
+												WHEN 'ST_CLERK' THEN 'E'
+												else 'F'  # 其他对应F
+												end "grade" #名称
+from employees
+```
+
+# 第八章 聚合函数
