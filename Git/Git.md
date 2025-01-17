@@ -28,7 +28,7 @@
 
 6.上传文件
 ```
--- git push -u origin master
+-- git push -u origin master   (-f强制推送)
 ```
 
 7.远程推送
