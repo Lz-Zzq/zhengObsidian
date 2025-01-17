@@ -1,0 +1,10 @@
+{
+  "editor:delete-paragraph": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "Delete"
+    }
+  ]
+}
