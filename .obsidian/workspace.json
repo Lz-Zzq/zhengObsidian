@@ -21,21 +21,8 @@
               "icon": "lucide-file",
               "title": "9 子查询"
             }
-          },
-          {
-            "id": "09d573ea0fac70e2",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -164,12 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "数据库/9 子查询.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "9 子查询 的大纲"
             }
           },
           {
@@ -216,7 +204,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "09d573ea0fac70e2",
+  "active": "ff58da200e6f530b",
   "lastOpenFiles": [
     "数据库/MySQL练习题.md",
     "原理/原码_反码_补码_位运算.md",
