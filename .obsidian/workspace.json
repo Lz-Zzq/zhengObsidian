@@ -4,19 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "15bf74486fa6448d",
+        "id": "5cc6a82498693626",
         "type": "tabs",
         "children": [
           {
-            "id": "102e123aac69f113",
+            "id": "193e97b3d1a73e63",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "日报/33ca940d060d6d3dfb040d7925cc02c.jpg"
+                "file": "日报/日报.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-image",
-              "title": "33ca940d060d6d3dfb040d7925cc02c"
+              "icon": "lucide-file",
+              "title": "日报"
             }
           }
         ]
@@ -201,19 +204,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "80bc0c3ada0e0c7a",
+  "active": "193e97b3d1a73e63",
   "lastOpenFiles": [
+    "6438cc0ad9fa49381377d6fa5353cf0.jpg",
+    "6f964e5091d7dda897a87869c66d357.jpg",
+    "e95cf7663bb369f4a061c662ae0cf7e.jpg",
+    "6d927b444d90e1637a132b7fe1faf61.jpg",
+    "6cb3d74c56c54918742cdd525bb1a3e.jpg",
+    "a86250271b8289cbcc458aaf3c89712.jpg",
+    "a83eed593f6942eb3836dedfe3b1517.jpg",
+    "735a2f1826ad37f489da30f0f058790.jpg",
+    "1db0cd425577bfa2f2692eeeda34050.jpg",
+    "227731ba779edc0e28a8eb8db7dbcb8.jpg",
+    "117eddf22da2d74f539a68ebe9c6189.jpg",
     "日报/日报.md",
-    "日报/a31ae3f2a3928ce6fb7ded98d587984.jpg",
-    "日报/757abcf7643e5ff6e1a0ca8b017871d.jpg",
-    "日报/33ca940d060d6d3dfb040d7925cc02c.jpg",
-    "日报/e2a40b10991759bde9832f002d7eb5b.jpg",
-    "日报/Pasted image 20250320224209.png",
     "日报",
     "2025-03-18.md",
     "日记",
     "3.18.md",
-    "2499a728530c9af74cc6dd3f7daa43b.png",
     "未命名.canvas",
     "数据库/9 子查询.md",
     "数据库/MySQL练习题.md",
@@ -236,14 +244,10 @@
     "汇编语言/img/e8799bafbce348447c938ebe34cba86.png~RFa643a8.TMP",
     "Linux/12 定制自己的linux.md",
     "数据库/4 运算符.md",
-    "数据库/image/Pasted image 20241027205108.png",
     "C Primer/1 初识C语言.md",
     "C Primer/3 数据和C.md",
     "网络/计算机网络.md",
     "原理",
-    "网络/image/Pasted image 20230330203212.png",
-    "网络/image/Pasted image 20231210155932.png",
-    "网络/image/Pasted image 20230330210027.png",
     "网络/image",
     "网络/新建文件夹",
     "Linux/image",
