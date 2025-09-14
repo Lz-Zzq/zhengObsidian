@@ -13,29 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "汇编语言/11 标志寄存器.md",
+                "file": "编程语言/python.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "11 标志寄存器"
-            }
-          },
-          {
-            "id": "f1d5111c0460eb12",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "title": "python"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "编程语言/python.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "python 的反向链接列表"
             }
           },
           {
@@ -215,8 +203,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f1d5111c0460eb12",
+  "active": "193e97b3d1a73e63",
   "lastOpenFiles": [
+    "汇编语言/7 更灵活的定位内存地址的方法.md",
+    "编程语言/python.md",
+    "编程语言",
+    "操作系统/韩顺平Linux/9 进程.md",
+    "操作系统/韩顺平Linux/13 Linux内核源码.md",
+    "数据库/7 单行函数.md",
+    "数据库/8 聚合函数.md",
+    "数据库/9 子查询.md",
+    "数据库/MySQL练习题.md",
+    "汇编语言/11 标志寄存器.md",
     "汇编语言/汇编语言附注.md",
     "汇编语言/10 CALL和RET指令.md",
     "汇编语言/6 包含多个段的程序.md",
@@ -233,8 +231,6 @@
     "操作系统/Linux大学教程",
     "操作系统",
     "原理/原码_反码_补码_位运算.md",
-    "汇编语言/11 标志寄存器.md",
-    "数据库/9 子查询.md",
     "Git/Git.md",
     "日报/日报.md",
     "1db0cd425577bfa2f2692eeeda34050.jpg",
@@ -250,20 +246,12 @@
     "日报",
     "2025-03-18.md",
     "日记",
-    "3.18.md",
     "未命名.canvas",
-    "数据库/MySQL练习题.md",
-    "操作系统/韩顺平Linux/11 日志.md",
-    "操作系统/韩顺平Linux/13 Linux内核源码.md",
-    "数据库/8 聚合函数.md",
-    "数据库/6 多表查询.md",
-    "数据库/2 数据库环境搭建.md",
     "汇编语言/img/6876022f2576eb713dffe8dc699a079.jpg~RFa643d7.TMP",
     "汇编语言/img/e8799bafbce348447c938ebe34cba86.png~RFa643a8.TMP",
     "原理",
     "网络/image",
     "网络/新建文件夹",
-    "操作系统/韩顺平Linux/image",
     "未命名 1.canvas",
     "未命名 2.canvas"
   ]
