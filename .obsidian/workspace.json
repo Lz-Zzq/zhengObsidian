@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C语言/第四章 字符串和格式化输入，输出.md",
+                "file": "C语言/第五章 运算符.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "第四章 字符串和格式化输入，输出"
+              "title": "第五章 运算符"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C语言/第四章 字符串和格式化输入，输出.md",
+                "file": "C语言/第五章 运算符.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "第四章 字符串和格式化输入，输出 的反向链接列表"
+              "title": "第五章 运算符 的反向链接列表"
             }
           },
           {
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C语言/第四章 字符串和格式化输入，输出.md",
+                "file": "C语言/第五章 运算符.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "第四章 字符串和格式化输入，输出 的出链列表"
+              "title": "第五章 运算符 的出链列表"
             }
           },
           {
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C语言/第四章 字符串和格式化输入，输出.md",
+                "file": "C语言/第五章 运算符.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "第四章 字符串和格式化输入，输出 的大纲"
+              "title": "第五章 运算符 的大纲"
             }
           }
         ]
@@ -189,11 +189,12 @@
   },
   "active": "6da30e8ef604683a",
   "lastOpenFiles": [
-    "e798047ab704b1e3b0bab185df8a11a4.jpg",
-    "5d51687d319ddc409e2d6805f15797d1.jpg",
-    "cad9fe031e6cf425bdbcb75d5344fd9c.jpg",
-    "C语言/img/438ecd76e3558305b44cce16ebd3845e.jpg",
     "C语言/第四章 字符串和格式化输入，输出.md",
+    "C语言/第五章 运算符.md",
+    "C语言/img/5d51687d319ddc409e2d6805f15797d1.jpg",
+    "C语言/img/e798047ab704b1e3b0bab185df8a11a4.jpg",
+    "C语言/img/cad9fe031e6cf425bdbcb75d5344fd9c.jpg",
+    "C语言/img/438ecd76e3558305b44cce16ebd3845e.jpg",
     "C语言/img/ae3c4891489ca148f05a22dc0189f704.jpg",
     "C语言/img/89622cab193ad3c9e9e9856dc012951c.jpg",
     "C语言/第二章 C语言概述.md",
@@ -203,7 +204,6 @@
     "C语言/img/cb49be124c70e2d4015f3c80f8a1a1b7.jpg",
     "C语言/第六章 C控制语句：循环.md",
     "C语言/img/67822507376f5a7d19eed8dbbf5879e2.jpg",
-    "C语言/img/67822507376f5a7d19eed8dbbf5879e2 1.jpg",
     "C语言/第一章 初识C语言.md"
   ]
 }
