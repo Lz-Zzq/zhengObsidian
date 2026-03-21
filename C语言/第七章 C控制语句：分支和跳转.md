@@ -16,3 +16,38 @@ x = (y < 0) ? -y : y;
 如果 y<0 则 x= -y
 否则 x = y
 ```
+
+#### break语句与continue
+break语句与continue语句都可以跳出循环，continue是从当前位置跳出本次循环进入下一次循环，而break是直接终止当前循环直接执行下一阶段。
+![[6fde24259df568666613c5ee92bbad39.jpg | 300]]
+
+#### switch语句
+语法
+```c
+switch( 整式表达式 ){
+	case 常量1：
+		语句
+	case 常量2：
+	    语句
+	default :
+		语句
+}
+//多重标签
+switch( 整式表达式 ){
+	case   'a' :  //如果定位到a，那么执行a，a中case没有语句，没有break，直接执行case 'A'中的代码，本质上，case 'a'与case'A'都指向同一个语句
+	case   'A':
+		语句
+	case 常量2：
+	    语句
+	default :
+		语句
+}
+```
+#### goto语句 
+```c
+goto part2;
+part2: printf(......)
+```
+break与continue是某种形式的goto语句，goto语句可以当成if判断语句与while循环语句使用。
+尽量避免使用goto语句，不过可以使用goto语句跳出一个大的嵌套循环，因为break只能跳出一个。
+
