@@ -1,6 +1,7 @@
 {
     "name": "Cybertron",
-    "version": "0.0.0",
-    "minAppVersion": "0.16.0",
-    "author": "nickmilo"
+    "version": "2.2",
+    "minAppVersion": "1.0.0",
+    "author": "nickmilo",
+    "authorUri": "https://github.com/nickmilo/Cybertron/"
 }

@@ -1,10 +1,10 @@
 {
   "accentColor": "",
-  "cssTheme": "Cybertron",
+  "cssTheme": "",
   "theme": "obsidian",
   "nativeMenus": false,
   "translucency": false,
-  "baseFontSize": 28,
+  "baseFontSize": 15,
   "textFontFamily": "Microsoft YaHei",
   "interfaceFontFamily": "Microsoft YaHei",
   "monospaceFontFamily": "Microsoft YaHei"
