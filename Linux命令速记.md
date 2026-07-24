@@ -26,6 +26,7 @@ whoami 显示当前用户吗
 rm 删除
 sudo visodu 专门编辑 /etc/sudoers 文件 该文件管理用户组
 groupadd 添加组
-
+-a(append)G (group)
 /etc/group 组数据
 /etc/passwd 用户数据
+

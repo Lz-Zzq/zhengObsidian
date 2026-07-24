@@ -35,3 +35,5 @@
 ```
 git push origin(远程名称) main(分支名称) 
 ```
+
+git clone xxx 克隆项目
