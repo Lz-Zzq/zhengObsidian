@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git/Git.md",
+                "file": "Linux命令速记.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "Linux命令速记"
             }
           }
         ]
@@ -199,9 +199,9 @@
   },
   "active": "6da30e8ef604683a",
   "lastOpenFiles": [
+    "Git/Git.md",
     "汇编语言/9 转移指令原理.md",
     "汇编语言/1 基础知识.md",
-    "Git/Git.md",
     "Linux命令速记.md",
     "markdown 命令速记.md",
     "C语言/8. 字符输入 输出和输入验证.md",

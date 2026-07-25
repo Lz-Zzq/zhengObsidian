@@ -30,3 +30,4 @@ groupadd 添加组
 /etc/group 组数据
 /etc/passwd 用户数据
 
+gpasswd -d 用户 组 //从组中删除用户
