@@ -62,3 +62,10 @@ systemd把所有管理对象叫做unit（单元）
 - `systemd`：一号进程，系统守护进程
 - `NetworkManager`：网络管理守护进程
 - `rsyslog`：日志守护进程
+
+```linux
+sudo systemctl list-unit-files | grep nginx
+sudo systemctl list-units --all | grep nginx
+unit-fles：磁盘上存放的单元配置文件（xxx.service）同时展示状态
+list-units：units=systemd 当前内存中加载的单元实例，只列出被加载到内存中的
+```
