@@ -23,6 +23,18 @@
             }
           },
           {
+            "id": "d9fad3f7411b3730",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.13.7"
+            }
+          },
+          {
             "id": "b5d78349e9acfb0f",
             "type": "leaf",
             "state": {
@@ -34,7 +46,8 @@
               "title": "版本说明 1.13.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -211,7 +224,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6da30e8ef604683a",
+  "active": "d9fad3f7411b3730",
   "lastOpenFiles": [
     "Git/Git.md",
     "汇编语言/9 转移指令原理.md",
