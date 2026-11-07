@@ -1,3 +1,13 @@
-2026-11-07T10:10:22.079Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
-2026-11-07T10:10:48.152Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
-2026-11-07T10:13:31.686Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T11:52:23.121Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T11:52:44.430Z auto-update: up-to-date (preview)
+2026-11-07T11:53:11.429Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T11:53:18.783Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T11:53:21.500Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T11:55:42.616Z service: endpoint=http://127.0.0.1:3080 cmd=dsh web --port {port} --no-open
+2026-11-07T11:57:07.456Z service: endpoint=http://127.0.0.1:3080 cmd=dsh web --port {port} --no-open
+2026-11-07T12:01:11.277Z skip render: needs token but launch URL has none
+2026-11-07T12:02:11.557Z skip render: needs token but launch URL has none
+2026-11-07T12:03:12.057Z skip render: needs token but launch URL has none
+2026-11-07T12:06:26.582Z service: endpoint=http://127.0.0.1:3080 cmd=dsh web --port {port} --no-open
+2026-11-07T12:06:28.281Z renderFrame endpoint=http://127.0.0.1:3080 token=…gqM&ob=1 ob=true size=420x758 fullRefreshes=0
+2026-11-07T12:06:29.561Z setDraft 可用：已撤掉自动填充的焦点门控（框选即出现）

@@ -177,17 +177,26 @@
               "icon": "lucide-ghost",
               "title": "advanced-tables-toolbar"
             }
+          },
+          {
+            "id": "eede09e0ee25210c",
+            "type": "leaf",
+            "state": {
+              "type": "dsh-harness-view",
+              "state": {},
+              "icon": "dsh-logo",
+              "title": "DeepSeek Harness"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 315
+    "width": 615.06298828125
   },
   "left-ribbon": {
     "hiddenItems": {
-      "dsh-harness:打开 DeepSeek Harness": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -195,16 +204,18 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "publish:发布更改": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "dsh-harness:打开 DeepSeek Harness": false
     }
   },
-  "active": "6da30e8ef604683a",
+  "active": "eede09e0ee25210c",
   "lastOpenFiles": [
+    "markdown 命令速记.md",
+    "未命名.md",
+    "Linux命令速记.md",
     "Git/Git.md",
     "汇编语言/9 转移指令原理.md",
     "汇编语言/1 基础知识.md",
-    "Linux命令速记.md",
-    "markdown 命令速记.md",
     "C语言/8. 字符输入 输出和输入验证.md",
     "C语言/7. C控制语句：分支和跳转.md",
     "C语言/6. C控制语句：循环.md",
@@ -225,7 +236,6 @@
     "汇编语言/5 BX和loop指令.md",
     "化学/原子，化合物和离子.md",
     "Python/细化知识.md",
-    "Python/第一章.md",
     "物理",
     "有机化学",
     "化学",

@@ -4,14 +4,14 @@
   "serviceScheme": "http",
   "tlsCertPath": "",
   "tlsKeyPath": "",
-  "startupCommand": "",
-  "startupCwd": "",
+  "startupCommand": "dsh web --port {port} --no-open",
+  "startupCwd": "C:\\Users\\26600\\deepseek-harness",
   "profile": "web",
   "autoStart": true,
   "detached": true,
   "readyTimeoutSec": 300,
   "zoom": 0.6,
-  "installDir": "",
+  "installDir": "C:\\Users\\26600\\deepseek-harness",
   "installUrl": "https://github.com/deepseek-ai/deepseek-harness.git",
   "updateMirrorUrl": "",
   "language": "auto",
@@ -23,5 +23,5 @@
   "updateChannel": "preview",
   "autoCheckUpdates": true,
   "autoCheckIntervalHours": 24,
-  "lastAutoUpdateAtMs": 1794046234095
+  "lastAutoUpdateAtMs": 1794052355132
 }
