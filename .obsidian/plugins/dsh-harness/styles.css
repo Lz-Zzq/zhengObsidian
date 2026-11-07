@@ -1,0 +1,655 @@
+/* DeepSeek Harness — 插件样式（对齐 Obsidian 设计变量） */
+
+/* 侧边栏 ribbon 与面板 tab 使用自定义「DeepSeek 官方鲸鱼」SVG（main.ts 模块级 addIcon 注册），
+   尺寸/悬停衬底/高亮均由 Obsidian 标准图标样式控制，无需额外 CSS。 */
+
+/* 视图与 iframe 布局 */
+.dsh-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* 缩放容器：宽高由 JS 按 1/zoom 计算，transform 缩放，左上角为原点 */
+.dsh-view .dsh-zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  overflow: hidden;
+}
+.dsh-view .dsh-zoom .dsh-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: var(--background-primary);
+}
+
+/* iframe 重绘轻推（v2.4.1）：1px 级高度变化强制合成器重排——跨域 iframe 偶发"已加载但不绘制"。
+   用类切换而非内联 style（官方审核规则 obsidianmd/no-static-styles-assignment）。 */
+.dsh-view .dsh-zoom .dsh-frame.dsh-frame-nudge {
+  height: calc(100% - 1px);
+}
+
+/* 状态视图（加载中 / 错误）——对齐 Obsidian 空状态风格 */
+.dsh-view .dsh-status {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-4-2);
+  padding: var(--size-4-8);
+  text-align: center;
+  font-family: var(--font-interface);
+  color: var(--text-faint);
+}
+.dsh-view .dsh-status .dsh-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--background-modifier-border);
+  border-top-color: var(--text-muted);
+  border-radius: 50%;
+  animation: dsh-spin 1s linear infinite;
+}
+@keyframes dsh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dsh-view .dsh-status h3 {
+  margin: 0;
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-medium, 500);
+  color: var(--text-normal);
+}
+.dsh-view .dsh-status p {
+  margin: 0;
+  max-width: 480px;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  line-height: var(--line-height-tight);
+}
+.dsh-view .dsh-status button {
+  margin-top: var(--size-4-2);
+  padding: var(--size-2-2) var(--size-4-3);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+  box-shadow: var(--input-shadow);
+  cursor: pointer;
+}
+.dsh-view .dsh-status button:hover {
+  background: var(--background-modifier-hover);
+}
+.dsh-view .dsh-status .dsh-cta {
+  margin-top: var(--size-4-4);
+  padding: var(--size-4-2) var(--size-4-8);
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-medium, 500);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+}
+.dsh-view .dsh-status .dsh-cta:hover {
+  background: var(--interactive-accent-hover);
+}
+.dsh-view .dsh-status .dsh-cta[disabled] {
+  opacity: 0.7;
+  cursor: wait;
+}
+.dsh-view .dsh-status .dsh-detail {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  max-width: 480px;
+  word-break: break-all;
+}
+.dsh-view .dsh-status .dsh-dep {
+  text-align: left;
+  min-width: 220px;
+  padding: var(--size-4-2) var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+}
+.dsh-view .dsh-status .dsh-dep p {
+  margin: var(--size-2-1) 0;
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+}
+.dsh-view .dsh-status .dsh-actions {
+  display: flex;
+  gap: var(--size-4-2);
+  margin-top: var(--size-4-2);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* 按钮行内的主操作按钮（dsh-cta）：作为行内成员时去掉独立 CTA 的外边距，并把尺寸收敛到与同行按钮一致（仅保留强调色） */
+.dsh-view .dsh-status .dsh-actions .dsh-cta {
+  margin-top: 0;
+  padding: var(--size-2-2) var(--size-4-3);
+  font-size: var(--font-ui-small);
+  border: 1px solid var(--interactive-accent);
+}
+
+/* 安装路径输入框（模态框内） */
+.modal .dsh-path-input {
+  width: 100%;
+}
+
+/* 错误视图：手动启动命令示例（复制即用） */
+.dsh-view .dsh-status .dsh-cmd-row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  max-width: 480px;
+}
+.dsh-view .dsh-status .dsh-cmd {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--size-2-2) var(--size-4-2);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-smaller);
+  text-align: left;
+  overflow-x: auto;
+  white-space: nowrap;
+  user-select: all;
+}
+.dsh-view .dsh-status .dsh-copy {
+  margin-top: 0;
+  padding: var(--size-2-2) var(--size-4-2);
+  flex: 0 0 auto;
+}
+
+/* 一键安装进度条（安装引导视图内） */
+.dsh-view .dsh-status .dsh-progress {
+  width: min(420px, 100%);
+  margin-top: var(--size-4-3);
+  padding: var(--size-2-2) var(--size-4-2);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+}
+.dsh-view .dsh-status .dsh-progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--interactive-accent);
+  transition: width 0.3s ease;
+}
+.dsh-view .dsh-status .dsh-progress-text {
+  margin-top: var(--size-2-2);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* DSH 版本行下的「阅读更新日志」超链接 */
+.dsh-changelog-link {
+  margin-top: var(--size-2-2);
+}
+.dsh-changelog-link a {
+  color: var(--text-accent);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: var(--font-ui-smaller);
+}
+.dsh-changelog-link a:hover {
+  text-decoration: none;
+  color: var(--interactive-accent-hover);
+}
+
+/* DSH 睡着了（等待重连）界面 —— 美化版（v1.7.6：状态为视觉峰值 + accent 呼吸指示点） */
+/* 状态指示点：accent 呼吸——服务离线，等待唤醒 */
+.dsh-asleep-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--interactive-accent);
+  animation: dsh-pulse 2.4s ease-in-out infinite;
+}
+@keyframes dsh-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--interactive-accent) 40%, transparent); }
+  50% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--interactive-accent) 0%, transparent); }
+}
+/* 产品名「DSH for Obsidian」：显著（大号加粗正常色） */
+.dsh-asleep-name {
+  margin: var(--size-4-4) 0 0;
+  font-size: var(--font-ui-large, 1.25em);
+  font-weight: var(--font-semibold, 600);
+  color: var(--text-normal);
+  letter-spacing: 0.02em;
+}
+/* 「你的 DSH 睡着了」：视觉峰值——最大、最重、正常色 */
+.dsh-asleep-status {
+  margin: var(--size-4-3) 0 0;
+  font-size: 1.5em;
+  font-weight: var(--font-semibold, 600);
+  color: var(--text-normal);
+  max-width: 460px;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  word-break: normal;
+}
+/* 英文界面：状态文案是长句，字号略收并在词间优雅折行，避免顶边/突兀换行 */
+.dsh-view.dsh-lang-en .dsh-asleep-status {
+  font-size: 1.2em;
+}
+/* 睡眠界面的自然语言文案（AED 确认、小提示）按词换行，禁止硬断英文单词（.dsh-detail 全局 break-all 仅适用错误路径长路径） */
+.dsh-asleep-aed .dsh-detail,
+.dsh-asleep-hint {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+/* 唤醒界面内容主体：垂直居中在视线中间（小提示作为 .dsh-status 的兄弟项留在底部） */
+.dsh-asleep-main {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+/* 主操作：唤醒干活（拉长占一行）；与「你的 DSH 睡着了」拉宽间距 */
+.dsh-view .dsh-status .dsh-asleep-primary {
+  width: 100%;
+  max-width: 320px;
+  margin-top: var(--size-4-6);
+}
+.dsh-asleep-primary .dsh-cta {
+  width: 100%;
+  box-shadow: var(--input-shadow);
+  transition: background 0.15s ease;
+}
+.dsh-asleep-primary .dsh-cta:hover {
+  background: var(--interactive-accent-hover);
+}
+.dsh-asleep-primary .dsh-cta:active {
+  transform: translateY(1px);
+}
+/* 唤醒界面按钮统一固定高度，保证唤醒干活与其他按钮绝对等高 */
+.dsh-view .dsh-status .dsh-asleep-primary .dsh-cta,
+.dsh-view .dsh-status .dsh-asleep-secondary button {
+  box-sizing: border-box;
+  height: var(--size-4-8);
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+/* 次要操作：AED / 问问AI / 更多设置（一行）——与主按钮同宽并对齐边缘 */
+.dsh-view .dsh-status .dsh-asleep-secondary {
+  width: 100%;
+  max-width: 320px;
+  margin-top: var(--size-4-2);
+  justify-content: space-between;
+}
+.dsh-asleep-secondary button {
+  min-width: 96px;
+  transition: background 0.15s ease;
+}
+.dsh-asleep-secondary button:hover {
+  background: var(--background-modifier-hover);
+}
+/* 英文界面：按钮文案较长，加宽到 360px 避免换行 */
+.dsh-view.dsh-lang-en .dsh-asleep-primary,
+.dsh-view.dsh-lang-en .dsh-asleep-secondary {
+  max-width: 360px;
+}
+/* 小提示：贴页面最下，顶部细分隔线（与主体区分） */
+.dsh-asleep-hint {
+  flex: 0 0 auto;
+  padding-top: var(--size-4-3);
+  border-top: 1px solid var(--background-modifier-border);
+}
+.dsh-asleep-aedbox {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+.dsh-asleep-aed {
+  margin-top: var(--size-4-3);
+  padding: var(--size-4-3);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  text-align: left;
+}
+/* AED 确认框内按钮：统一行高与边距（确认执行/取消绝对对齐） */
+.dsh-asleep-aed .dsh-actions button {
+  box-sizing: border-box;
+  height: var(--size-4-8);
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+/* AED 确认按钮「确认执行」：横向拉长一点，突出主操作 */
+.dsh-asleep-aed .dsh-actions .dsh-cta {
+  padding-left: var(--size-4-4);
+  padding-right: var(--size-4-4);
+}
+
+/* ---- 一键配置 DSH 安装进度弹窗 ---- */
+.dsh-install-modal .dsh-detail {
+  margin: var(--size-2-1) 0 var(--size-4-3);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+.dsh-install-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2-1);
+  margin-bottom: var(--size-4-3);
+}
+.dsh-install-step {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  padding: var(--size-2-2) var(--size-4-2);
+  border-radius: var(--radius-m);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.dsh-install-step-active {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+}
+.dsh-install-step-done {
+  color: var(--text-normal);
+}
+.dsh-install-mark {
+  width: 1.2em;
+  text-align: center;
+  font-weight: var(--font-semibold, 600);
+}
+.dsh-install-mark-active {
+  color: var(--interactive-accent);
+  animation: dsh-blink 1s ease-in-out infinite;
+}
+.dsh-install-mark-ok {
+  color: var(--color-green, #5cb85c);
+}
+.dsh-install-mark-fail {
+  color: var(--color-red, #d9534f);
+}
+@keyframes dsh-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+/* 弹窗内进度条（复用 dsh-progress 结构） */
+.dsh-install-modal .dsh-progress {
+  padding: var(--size-2-2) var(--size-4-2);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+}
+.dsh-install-modal .dsh-progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--interactive-accent);
+  transition: width 0.3s ease;
+}
+.dsh-install-modal .dsh-progress-text {
+  margin-top: var(--size-2-2);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  text-align: center;
+}
+/* DSH 更新中弹窗（UpdatingModal） */
+.dsh-install-modal .dsh-updating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-4-3);
+  padding: var(--size-4-4) 0;
+}
+.dsh-install-modal .dsh-updating .dsh-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--background-modifier-border);
+  border-top-color: var(--interactive-accent);
+  border-radius: 50%;
+  animation: dsh-spin 1s linear infinite;
+}
+.dsh-install-modal .dsh-updating .dsh-spinner.dsh-spinner-fail {
+  animation: none;
+  border-top-color: var(--color-red, #d9534f);
+}
+.dsh-install-modal .dsh-updating .dsh-detail {
+  margin: 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* 注：设置页按钮行不再加居中样式——遵循 Obsidian 标准设置行布局（名称左、控件靠右、垂直居中），
+   与「界面语言」等默认行一致；曾实现的 dsh-aed-row / dsh-btn-row 居中方案已按用户要求移除。 */
+
+
+/* ---- Diagnostics log ---- */
+.dsh-diag-log {
+  margin: 4px 0 12px;
+  padding: 8px 10px;
+  font-family: var(--font-monospace);
+  font-size: 11px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* ---- 插件更新日志弹窗 ---- */
+.dsh-changelog-modal .dsh-changelog-list {
+  max-height: 420px;
+  overflow-y: auto;
+  margin: 4px 0;
+}
+.dsh-changelog-modal .dsh-changelog-ver {
+  margin: 10px 0;
+}
+.dsh-changelog-modal .dsh-changelog-ver h4 {
+  margin: 0 0 4px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+}
+.dsh-changelog-modal .dsh-changelog-ver ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.dsh-changelog-modal .dsh-changelog-ver li {
+  font-size: var(--font-ui-small);
+  line-height: 1.6;
+  color: var(--text-normal);
+}
+
+/* ---- 设置页「一键配置 DSH」行：按钮垂直居中（防主题/长描述导致按钮相对整行偏上/偏下） ---- */
+.dsh-config-row .setting-item-control {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.dsh-config-row .setting-item-control button {
+  margin: 0;
+  align-self: center;
+}
+
+/* ---- 桥接状态描述（多行功能列表） ---- */
+.dsh-bridge-status {
+  white-space: pre-line;
+  line-height: 1.7;
+}
+
+/* ---- 桥接状态行：重新写入按钮垂直居中（描述多行时按钮相对整行居中） ---- */
+.dsh-bridge-status-row .setting-item-control {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.dsh-bridge-status-row .setting-item-control button {
+  margin: 0;
+  align-self: center;
+}
+
+/* ---- 桥接模式行：下拉框垂直居中（与状态行同款，描述多行时下拉相对整行居中） ---- */
+.dsh-bridge-mode-row .setting-item-control {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.dsh-bridge-mode-row .setting-item-control select {
+  margin-block: auto;
+  align-self: center;
+}
+
+/* ---- 设置页全部行控件强制上下居中（按钮/输入框/下拉框；用选择器特异性覆盖主题，不用 !important） ---- */
+.dsh-settings-tab .setting-item.setting-item {
+  align-items: center;
+}
+.dsh-settings-tab .setting-item-control.setting-item-control {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+.dsh-settings-tab .setting-item-control > * {
+  margin-block: auto;
+  align-self: center;
+}
+
+/* ---- 卸载并重装 DSH：危险确认弹窗的红字警示 ---- */
+.dsh-cleanup-modal .dsh-cleanup-warn {
+  color: var(--text-error);
+  font-weight: 600;
+  margin-block: 8px;
+}
+
+/* ---- 通用红字警告段（更新弹窗「认证不兼容」、AED 认证功能失效提示） ---- */
+.dsh-modal-danger {
+  color: var(--text-error);
+  font-weight: 600;
+}
+
+/* ---- v2.3.1 认证拦截引导卡（内嵌面板被 0.1.2+ 会话认证拦截时覆盖 iframe） ---- */
+.dsh-blocked-card {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  background: var(--background-primary);
+}
+.dsh-blocked-card p {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  max-width: 42em;
+}
+.dsh-blocked-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* ---- v2.4.0 冷启动等待层（全覆盖，挡住 0.1.2+ 裸地址的 401 文本；就绪后移除） ---- */
+.dsh-wait-card {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  background: var(--background-primary);
+}
+.dsh-wait-card p {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  max-width: 42em;
+}
+
+/* ---- v2.6.0 适配弹窗的取证小字（版本 / 适配区间 / profile / 端口） ---- */
+.dsh-modal-detail {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
+
+/* ---- v2.6.0 适配说明弹窗的要点列表（逐条陈述适配政策与判据；v2.8.6 起 AED「适用症状」弹窗共用） ---- */
+.dsh-modal-bullets {
+  margin: 8px 0 4px;
+  padding-inline-start: 20px;
+}
+.dsh-modal-bullets li {
+  margin-bottom: 6px;
+  color: var(--text-normal);
+}
+
+/* ---- v2.8.6 设置页「AED for DSH」行名右侧的症状说明链接：字号继承行名，图标与文字同行 ---- */
+.dsh-aed-symptoms-link {
+  margin-inline-start: 12px;
+  font-size: inherit;
+  font-weight: normal;
+  color: var(--text-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dsh-aed-symptoms-link:hover {
+  text-decoration: underline;
+}
+.dsh-aed-symptoms-icon {
+  display: inline-flex;
+  vertical-align: -0.2em;
+  margin-inline-end: 4px;
+}
+.dsh-aed-symptoms-icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* ---- v2.8.6 AED 症状弹窗：✓ 可以抢救／✗ 不适用两组**同字号**，只以符号与颜色区分（用户定案） ---- */
+.dsh-symptoms-title {
+  margin: 14px 0 2px;
+  font-weight: var(--bold-weight);
+  color: var(--text-normal);
+}
+.dsh-symptom-yes {
+  color: var(--color-green);
+  font-weight: var(--bold-weight);
+  margin-inline-end: 8px;
+}
+.dsh-symptom-no {
+  color: var(--color-red);
+  font-weight: var(--bold-weight);
+  margin-inline-end: 8px;
+}
+.dsh-symptom-text {
+  color: var(--text-normal);
+}

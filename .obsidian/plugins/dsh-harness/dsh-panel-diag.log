@@ -1,0 +1,3 @@
+2026-11-07T10:10:22.079Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T10:10:48.152Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}
+2026-11-07T10:13:31.686Z service: endpoint=http://127.0.0.1:3080 cmd=pnpm dsh web --port {port}

@@ -21,33 +21,8 @@
               "icon": "lucide-file",
               "title": "Linux命令速记"
             }
-          },
-          {
-            "id": "d9fad3f7411b3730",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.13.7"
-            }
-          },
-          {
-            "id": "b5d78349e9acfb0f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.13.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,8 +174,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
         ],
@@ -212,19 +187,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "dsh-harness:打开 DeepSeek Harness": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "publish:发布更改": false,
-      "bases:新建数据库": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "bases:新建数据库": false
     }
   },
-  "active": "d9fad3f7411b3730",
+  "active": "6da30e8ef604683a",
   "lastOpenFiles": [
     "Git/Git.md",
     "汇编语言/9 转移指令原理.md",
