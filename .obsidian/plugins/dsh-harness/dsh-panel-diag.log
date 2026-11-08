@@ -13,3 +13,4 @@
 2026-11-07T12:06:29.561Z setDraft 可用：已撤掉自动填充的焦点门控（框选即出现）
 2026-11-08T08:51:04.631Z service: endpoint=http://127.0.0.1:3080 cmd=dsh web --port {port} --no-open
 2026-11-08T08:51:06.295Z renderFrame endpoint=http://127.0.0.1:3080 token=…gqM&ob=1 ob=true size=615x758 fullRefreshes=0
+2026-11-08T08:51:07.700Z setDraft 可用：已撤掉自动填充的焦点门控（框选即出现）
